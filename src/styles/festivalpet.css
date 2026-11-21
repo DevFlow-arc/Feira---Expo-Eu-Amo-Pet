@@ -1,0 +1,7013 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Protest+Strike&family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* ==========================================================================
+   CANONICAL FESTIVAL PET CSS - REVERSE ENGINEERED 1:1
+   Identical font sizes, clip-paths, background collages, animations & layouts
+   Adapted for Feira Eu Amo Pet - Campos dos Goytacazes
+   ========================================================================== */
+
+
+
+:root {
+  --navy: #202f6b;
+  --orange: #f45225;
+  --pink: #f9418c;
+  --purple: #8c43dc;
+  --lime: #cbe33d;
+  --cream: #f8f1e2;
+  --cream2: #f8f1e5;
+  --yellow: #ffc600;
+  --blue: #10a8e8;
+  --bege: #f8f1e5;
+  --fundo-faq: #f8f1e5;
+}
+
+
+
+
+
+  .fp-home,
+
+  .fp-home * {
+
+    box-sizing: border-box;
+
+  }
+
+
+
+  .fp-home {
+
+    --navy: #202f6b;
+
+    --orange: #f45225;
+
+    --pink: #f9418c;
+
+    --purple: #8c43dc;
+
+    --lime: #cbe33d;
+
+    --cream: #f8f1e2;
+
+
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: clamp(760px, 100vh, 850px);
+
+    padding: 22px clamp(24px, 2.8vw, 54px);
+
+
+
+    background:
+
+      var(--cream)
+
+      url("/assets/festival/ChatGPT-Image-21_09_2026-15_25_40.png")
+
+      78% bottom / cover no-repeat;
+
+
+
+    font-family: Nunito, sans-serif;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-top {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: 94px;
+    height: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+
+
+  .fp-home-logo {
+    display: block;
+    height: 82px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+
+
+  .fp-home-nav {
+
+    display: flex;
+
+    gap: clamp(14px, 1.8vw, 32px);
+
+    margin: 16px auto 0;
+
+    white-space: nowrap;
+
+  }
+
+
+
+  .fp-home-nav a {
+
+    color: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+  }
+
+
+
+  .fp-home-nav a:hover {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-main {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1850px;
+
+    height: calc(100% - 84px);
+
+    min-height: 570px;
+
+    margin: 0 auto;
+
+  }
+
+
+
+  .fp-home-copy {
+
+    position: relative;
+
+    z-index: 7;
+
+    width: min(47%, 820px);
+
+    padding: 63px 0 0 2%;
+
+  }
+
+
+
+  .fp-home-badge {
+
+    display: inline-block;
+
+    margin: 0 0 18px 12px;
+
+    padding: 8px 20px;
+
+    transform: rotate(-2deg);
+
+    background: var(--lime);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(18px, 1.5vw, 25px);
+
+  }
+
+
+
+  .fp-home-heart {
+
+    position: absolute;
+
+    top: 66px;
+
+    left: 315px;
+
+    width: 55px;
+
+    animation: fp-heart 6s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-lines {
+
+    position: absolute;
+
+    top: 102px;
+
+    right: 4%;
+
+    width: 70px;
+
+    height: 70px;
+
+  }
+
+
+
+  .fp-home-lines i {
+
+    position: absolute;
+
+    display: block;
+
+    width: 6px;
+
+    height: 30px;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(1) {
+
+    top: 0;
+
+    left: 4px;
+
+    transform: rotate(30deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(2) {
+
+    top: 24px;
+
+    right: 5px;
+
+    transform: rotate(72deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(3) {
+
+    bottom: 0;
+
+    left: 27px;
+
+    transform: rotate(112deg);
+
+  }
+
+
+
+  .fp-home-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(42px, 3.6vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 0.94;
+
+  }
+
+
+
+  .fp-home-title span {
+
+    display: inline-block;
+
+    margin-top: -0.02em;
+
+    padding: 0.1em 0.32em 0.15em;
+
+    white-space: nowrap;
+
+    background: #fffdf7;
+
+    filter: drop-shadow(0 7px 9px rgba(30, 35, 80, 0.16));
+
+    clip-path: polygon(
+
+      1% 8%, 8% 2%, 15% 7%, 23% 2%, 31% 6%, 40% 2%, 49% 7%,
+
+      57% 2%, 66% 6%, 74% 2%, 83% 7%, 92% 2%, 99% 8%, 98% 90%,
+
+      91% 96%, 83% 92%, 75% 98%, 66% 93%, 57% 98%, 48% 93%,
+
+      40% 98%, 31% 93%, 22% 98%, 14% 93%, 6% 98%, 1% 90%
+
+    );
+
+  }
+
+
+
+  .fp-home-title span:nth-child(2) {
+
+    transform: rotate(0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(3) {
+
+    transform: rotate(-0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(4) {
+
+    transform: rotate(0.5deg);
+
+  }
+
+
+
+  .fp-home-title b {
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-title .orange {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-title .purple {
+
+    color: var(--purple);
+
+  }
+
+
+
+  .fp-home-title .pink {
+
+    color: var(--pink);
+
+  }
+
+
+
+  .fp-home-copy > p {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 16px 0 0 110px;
+
+    padding: 8px 14px 10px;
+
+    background: rgba(248, 241, 226, 0.94);
+
+    box-shadow: 0 0 22px 16px rgba(248, 241, 226, 0.94);
+
+    font-size: clamp(16px, 1.45vw, 24px);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+  }
+
+
+
+  .fp-home-photo-wrap {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: -10px;
+
+    right: 10%;
+
+    width: min(56%, 900px);
+
+    height: 810px;
+
+    filter: drop-shadow(0 14px 19px rgba(25, 30, 50, 0.22));
+
+  }
+
+
+
+  .fp-home-photo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    clip-path: polygon(
+
+      9% 0, 17% 2%, 25% 0, 34% 3%, 43% 0, 52% 3%, 60% 0,
+
+      70% 2%, 78% 0, 88% 3%, 100% 8%, 98% 91%, 91% 98%, 83% 94%,
+
+      75% 99%, 66% 95%, 56% 100%, 48% 95%, 40% 99%, 31% 95%,
+
+      23% 100%, 15% 94%, 8% 97%, 3% 89%, 5% 80%, 1% 72%, 5% 63%,
+
+      1% 55%, 5% 47%, 1% 39%, 5% 31%, 1% 23%, 5% 15%, 1% 8%
+
+    );
+
+  }
+
+
+
+  .fp-home-star {
+
+    position: absolute;
+
+    z-index: 8;
+
+    top: -40px;
+
+    right: 6%;
+
+    width: 220px;
+
+    animation: fp-star 7s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-star svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+  }
+
+
+
+  .fp-home-dog {
+
+    position: absolute;
+
+    z-index: 9;
+
+    right: -1%;
+
+    bottom: -26px;
+
+    width: min(47vw, 790px);
+
+    height: auto;
+
+    animation: fp-dog 8s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-cat {
+
+    position: absolute;
+
+    z-index: 9;
+
+    bottom: 18px;
+
+    left: -1%;
+
+    width: min(21vw, 300px);
+
+    height: auto;
+
+    animation: fp-cat 7.4s ease-in-out infinite 0.5s;
+
+  }
+
+
+
+  .fp-home-stats {
+
+    position: absolute;
+
+    z-index: 12;
+
+    bottom: 22px;
+
+    left: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    gap: clamp(16px, 3vw, 48px);
+
+    padding: 0 24px;
+
+    background: transparent;
+
+  }
+
+
+
+  .fp-home-stats > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 26px;
+
+    border-radius: 15px;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(1) {
+
+    background: #c9a8f0;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(2) {
+
+    background: #f8b6cf;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(3) {
+
+    background: #ddeb61;
+
+  }
+
+
+
+  .fp-home-stats svg {
+
+    flex: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-stats p {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+
+    line-height: 1;
+
+  }
+
+
+
+  .fp-home-stats b {
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-stats small {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+
+  }
+
+
+
+  @keyframes fp-heart {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-8px) rotate(9deg); }
+
+  }
+
+
+
+  @keyframes fp-star {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-9px) rotate(6deg); }
+
+  }
+
+
+
+  @keyframes fp-dog {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(0.6deg); }
+
+  }
+
+
+
+  @keyframes fp-cat {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(-1deg); }
+
+  }
+
+
+
+  @media (max-width: 1050px) {
+
+    .fp-home {
+
+      min-height: 760px;
+
+    }
+
+
+
+    .fp-home-nav {
+
+      gap: 14px;
+
+    }
+
+
+
+    .fp-home-nav a {
+
+      font-size: 11px;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 57%;
+
+      padding-left: 0;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      right: 2%;
+
+      width: 48%;
+
+      height: 560px;
+
+    }
+
+
+
+    .fp-home-star {
+
+      width: 160px;
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin-left: 50px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      width: 330px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      width: 260px;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(38px, 5vw, 60px);
+
+    }
+
+  }
+
+
+
+  @media (max-width: 760px) {
+
+    .fp-home {
+
+      height: auto;
+
+      min-height: 0;
+
+      padding: 18px;
+
+    }
+
+
+
+    .fp-home-logo {
+      height: 62px;
+      width: auto;
+      max-width: 125px;
+      object-fit: contain;
+    }
+
+
+
+    .fp-home-nav {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-main {
+
+      height: auto;
+
+      min-height: 0;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 100%;
+
+      padding-top: 25px;
+
+    }
+
+
+
+    .fp-home-badge {
+
+      margin-left: 0;
+
+      font-size: 21px;
+
+    }
+
+
+
+    .fp-home-heart {
+
+      top: 28px;
+
+      left: 255px;
+
+      width: 45px;
+
+    }
+
+
+
+    .fp-home-lines {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(35px, 10vw, 52px);
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin: 22px 0 0 18px;
+
+      font-size: 17px;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      position: relative;
+
+      top: auto;
+
+      right: auto;
+
+      width: 100%;
+
+      height: 350px;
+
+      margin: 28px auto 0;
+
+    }
+
+
+
+    .fp-home-star {
+
+      top: 48%;
+
+      right: -18px;
+
+      width: 120px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      right: -58px;
+
+      bottom: -32px;
+
+      width: 235px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      bottom: 14px;
+
+      left: -20px;
+
+      width: 155px;
+
+    }
+
+
+
+    .fp-home-stats {
+
+      position: relative;
+
+      bottom: auto;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      width: 100%;
+
+      gap: 10px;
+
+      margin: 20px 0 0;
+
+      padding: 0;
+
+    }
+
+
+
+    .fp-home-stats > div {
+
+      width: min(330px, 90%);
+
+    }
+
+  }
+
+
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .fp-home * {
+
+      animation: none !important;
+
+    }
+
+  }
+
+
+
+
+
+
+
+  .fp-home,
+
+  .fp-home * {
+
+    box-sizing: border-box;
+
+  }
+
+
+
+  .fp-home {
+
+    --navy: #202f6b;
+
+    --orange: #f45225;
+
+    --pink: #f9418c;
+
+    --purple: #8c43dc;
+
+    --lime: #cbe33d;
+
+    --cream: #f8f1e2;
+
+
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: clamp(760px, 100vh, 850px);
+
+    padding: 22px clamp(24px, 2.8vw, 54px);
+
+
+
+    background:
+
+      var(--cream)
+
+      url("/assets/festival/ChatGPT-Image-21_09_2026-15_25_40.png")
+
+      78% bottom / cover no-repeat;
+
+
+
+    font-family: Nunito, sans-serif;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-top {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: 94px;
+    height: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+
+
+  .fp-home-logo {
+    display: block;
+    height: 82px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+
+
+  .fp-home-nav {
+
+    display: flex;
+
+    gap: clamp(14px, 1.8vw, 32px);
+
+    margin: 16px auto 0;
+
+    white-space: nowrap;
+
+  }
+
+
+
+  .fp-home-nav a {
+
+    color: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+  }
+
+
+
+  .fp-home-nav a:hover {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-main {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1850px;
+
+    height: calc(100% - 84px);
+
+    min-height: 570px;
+
+    margin: 0 auto;
+
+  }
+
+
+
+  .fp-home-copy {
+
+    position: relative;
+
+    z-index: 7;
+
+    width: min(47%, 820px);
+
+    padding: 63px 0 0 2%;
+
+  }
+
+
+
+  .fp-home-badge {
+
+    display: inline-block;
+
+    margin: 0 0 18px 12px;
+
+    padding: 8px 20px;
+
+    transform: rotate(-2deg);
+
+    background: var(--lime);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(18px, 1.5vw, 25px);
+
+  }
+
+
+
+  .fp-home-heart {
+
+    position: absolute;
+
+    top: 66px;
+
+    left: 315px;
+
+    width: 55px;
+
+    animation: fp-heart 6s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-lines {
+
+    position: absolute;
+
+    top: 102px;
+
+    right: 4%;
+
+    width: 70px;
+
+    height: 70px;
+
+  }
+
+
+
+  .fp-home-lines i {
+
+    position: absolute;
+
+    display: block;
+
+    width: 6px;
+
+    height: 30px;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(1) {
+
+    top: 0;
+
+    left: 4px;
+
+    transform: rotate(30deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(2) {
+
+    top: 24px;
+
+    right: 5px;
+
+    transform: rotate(72deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(3) {
+
+    bottom: 0;
+
+    left: 27px;
+
+    transform: rotate(112deg);
+
+  }
+
+
+
+  .fp-home-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(42px, 3.6vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 0.94;
+
+  }
+
+
+
+  .fp-home-title span {
+
+    display: inline-block;
+
+    margin-top: -0.02em;
+
+    padding: 0.1em 0.32em 0.15em;
+
+    white-space: nowrap;
+
+    background: #fffdf7;
+
+    filter: drop-shadow(0 7px 9px rgba(30, 35, 80, 0.16));
+
+    clip-path: polygon(
+
+      1% 8%, 8% 2%, 15% 7%, 23% 2%, 31% 6%, 40% 2%, 49% 7%,
+
+      57% 2%, 66% 6%, 74% 2%, 83% 7%, 92% 2%, 99% 8%, 98% 90%,
+
+      91% 96%, 83% 92%, 75% 98%, 66% 93%, 57% 98%, 48% 93%,
+
+      40% 98%, 31% 93%, 22% 98%, 14% 93%, 6% 98%, 1% 90%
+
+    );
+
+  }
+
+
+
+  .fp-home-title span:nth-child(2) {
+
+    transform: rotate(0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(3) {
+
+    transform: rotate(-0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(4) {
+
+    transform: rotate(0.5deg);
+
+  }
+
+
+
+  .fp-home-title b {
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-title .orange {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-title .purple {
+
+    color: var(--purple);
+
+  }
+
+
+
+  .fp-home-title .pink {
+
+    color: var(--pink);
+
+  }
+
+
+
+  .fp-home-copy > p {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 16px 0 0 110px;
+
+    padding: 8px 14px 10px;
+
+    background: rgba(248, 241, 226, 0.94);
+
+    box-shadow: 0 0 22px 16px rgba(248, 241, 226, 0.94);
+
+    font-size: clamp(16px, 1.45vw, 24px);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+  }
+
+
+
+  .fp-home-photo-wrap {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: -10px;
+
+    right: 10%;
+
+    width: min(56%, 900px);
+
+    height: 810px;
+
+    filter: drop-shadow(0 14px 19px rgba(25, 30, 50, 0.22));
+
+  }
+
+
+
+  .fp-home-photo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    clip-path: polygon(
+
+      9% 0, 17% 2%, 25% 0, 34% 3%, 43% 0, 52% 3%, 60% 0,
+
+      70% 2%, 78% 0, 88% 3%, 100% 8%, 98% 91%, 91% 98%, 83% 94%,
+
+      75% 99%, 66% 95%, 56% 100%, 48% 95%, 40% 99%, 31% 95%,
+
+      23% 100%, 15% 94%, 8% 97%, 3% 89%, 5% 80%, 1% 72%, 5% 63%,
+
+      1% 55%, 5% 47%, 1% 39%, 5% 31%, 1% 23%, 5% 15%, 1% 8%
+
+    );
+
+  }
+
+
+
+  .fp-home-star {
+
+    position: absolute;
+
+    z-index: 8;
+
+    top: -40px;
+
+    right: 6%;
+
+    width: 220px;
+
+    animation: fp-star 7s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-star svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+  }
+
+
+
+  .fp-home-dog {
+
+    position: absolute;
+
+    z-index: 9;
+
+    right: -1%;
+
+    bottom: -26px;
+
+    width: min(47vw, 790px);
+
+    height: auto;
+
+    animation: fp-dog 8s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-cat {
+
+    position: absolute;
+
+    z-index: 9;
+
+    bottom: 18px;
+
+    left: -1%;
+
+    width: min(21vw, 300px);
+
+    height: auto;
+
+    animation: fp-cat 7.4s ease-in-out infinite 0.5s;
+
+  }
+
+
+
+  .fp-home-stats {
+
+    position: absolute;
+
+    z-index: 12;
+
+    bottom: 22px;
+
+    left: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    gap: clamp(16px, 3vw, 48px);
+
+    padding: 0 24px;
+
+    background: transparent;
+
+  }
+
+
+
+  .fp-home-stats > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 26px;
+
+    border-radius: 15px;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(1) {
+
+    background: #c9a8f0;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(2) {
+
+    background: #f8b6cf;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(3) {
+
+    background: #ddeb61;
+
+  }
+
+
+
+  .fp-home-stats svg {
+
+    flex: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-stats p {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+
+    line-height: 1;
+
+  }
+
+
+
+  .fp-home-stats b {
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-stats small {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+
+  }
+
+
+
+  @keyframes fp-heart {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-8px) rotate(9deg); }
+
+  }
+
+
+
+  @keyframes fp-star {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-9px) rotate(6deg); }
+
+  }
+
+
+
+  @keyframes fp-dog {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(0.6deg); }
+
+  }
+
+
+
+  @keyframes fp-cat {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(-1deg); }
+
+  }
+
+
+
+  @media (max-width: 1050px) {
+
+    .fp-home {
+
+      min-height: 760px;
+
+    }
+
+
+
+    .fp-home-nav {
+
+      gap: 14px;
+
+    }
+
+
+
+    .fp-home-nav a {
+
+      font-size: 11px;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 57%;
+
+      padding-left: 0;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      right: 2%;
+
+      width: 48%;
+
+      height: 560px;
+
+    }
+
+
+
+    .fp-home-star {
+
+      width: 160px;
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin-left: 50px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      width: 330px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      width: 260px;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(38px, 5vw, 60px);
+
+    }
+
+  }
+
+
+
+  @media (max-width: 760px) {
+
+    .fp-home {
+
+      height: auto;
+
+      min-height: 0;
+
+      padding: 18px;
+
+    }
+
+
+
+    .fp-home-logo {
+      height: 62px;
+      width: auto;
+      max-width: 125px;
+      object-fit: contain;
+    }
+
+
+
+    .fp-home-nav {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-main {
+
+      height: auto;
+
+      min-height: 0;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 100%;
+
+      padding-top: 25px;
+
+    }
+
+
+
+    .fp-home-badge {
+
+      margin-left: 0;
+
+      font-size: 21px;
+
+    }
+
+
+
+    .fp-home-heart {
+
+      top: 28px;
+
+      left: 255px;
+
+      width: 45px;
+
+    }
+
+
+
+    .fp-home-lines {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(35px, 10vw, 52px);
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin: 22px 0 0 18px;
+
+      font-size: 17px;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      position: relative;
+
+      top: auto;
+
+      right: auto;
+
+      width: 100%;
+
+      height: 350px;
+
+      margin: 28px auto 0;
+
+    }
+
+
+
+    .fp-home-star {
+
+      top: 48%;
+
+      right: -18px;
+
+      width: 120px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      right: -58px;
+
+      bottom: -32px;
+
+      width: 235px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      bottom: 14px;
+
+      left: -20px;
+
+      width: 155px;
+
+    }
+
+
+
+    .fp-home-stats {
+
+      position: relative;
+
+      bottom: auto;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      width: 100%;
+
+      gap: 10px;
+
+      margin: 20px 0 0;
+
+      padding: 0;
+
+    }
+
+
+
+    .fp-home-stats > div {
+
+      width: min(330px, 90%);
+
+    }
+
+  }
+
+
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .fp-home * {
+
+      animation: none !important;
+
+    }
+
+  }
+
+
+
+
+
+
+
+  .fp-home,
+
+  .fp-home * {
+
+    box-sizing: border-box;
+
+  }
+
+
+
+  .fp-home {
+
+    --navy: #202f6b;
+
+    --orange: #f45225;
+
+    --pink: #f9418c;
+
+    --purple: #8c43dc;
+
+    --lime: #cbe33d;
+
+    --cream: #f8f1e2;
+
+
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: clamp(760px, 100vh, 850px);
+
+    padding: 22px clamp(24px, 2.8vw, 54px);
+
+
+
+    background:
+
+      var(--cream)
+
+      url("/assets/festival/ChatGPT-Image-21_09_2026-15_25_40.png")
+
+      78% bottom / cover no-repeat;
+
+
+
+    font-family: Nunito, sans-serif;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-top {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: 94px;
+    height: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+
+
+  .fp-home-logo {
+    display: block;
+    height: 82px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+
+
+  .fp-home-nav {
+
+    display: flex;
+
+    gap: clamp(14px, 1.8vw, 32px);
+
+    margin: 16px auto 0;
+
+    white-space: nowrap;
+
+  }
+
+
+
+  .fp-home-nav a {
+
+    color: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+  }
+
+
+
+  .fp-home-nav a:hover {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-main {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1850px;
+
+    height: calc(100% - 84px);
+
+    min-height: 570px;
+
+    margin: 0 auto;
+
+  }
+
+
+
+  .fp-home-copy {
+
+    position: relative;
+
+    z-index: 7;
+
+    width: min(47%, 820px);
+
+    padding: 63px 0 0 2%;
+
+  }
+
+
+
+  .fp-home-badge {
+
+    display: inline-block;
+
+    margin: 0 0 18px 12px;
+
+    padding: 8px 20px;
+
+    transform: rotate(-2deg);
+
+    background: var(--lime);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(18px, 1.5vw, 25px);
+
+  }
+
+
+
+  .fp-home-heart {
+
+    position: absolute;
+
+    top: 66px;
+
+    left: 315px;
+
+    width: 55px;
+
+    animation: fp-heart 6s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-lines {
+
+    position: absolute;
+
+    top: 102px;
+
+    right: 4%;
+
+    width: 70px;
+
+    height: 70px;
+
+  }
+
+
+
+  .fp-home-lines i {
+
+    position: absolute;
+
+    display: block;
+
+    width: 6px;
+
+    height: 30px;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(1) {
+
+    top: 0;
+
+    left: 4px;
+
+    transform: rotate(30deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(2) {
+
+    top: 24px;
+
+    right: 5px;
+
+    transform: rotate(72deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(3) {
+
+    bottom: 0;
+
+    left: 27px;
+
+    transform: rotate(112deg);
+
+  }
+
+
+
+  .fp-home-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(42px, 3.6vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 0.94;
+
+  }
+
+
+
+  .fp-home-title span {
+
+    display: inline-block;
+
+    margin-top: -0.02em;
+
+    padding: 0.1em 0.32em 0.15em;
+
+    white-space: nowrap;
+
+    background: #fffdf7;
+
+    filter: drop-shadow(0 7px 9px rgba(30, 35, 80, 0.16));
+
+    clip-path: polygon(
+
+      1% 8%, 8% 2%, 15% 7%, 23% 2%, 31% 6%, 40% 2%, 49% 7%,
+
+      57% 2%, 66% 6%, 74% 2%, 83% 7%, 92% 2%, 99% 8%, 98% 90%,
+
+      91% 96%, 83% 92%, 75% 98%, 66% 93%, 57% 98%, 48% 93%,
+
+      40% 98%, 31% 93%, 22% 98%, 14% 93%, 6% 98%, 1% 90%
+
+    );
+
+  }
+
+
+
+  .fp-home-title span:nth-child(2) {
+
+    transform: rotate(0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(3) {
+
+    transform: rotate(-0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(4) {
+
+    transform: rotate(0.5deg);
+
+  }
+
+
+
+  .fp-home-title b {
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-title .orange {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-title .purple {
+
+    color: var(--purple);
+
+  }
+
+
+
+  .fp-home-title .pink {
+
+    color: var(--pink);
+
+  }
+
+
+
+  .fp-home-copy > p {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 16px 0 0 110px;
+
+    padding: 8px 14px 10px;
+
+    background: rgba(248, 241, 226, 0.94);
+
+    box-shadow: 0 0 22px 16px rgba(248, 241, 226, 0.94);
+
+    font-size: clamp(16px, 1.45vw, 24px);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+  }
+
+
+
+  .fp-home-photo-wrap {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: -10px;
+
+    right: 10%;
+
+    width: min(56%, 900px);
+
+    height: 810px;
+
+    filter: drop-shadow(0 14px 19px rgba(25, 30, 50, 0.22));
+
+  }
+
+
+
+  .fp-home-photo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    clip-path: polygon(
+
+      9% 0, 17% 2%, 25% 0, 34% 3%, 43% 0, 52% 3%, 60% 0,
+
+      70% 2%, 78% 0, 88% 3%, 100% 8%, 98% 91%, 91% 98%, 83% 94%,
+
+      75% 99%, 66% 95%, 56% 100%, 48% 95%, 40% 99%, 31% 95%,
+
+      23% 100%, 15% 94%, 8% 97%, 3% 89%, 5% 80%, 1% 72%, 5% 63%,
+
+      1% 55%, 5% 47%, 1% 39%, 5% 31%, 1% 23%, 5% 15%, 1% 8%
+
+    );
+
+  }
+
+
+
+  .fp-home-star {
+
+    position: absolute;
+
+    z-index: 8;
+
+    top: -40px;
+
+    right: 6%;
+
+    width: 220px;
+
+    animation: fp-star 7s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-star svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+  }
+
+
+
+  .fp-home-dog {
+
+    position: absolute;
+
+    z-index: 9;
+
+    right: -1%;
+
+    bottom: -26px;
+
+    width: min(47vw, 790px);
+
+    height: auto;
+
+    animation: fp-dog 8s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-cat {
+
+    position: absolute;
+
+    z-index: 9;
+
+    bottom: 18px;
+
+    left: -1%;
+
+    width: min(21vw, 300px);
+
+    height: auto;
+
+    animation: fp-cat 7.4s ease-in-out infinite 0.5s;
+
+  }
+
+
+
+  .fp-home-stats {
+
+    position: absolute;
+
+    z-index: 12;
+
+    bottom: 22px;
+
+    left: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    gap: clamp(16px, 3vw, 48px);
+
+    padding: 0 24px;
+
+    background: transparent;
+
+  }
+
+
+
+  .fp-home-stats > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 26px;
+
+    border-radius: 15px;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(1) {
+
+    background: #c9a8f0;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(2) {
+
+    background: #f8b6cf;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(3) {
+
+    background: #ddeb61;
+
+  }
+
+
+
+  .fp-home-stats svg {
+
+    flex: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-stats p {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+
+    line-height: 1;
+
+  }
+
+
+
+  .fp-home-stats b {
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-stats small {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+
+  }
+
+
+
+  @keyframes fp-heart {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-8px) rotate(9deg); }
+
+  }
+
+
+
+  @keyframes fp-star {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-9px) rotate(6deg); }
+
+  }
+
+
+
+  @keyframes fp-dog {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(0.6deg); }
+
+  }
+
+
+
+  @keyframes fp-cat {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(-1deg); }
+
+  }
+
+
+
+  @media (max-width: 1050px) {
+
+    .fp-home {
+
+      min-height: 760px;
+
+    }
+
+
+
+    .fp-home-nav {
+
+      gap: 14px;
+
+    }
+
+
+
+    .fp-home-nav a {
+
+      font-size: 11px;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 57%;
+
+      padding-left: 0;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      right: 2%;
+
+      width: 48%;
+
+      height: 560px;
+
+    }
+
+
+
+    .fp-home-star {
+
+      width: 160px;
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin-left: 50px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      width: 330px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      width: 260px;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(38px, 5vw, 60px);
+
+    }
+
+  }
+
+
+
+  @media (max-width: 760px) {
+
+    .fp-home {
+
+      height: auto;
+
+      min-height: 0;
+
+      padding: 18px;
+
+    }
+
+
+
+    .fp-home-logo {
+      height: 62px;
+      width: auto;
+      max-width: 125px;
+      object-fit: contain;
+    }
+
+
+
+    .fp-home-nav {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-main {
+
+      height: auto;
+
+      min-height: 0;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 100%;
+
+      padding-top: 25px;
+
+    }
+
+
+
+    .fp-home-badge {
+
+      margin-left: 0;
+
+      font-size: 21px;
+
+    }
+
+
+
+    .fp-home-heart {
+
+      top: 28px;
+
+      left: 255px;
+
+      width: 45px;
+
+    }
+
+
+
+    .fp-home-lines {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(35px, 10vw, 52px);
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin: 22px 0 0 18px;
+
+      font-size: 17px;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      position: relative;
+
+      top: auto;
+
+      right: auto;
+
+      width: 100%;
+
+      height: 350px;
+
+      margin: 28px auto 0;
+
+    }
+
+
+
+    .fp-home-star {
+
+      top: 48%;
+
+      right: -18px;
+
+      width: 120px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      right: -58px;
+
+      bottom: -32px;
+
+      width: 235px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      bottom: 14px;
+
+      left: -20px;
+
+      width: 155px;
+
+    }
+
+
+
+    .fp-home-stats {
+
+      position: relative;
+
+      bottom: auto;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      width: 100%;
+
+      gap: 10px;
+
+      margin: 20px 0 0;
+
+      padding: 0;
+
+    }
+
+
+
+    .fp-home-stats > div {
+
+      width: min(330px, 90%);
+
+    }
+
+  }
+
+
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .fp-home * {
+
+      animation: none !important;
+
+    }
+
+  }
+
+
+
+
+
+
+
+  .fp-home,
+
+  .fp-home * {
+
+    box-sizing: border-box;
+
+  }
+
+
+
+  .fp-home {
+
+    --navy: #202f6b;
+
+    --orange: #f45225;
+
+    --pink: #f9418c;
+
+    --purple: #8c43dc;
+
+    --lime: #cbe33d;
+
+    --cream: #f8f1e2;
+
+
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: clamp(760px, 100vh, 850px);
+
+    padding: 22px clamp(24px, 2.8vw, 54px);
+
+
+
+    background:
+
+      var(--cream)
+
+      url("/assets/festival/ChatGPT-Image-21_09_2026-15_25_40.png")
+
+      78% bottom / cover no-repeat;
+
+
+
+    font-family: Nunito, sans-serif;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-top {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: 94px;
+    height: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+
+
+  .fp-home-logo {
+    display: block;
+    height: 82px;
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+
+
+  .fp-home-nav {
+
+    display: flex;
+
+    gap: clamp(14px, 1.8vw, 32px);
+
+    margin: 16px auto 0;
+
+    white-space: nowrap;
+
+  }
+
+
+
+  .fp-home-nav a {
+
+    color: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+  }
+
+
+
+  .fp-home-nav a:hover {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-main {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1850px;
+
+    height: calc(100% - 84px);
+
+    min-height: 570px;
+
+    margin: 0 auto;
+
+  }
+
+
+
+  .fp-home-copy {
+
+    position: relative;
+
+    z-index: 7;
+
+    width: min(47%, 820px);
+
+    padding: 63px 0 0 2%;
+
+  }
+
+
+
+  .fp-home-badge {
+
+    display: inline-block;
+
+    margin: 0 0 18px 12px;
+
+    padding: 8px 20px;
+
+    transform: rotate(-2deg);
+
+    background: var(--lime);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(18px, 1.5vw, 25px);
+
+  }
+
+
+
+  .fp-home-heart {
+
+    position: absolute;
+
+    top: 66px;
+
+    left: 315px;
+
+    width: 55px;
+
+    animation: fp-heart 6s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-lines {
+
+    position: absolute;
+
+    top: 102px;
+
+    right: 4%;
+
+    width: 70px;
+
+    height: 70px;
+
+  }
+
+
+
+  .fp-home-lines i {
+
+    position: absolute;
+
+    display: block;
+
+    width: 6px;
+
+    height: 30px;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(1) {
+
+    top: 0;
+
+    left: 4px;
+
+    transform: rotate(30deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(2) {
+
+    top: 24px;
+
+    right: 5px;
+
+    transform: rotate(72deg);
+
+  }
+
+
+
+  .fp-home-lines i:nth-child(3) {
+
+    bottom: 0;
+
+    left: 27px;
+
+    transform: rotate(112deg);
+
+  }
+
+
+
+  .fp-home-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: clamp(42px, 3.6vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 0.94;
+
+  }
+
+
+
+  .fp-home-title span {
+
+    display: inline-block;
+
+    margin-top: -0.02em;
+
+    padding: 0.1em 0.32em 0.15em;
+
+    white-space: nowrap;
+
+    background: #fffdf7;
+
+    filter: drop-shadow(0 7px 9px rgba(30, 35, 80, 0.16));
+
+    clip-path: polygon(
+
+      1% 8%, 8% 2%, 15% 7%, 23% 2%, 31% 6%, 40% 2%, 49% 7%,
+
+      57% 2%, 66% 6%, 74% 2%, 83% 7%, 92% 2%, 99% 8%, 98% 90%,
+
+      91% 96%, 83% 92%, 75% 98%, 66% 93%, 57% 98%, 48% 93%,
+
+      40% 98%, 31% 93%, 22% 98%, 14% 93%, 6% 98%, 1% 90%
+
+    );
+
+  }
+
+
+
+  .fp-home-title span:nth-child(2) {
+
+    transform: rotate(0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(3) {
+
+    transform: rotate(-0.7deg);
+
+  }
+
+
+
+  .fp-home-title span:nth-child(4) {
+
+    transform: rotate(0.5deg);
+
+  }
+
+
+
+  .fp-home-title b {
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-title .orange {
+
+    color: var(--orange);
+
+  }
+
+
+
+  .fp-home-title .purple {
+
+    color: var(--purple);
+
+  }
+
+
+
+  .fp-home-title .pink {
+
+    color: var(--pink);
+
+  }
+
+
+
+  .fp-home-copy > p {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 16px 0 0 110px;
+
+    padding: 8px 14px 10px;
+
+    background: rgba(248, 241, 226, 0.94);
+
+    box-shadow: 0 0 22px 16px rgba(248, 241, 226, 0.94);
+
+    font-size: clamp(16px, 1.45vw, 24px);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+  }
+
+
+
+  .fp-home-photo-wrap {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: -10px;
+
+    right: 10%;
+
+    width: min(56%, 900px);
+
+    height: 810px;
+
+    filter: drop-shadow(0 14px 19px rgba(25, 30, 50, 0.22));
+
+  }
+
+
+
+  .fp-home-photo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    clip-path: polygon(
+
+      9% 0, 17% 2%, 25% 0, 34% 3%, 43% 0, 52% 3%, 60% 0,
+
+      70% 2%, 78% 0, 88% 3%, 100% 8%, 98% 91%, 91% 98%, 83% 94%,
+
+      75% 99%, 66% 95%, 56% 100%, 48% 95%, 40% 99%, 31% 95%,
+
+      23% 100%, 15% 94%, 8% 97%, 3% 89%, 5% 80%, 1% 72%, 5% 63%,
+
+      1% 55%, 5% 47%, 1% 39%, 5% 31%, 1% 23%, 5% 15%, 1% 8%
+
+    );
+
+  }
+
+
+
+  .fp-home-star {
+
+    position: absolute;
+
+    z-index: 8;
+
+    top: -40px;
+
+    right: 6%;
+
+    width: 220px;
+
+    animation: fp-star 7s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-star svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+  }
+
+
+
+  .fp-home-dog {
+
+    position: absolute;
+
+    z-index: 9;
+
+    right: -1%;
+
+    bottom: -26px;
+
+    width: min(47vw, 790px);
+
+    height: auto;
+
+    animation: fp-dog 8s ease-in-out infinite;
+
+  }
+
+
+
+  .fp-home-cat {
+
+    position: absolute;
+
+    z-index: 9;
+
+    bottom: 18px;
+
+    left: -1%;
+
+    width: min(21vw, 300px);
+
+    height: auto;
+
+    animation: fp-cat 7.4s ease-in-out infinite 0.5s;
+
+  }
+
+
+
+  .fp-home-stats {
+
+    position: absolute;
+
+    z-index: 12;
+
+    bottom: 22px;
+
+    left: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+
+    gap: clamp(16px, 3vw, 48px);
+
+    padding: 0 24px;
+
+    background: transparent;
+
+  }
+
+
+
+  .fp-home-stats > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 12px 26px;
+
+    border-radius: 15px;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(1) {
+
+    background: #c9a8f0;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(2) {
+
+    background: #f8b6cf;
+
+  }
+
+
+
+  .fp-home-stats > div:nth-child(3) {
+
+    background: #ddeb61;
+
+  }
+
+
+
+  .fp-home-stats svg {
+
+    flex: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    color: var(--navy);
+
+  }
+
+
+
+  .fp-home-stats p {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+
+    line-height: 1;
+
+  }
+
+
+
+  .fp-home-stats b {
+
+    font-family: "Protest Strike", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+  }
+
+
+
+  .fp-home-stats small {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+
+  }
+
+
+
+  @keyframes fp-heart {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-8px) rotate(9deg); }
+
+  }
+
+
+
+  @keyframes fp-star {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-9px) rotate(6deg); }
+
+  }
+
+
+
+  @keyframes fp-dog {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(0.6deg); }
+
+  }
+
+
+
+  @keyframes fp-cat {
+
+    0%, 100% { transform: translateY(0) rotate(0); }
+
+    50% { transform: translateY(-7px) rotate(-1deg); }
+
+  }
+
+
+
+  @media (max-width: 1050px) {
+
+    .fp-home {
+
+      min-height: 760px;
+
+    }
+
+
+
+    .fp-home-nav {
+
+      gap: 14px;
+
+    }
+
+
+
+    .fp-home-nav a {
+
+      font-size: 11px;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 57%;
+
+      padding-left: 0;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      right: 2%;
+
+      width: 48%;
+
+      height: 560px;
+
+    }
+
+
+
+    .fp-home-star {
+
+      width: 160px;
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin-left: 50px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      width: 330px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      width: 260px;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(38px, 5vw, 60px);
+
+    }
+
+  }
+
+
+
+  @media (max-width: 760px) {
+
+    .fp-home {
+
+      height: auto;
+
+      min-height: 0;
+
+      padding: 18px;
+
+    }
+
+
+
+    .fp-home-logo {
+      height: 62px;
+      width: auto;
+      max-width: 125px;
+      object-fit: contain;
+    }
+
+
+
+    .fp-home-nav {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-main {
+
+      height: auto;
+
+      min-height: 0;
+
+    }
+
+
+
+    .fp-home-copy {
+
+      width: 100%;
+
+      padding-top: 25px;
+
+    }
+
+
+
+    .fp-home-badge {
+
+      margin-left: 0;
+
+      font-size: 21px;
+
+    }
+
+
+
+    .fp-home-heart {
+
+      top: 28px;
+
+      left: 255px;
+
+      width: 45px;
+
+    }
+
+
+
+    .fp-home-lines {
+
+      display: none;
+
+    }
+
+
+
+    .fp-home-title {
+
+      font-size: clamp(35px, 10vw, 52px);
+
+    }
+
+
+
+    .fp-home-copy > p {
+
+      margin: 22px 0 0 18px;
+
+      font-size: 17px;
+
+    }
+
+
+
+    .fp-home-photo-wrap {
+
+      position: relative;
+
+      top: auto;
+
+      right: auto;
+
+      width: 100%;
+
+      height: 350px;
+
+      margin: 28px auto 0;
+
+    }
+
+
+
+    .fp-home-star {
+
+      top: 48%;
+
+      right: -18px;
+
+      width: 120px;
+
+    }
+
+
+
+    .fp-home-dog {
+
+      right: -58px;
+
+      bottom: -32px;
+
+      width: 235px;
+
+    }
+
+
+
+    .fp-home-cat {
+
+      bottom: 14px;
+
+      left: -20px;
+
+      width: 155px;
+
+    }
+
+
+
+    .fp-home-stats {
+
+      position: relative;
+
+      bottom: auto;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      width: 100%;
+
+      gap: 10px;
+
+      margin: 20px 0 0;
+
+      padding: 0;
+
+    }
+
+
+
+    .fp-home-stats > div {
+
+      width: min(330px, 90%);
+
+    }
+
+  }
+
+
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .fp-home * {
+
+      animation: none !important;
+
+    }
+
+  }
+
+
+
+
+
+
+  .fp-about,
+  .fp-about * {
+    box-sizing: border-box;
+  }
+
+  .fp-about {
+    --navy: #151a4b;
+    --purple: #7c2bc2;
+    --pink: #f51b88;
+    --yellow: #ffc600;
+    --cream: #f8f1e5;
+    --blue: #10a8e8;
+
+    position: relative;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    overflow: hidden;
+    scroll-margin-top: 110px;
+
+    color: var(--navy);
+    font-family: "Nunito", Arial, sans-serif;
+    background-color: #f8f1e5;
+background-image:
+  linear-gradient(rgba(248, 241, 229, .58), rgba(248, 241, 229, .58)),
+  url("/assets/festival/Colagem-Vintage-de-Festival-em-Papel-Rasgado.png");
+background-position: center, center;
+background-size: cover, cover;
+background-repeat: no-repeat, no-repeat;
+
+    box-shadow: 0 0 0 100vmax var(--cream);
+    clip-path: inset(0 -100vmax);
+  }
+
+  .about-wrap {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.04fr) minmax(400px, .88fr);
+    align-items: center;
+    gap: clamp(40px, 5.8vw, 100px);
+
+    width: min(1430px, 88vw);
+    min-height: 900px;
+    margin: 0 auto;
+    padding: clamp(66px, 6vw, 98px) 0 clamp(72px, 6vw, 102px);
+  }
+
+  .about-left {
+    position: relative;
+    z-index: 2;
+  }
+
+  .about-title-wrap {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .about-title {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: var(--navy);
+    font-family: "Protest Strike", Impact, sans-serif;
+    font-size: clamp(55px, 5.4vw, 91px);
+    font-weight: 400;
+    line-height: .95;
+    letter-spacing: .4px;
+  }
+
+  .about-title span {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .about-title-line {
+    display: block;
+    width: min(290px, 51%);
+    height: 18px;
+    margin: 10px 12px 0 auto;
+    border-top: 10px solid var(--yellow);
+    border-radius: 50%;
+    transform: rotate(-3deg);
+  }
+
+  .about-rays {
+    position: absolute;
+    top: -44px;
+    left: -54px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: rotate(-42deg);
+  }
+
+  .about-rays i {
+    display: block;
+    width: 48px;
+    height: 11px;
+    border-radius: 50px;
+    background: var(--pink);
+  }
+
+  .about-text {
+    max-width: 660px;
+    margin: 0 0 clamp(32px, 3.5vw, 52px);
+    color: var(--navy);
+    font-size: clamp(17px, 1.45vw, 25px);
+    font-weight: 700;
+    line-height: 1.34;
+  }
+
+  .about-text strong {
+    font-weight: 900;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: 715px;
+  }
+
+  .feature {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: 0 clamp(8px, 1.1vw, 17px);
+    text-align: center;
+  }
+
+  .feature:not(:last-child)::after {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    width: 4px;
+    height: 51px;
+    border-radius: 20px;
+    background: var(--pink);
+    content: "";
+    transform: rotate(1deg);
+  }
+
+  .feat-ico {
+    display: grid;
+    width: clamp(70px, 5.5vw, 90px);
+    height: clamp(70px, 5.5vw, 90px);
+    margin-bottom: 11px;
+    padding: 12px;
+    place-items: center;
+    transform: rotate(-5deg);
+  }
+
+  .feat-ico svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feat-paw {
+    color: #8c38d0;
+    background: #d7b5ef;
+    border-radius: 46% 54% 48% 52% / 54% 43% 57% 46%;
+  }
+
+  .feat-light {
+    color: #192361;
+    background: #ffd65a;
+    border-radius: 54% 46% 44% 56% / 46% 52% 48% 54%;
+    transform: rotate(4deg);
+  }
+
+  .feat-bag {
+    color: #10a8e8;
+    background: #9fdbf3;
+    border-radius: 45% 55% 50% 50% / 54% 44% 56% 46%;
+  }
+
+  .feat-cup {
+    color: #ef5b61;
+    background: #f6b7c0;
+    border-radius: 52% 48% 44% 56% / 44% 56% 44% 56%;
+    transform: rotate(5deg);
+  }
+
+  .feat-lbl {
+    color: var(--navy);
+    font-size: clamp(12px, 1.08vw, 17px);
+    font-weight: 900;
+    line-height: 1.08;
+    text-transform: uppercase;
+  }
+
+  .about-right {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .about-right::before {
+    position: absolute;
+    top: -3%;
+    right: -3%;
+    z-index: -2;
+    width: 100%;
+    height: 98%;
+    background: var(--purple);
+    content: "";
+    clip-path: polygon(7% 8%, 25% 4%, 42% 7%, 59% 2%, 78% 7%, 95% 3%, 100% 18%, 96% 34%, 100% 50%, 94% 67%, 99% 84%, 88% 97%, 70% 93%, 53% 100%, 35% 95%, 17% 100%, 4% 87%, 7% 69%, 1% 52%, 5% 35%, 0 19%);
+    transform: rotate(-4deg);
+  }
+
+  .about-photo {
+    position: relative;
+    z-index: 1;
+    padding: clamp(11px, 1.25vw, 20px);
+    background: #fffdf9;
+    filter: drop-shadow(0 14px 22px rgba(24, 25, 68, .2));
+    clip-path: polygon(7% 8%, 23% 3%, 40% 7%, 58% 2%, 77% 6%, 94% 4%, 100% 19%, 96% 34%, 100% 51%, 94% 68%, 98% 85%, 87% 97%, 69% 93%, 53% 100%, 35% 95%, 18% 99%, 5% 88%, 8% 69%, 1% 52%, 5% 35%, 0 19%);
+  }
+
+  .about-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: .95 / 1;
+    object-fit: cover;
+    object-position: center;
+    clip-path: polygon(7% 8%, 23% 3%, 40% 7%, 58% 2%, 77% 6%, 94% 4%, 100% 19%, 96% 34%, 100% 51%, 94% 68%, 98% 85%, 87% 97%, 69% 93%, 53% 100%, 35% 95%, 18% 99%, 5% 88%, 8% 69%, 1% 52%, 5% 35%, 0 19%);
+  }
+
+  .ab-stk {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .ab-spark {
+    top: -55px;
+    right: -55px;
+    width: clamp(78px, 7vw, 118px);
+  }
+
+  .ab-heart-blue {
+    bottom: 21%;
+    left: -55px;
+    width: clamp(73px, 6.8vw, 108px);
+  }
+
+  .ab-heart-pink {
+    top: 52%;
+    right: -66px;
+    width: clamp(68px, 6vw, 98px);
+    transform: rotate(9deg);
+  }
+
+  .ab-squiggle {
+    bottom: -57px;
+    left: 0;
+    width: min(320px, 70%);
+  }
+
+  @media (max-width: 1040px) {
+    .about-wrap {
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      width: min(92vw, 1100px);
+    }
+
+    .about-text {
+      font-size: clamp(16px, 1.7vw, 20px);
+    }
+
+    .features {
+      max-width: 100%;
+    }
+
+    .feature {
+      padding: 0 7px;
+    }
+
+    .feat-lbl {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 780px) {
+    .about-wrap {
+      display: flex;
+      flex-direction: column;
+      width: min(91vw, 580px);
+      min-height: 0;
+      gap: 54px;
+      padding: 62px 0 82px;
+    }
+
+    .about-left {
+      width: 100%;
+    }
+
+    .about-right {
+      width: min(100%, 500px);
+    }
+
+    .about-title {
+      font-size: clamp(50px, 12vw, 72px);
+    }
+
+    .about-text {
+      max-width: none;
+      font-size: 18px;
+    }
+
+    .features {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 12px;
+    }
+
+    .feature {
+      padding: 0 10px;
+    }
+
+    .feature:nth-child(2)::after {
+      display: none;
+    }
+
+    .feature:nth-child(3)::after {
+      display: block;
+    }
+
+    .ab-heart-pink {
+      right: -34px;
+    }
+
+    .ab-heart-blue {
+      left: -35px;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .about-wrap {
+      width: min(92vw, 430px);
+      padding-top: 48px;
+    }
+
+    .about-title {
+      font-size: clamp(42px, 12.2vw, 57px);
+      letter-spacing: 0;
+    }
+
+    .about-rays {
+      top: -34px;
+      left: -16px;
+      gap: 9px;
+    }
+
+    .about-rays i {
+      width: 34px;
+      height: 8px;
+    }
+
+    .about-text {
+      font-size: 16px;
+      line-height: 1.38;
+    }
+
+    .feat-ico {
+      width: 68px;
+      height: 68px;
+    }
+
+    .feat-lbl {
+      font-size: 12px;
+    }
+
+    .ab-spark {
+      top: -36px;
+      right: -27px;
+    }
+
+    .ab-squiggle {
+      bottom: -48px;
+      width: 250px;
+    }
+  }
+
+
+
+
+
+  .fp-purpose,
+  .fp-purpose * {
+    box-sizing: border-box;
+  }
+
+  .fp-purpose {
+    --navy: #16286b;
+    --purple: #7d2dc0;
+    --pink: #f51b88;
+    --yellow: #ffc600;
+    --blue: #10a8e8;
+    --cream: #f8f1e5;
+
+    position: relative;
+    isolation: isolate;
+    width: 100vw;
+    max-width: none;
+    min-height: 920px;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    padding: clamp(68px, 6.5vw, 104px) 20px clamp(84px, 7vw, 120px);
+    overflow: hidden;
+    scroll-margin-top: 110px;
+
+    color: var(--navy);
+    font-family: "Nunito", Arial, sans-serif;
+    background-color: var(--cream);
+    background-image:
+      linear-gradient(rgba(248, 241, 229, .48), rgba(248, 241, 229, .48)),
+      url("/assets/festival/Colagem-Tropical-em-Papel-Rasgado.png");
+    background-position: center, center;
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+
+    box-shadow: 0 0 0 100vmax var(--cream);
+    clip-path: inset(0 -100vmax);
+  }
+
+  .purpose-inner {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 86vw);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .purpose-title {
+    margin: 0;
+    color: var(--navy);
+    font-family: "Protest Strike", Impact, sans-serif;
+    font-size: clamp(42px, 4.5vw, 72px);
+    font-weight: 400;
+    line-height: .98;
+    letter-spacing: .5px;
+  }
+
+  .purpose-title span {
+    color: var(--purple);
+  }
+
+  .purpose-line {
+    display: block;
+    width: min(260px, 38vw);
+    height: 20px;
+    margin: 11px auto 28px;
+    border-top: 8px solid var(--yellow);
+    border-radius: 50%;
+    transform: rotate(-3deg);
+  }
+
+  .purpose-text {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--navy);
+    font-size: clamp(16px, 1.27vw, 21px);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .purpose-text-second {
+    margin-top: 19px;
+  }
+
+  .purpose-text strong {
+    font-weight: 900;
+  }
+
+  .impact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    width: min(690px, 100%);
+    margin: 30px auto 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+  }
+
+  .impact-list li {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    color: var(--navy);
+    font-size: clamp(15px, 1.2vw, 19px);
+    font-weight: 700;
+    line-height: 1.33;
+  }
+
+  .impact-list li svg {
+    width: 25px;
+    height: 25px;
+    margin-top: 1px;
+    color: var(--pink);
+  }
+
+  .impact-list strong {
+    color: var(--pink);
+    font-weight: 900;
+  }
+
+  .purpose-closing {
+    max-width: 740px;
+    margin: 29px auto 0;
+    color: var(--navy);
+    font-size: clamp(17px, 1.32vw, 22px);
+    font-weight: 900;
+    line-height: 1.28;
+  }
+
+  .pp-deco {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .pp-paw {
+    top: 31%;
+    left: max(11vw, 36px);
+    width: clamp(90px, 8vw, 142px);
+    color: var(--purple);
+    filter: drop-shadow(0 8px 7px rgba(43, 26, 84, .12));
+    animation: pp-paw-float 7s ease-in-out infinite;
+  }
+
+  .pp-paw img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .pp-heart {
+    top: 13%;
+    right: max(10vw, 34px);
+    width: clamp(82px, 7vw, 120px);
+    color: var(--pink);
+    animation: pp-heart-float 6.4s ease-in-out infinite;
+  }
+
+  .pp-rays {
+    top: 5%;
+    right: max(20vw, 180px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 48px;
+    transform: rotate(-37deg);
+    animation: pp-rays-sway 7s ease-in-out infinite;
+  }
+
+  .pp-rays i {
+    display: block;
+    width: 50px;
+    height: 12px;
+    border-radius: 99px;
+    background: var(--yellow);
+  }
+
+  .pp-star {
+    right: max(11vw, 42px);
+    bottom: 26%;
+    width: clamp(70px, 6vw, 102px);
+    color: var(--blue);
+    animation: pp-star-sway 7.2s ease-in-out infinite .4s;
+  }
+
+  .pp-squiggle {
+    bottom: 7%;
+    left: 50%;
+    width: clamp(175px, 16vw, 270px);
+    color: var(--purple);
+    transform: translateX(-50%);
+    animation: pp-squiggle 7s ease-in-out infinite;
+  }
+
+  .pp-squiggle svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @keyframes pp-heart-float {
+    0%, 100% { transform: translateY(0) rotate(7deg); }
+    50% { transform: translateY(-12px) rotate(13deg); }
+  }
+
+  @keyframes pp-paw-float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  @keyframes pp-star-sway {
+    0%, 100% { transform: translateY(0) rotate(-6deg) scale(1); }
+    50% { transform: translateY(-8px) rotate(5deg) scale(1.07); }
+  }
+
+  @keyframes pp-rays-sway {
+    0%, 100% { transform: rotate(-37deg) translateY(0); }
+    50% { transform: rotate(-31deg) translateY(-8px); }
+  }
+
+  @keyframes pp-squiggle {
+    0%, 100% { transform: translateX(-50%) rotate(0); }
+    50% { transform: translateX(-50%) rotate(2deg) translateY(-5px); }
+  }
+
+  @media (max-width: 900px) {
+    .fp-purpose {
+      min-height: 0;
+      padding: 82px 20px 100px;
+    }
+
+    .pp-paw {
+      top: 34%;
+      left: 18px;
+      width: 78px;
+    }
+
+    .pp-heart {
+      top: 13%;
+      right: 18px;
+      width: 68px;
+    }
+
+    .pp-rays {
+      top: 5%;
+      right: 17%;
+      transform: scale(.76) rotate(-37deg);
+    }
+
+    .pp-star {
+      right: 20px;
+      bottom: 19%;
+      width: 60px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .fp-purpose {
+      padding: 62px 16px 86px;
+      background-position: center;
+    }
+
+    .purpose-inner {
+      width: min(100%, 520px);
+    }
+
+    .purpose-title {
+      font-size: clamp(38px, 10vw, 53px);
+      line-height: .96;
+    }
+
+    .purpose-line {
+      margin-bottom: 23px;
+    }
+
+    .purpose-text {
+      font-size: 16px;
+      line-height: 1.38;
+    }
+
+    .impact-list {
+      gap: 13px;
+      margin-top: 27px;
+    }
+
+    .impact-list li {
+      grid-template-columns: 22px minmax(0, 1fr);
+      gap: 8px;
+      font-size: 15px;
+      line-height: 1.34;
+    }
+
+    .impact-list li svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .purpose-closing {
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .pp-paw {
+      top: 28%;
+      left: -15px;
+      width: 62px;
+      opacity: .75;
+    }
+
+    .pp-heart {
+      top: 9%;
+      right: -11px;
+      width: 58px;
+    }
+
+    .pp-rays {
+      top: 3%;
+      right: 13%;
+      transform: scale(.55) rotate(-37deg);
+    }
+
+    .pp-star {
+      right: -12px;
+      bottom: 14%;
+      width: 48px;
+    }
+
+    .pp-squiggle {
+      bottom: 3%;
+      width: 175px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fp-purpose * {
+      animation: none !important;
+    }
+  }
+
+
+
+
+
+  
+
+  .fp-tem-tudo,
+  .fp-tem-tudo * {
+    box-sizing: border-box;
+  }
+
+  .fp-tem-tudo {
+    --roxo: #402087;
+    --rosa: #f9418c;
+    --amarelo: #ffd11a;
+    --bege: #f8f1e5;
+
+    width: 100vw;
+    max-width: none;
+    margin: -24px 0 -24px calc(50% - 50vw);
+    padding: clamp(34px, 4vw, 64px) clamp(18px, 4vw, 70px);
+
+    overflow: hidden;
+    background: var(--bege);
+    box-shadow: 0 0 0 100vmax var(--bege);
+    clip-path: inset(0 -100vmax);
+
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    scroll-margin-top: 110px;
+  }
+
+  .fp-tem-tudo-card {
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: clamp(28px, 3.2vw, 50px) clamp(20px, 3.3vw, 54px);
+
+    border-radius: 28px;
+    background: var(--roxo);
+  }
+
+  .fp-tem-tudo h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(25px, 2.2vw, 36px);
+    font-weight: 900;
+    line-height: 1.05;
+  }
+
+  .fp-tem-tudo h2 span {
+    color: var(--amarelo);
+  }
+
+  .fp-tem-tudo-intro {
+    max-width: 1210px;
+    margin: 20px 0 34px;
+    color: #fff;
+    font-size: clamp(16px, 1.45vw, 22px);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .fp-tem-tudo-itens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 5vw, 90px);
+    text-align: center;
+  }
+
+  .fp-tem-tudo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fp-tem-tudo-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  .fp-tem-tudo-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fp-tem-tudo-num {
+    display: block;
+    margin-bottom: 12px;
+    font-size: clamp(20px, 1.8vw, 29px);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .fp-tem-tudo-num.pink {
+    color: var(--rosa);
+  }
+
+  .fp-tem-tudo-num.yellow {
+    color: var(--amarelo);
+  }
+
+  .fp-tem-tudo-item h3 {
+    margin: 0 0 9px;
+    color: #fff;
+    font-size: clamp(16px, 1.25vw, 21px);
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  .fp-tem-tudo-item p {
+    max-width: 330px;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(13px, 1vw, 16px);
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 700px) {
+    .fp-tem-tudo {
+      margin-top: -16px;
+      margin-bottom: -16px;
+      padding: 28px 18px;
+    }
+
+    .fp-tem-tudo-card {
+      border-radius: 22px;
+      padding: 28px 20px;
+    }
+
+    .fp-tem-tudo-intro {
+      margin-bottom: 30px;
+    }
+
+    .fp-tem-tudo-itens {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .fp-tem-tudo-icon {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+
+
+
+
+  .fp-editions-v2,
+  .fp-editions-v2 * {
+    box-sizing: border-box;
+  }
+
+  .fp-editions-v2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    background: #f8f1e5;
+    font-family: Nunito, sans-serif;
+    scroll-margin-top: 110px;
+  }
+
+  .fp-editions-v2-stage {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 1920px;
+    min-height: 570px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    overflow: hidden;
+    background:
+      url("/assets/festival/Colagem-em-tons-de-cinzento-sobre-papel-bege.png")
+      center / cover no-repeat;
+  }
+
+  .fp-v2-head {
+    position: absolute;
+    z-index: 8;
+    top: 7%;
+    left: 50%;
+    width: 44%;
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  .fp-v2-title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 13px;
+  }
+
+  .fp-v2-title h2 {
+    margin: 0;
+    padding: 8px 23px 10px;
+    color: #fff;
+    background: #6f2ab7;
+    box-shadow: 0 6px 12px rgba(51, 25, 110, 0.18);
+    font-family: "Protest Strike", sans-serif;
+    font-size: clamp(27px, 3vw, 52px);
+    font-weight: 400;
+    line-height: 0.9;
+    transform: rotate(-3deg);
+  }
+
+  .fp-v2-head p {
+    margin: 0;
+    color: #202f6b;
+    font-size: clamp(12px, 1vw, 18px);
+    font-weight: 900;
+    line-height: 1.35;
+  }
+
+  .fp-v2-rays {
+    position: absolute;
+    top: 4px;
+    width: 30px;
+    height: 4px;
+    border-radius: 8px;
+    background: #f71883;
+  }
+
+  .rays-left {
+    left: -28px;
+    box-shadow: -9px 13px 0 #f71883, -1px 27px 0 #f71883;
+    transform: rotate(-25deg);
+  }
+
+  .rays-right {
+    right: -28px;
+    box-shadow: 9px 13px 0 #f71883, 1px 27px 0 #f71883;
+    transform: rotate(25deg);
+  }
+
+  .fp-v2-card {
+    position: absolute;
+    z-index: 4;
+    top: 28%;
+    width: 42.5%;
+  }
+
+  .fp-v2-sp {
+    left: 5.2%;
+  }
+
+  .fp-v2-rj {
+    right: 5.2%;
+  }
+
+  .fp-v2-photo {
+    width: 100%;
+    aspect-ratio: 1.78 / 1;
+    overflow: hidden;
+    background: #ddd;
+    filter: drop-shadow(0 10px 14px rgba(28, 31, 59, 0.14));
+    clip-path: polygon(
+      1% 8%, 7% 3%, 14% 7%, 22% 2%, 30% 5%, 38% 1%, 47% 5%,
+      56% 2%, 65% 6%, 74% 2%, 83% 6%, 92% 2%, 99% 7%, 98% 92%,
+      91% 97%, 83% 93%, 75% 98%, 66% 94%, 58% 99%, 49% 95%,
+      40% 99%, 31% 94%, 23% 98%, 15% 93%, 7% 98%, 2% 92%
+    );
+  }
+
+  .fp-v2-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .fp-v2-rj .fp-v2-photo img {
+    object-position: center 56%;
+  }
+
+  .fp-v2-label {
+    position: absolute;
+    z-index: 10;
+    top: -8%;
+    left: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fp-v2-label strong {
+    display: block;
+    padding: 3px 18px 0;
+    color: #f71883;
+    background: #fffdf9;
+    box-shadow: 0 5px 9px rgba(39, 35, 74, 0.12);
+    font-family: "Protest Strike", sans-serif;
+    font-size: clamp(74px, 8vw, 140px);
+    font-weight: 400;
+    letter-spacing: -5px;
+    line-height: 0.78;
+    transform: rotate(-5deg);
+  }
+
+  .fp-v2-label span {
+    display: block;
+    margin: 1px 0 0 8px;
+    padding: 6px 12px 7px;
+    color: #fff;
+    background: #6f2ab7;
+    box-shadow: 0 5px 9px rgba(39, 35, 74, 0.12);
+    font-family: "Protest Strike", sans-serif;
+    font-size: clamp(13px, 1.35vw, 24px);
+    font-weight: 400;
+    line-height: 0.9;
+    transform: rotate(-4deg);
+  }
+
+  .fp-v2-info {
+    position: relative;
+    z-index: 11;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 88%;
+    min-height: clamp(67px, 7vw, 105px);
+    margin: -2.7% auto 0;
+    padding: 11px 8px;
+    border-radius: 18px;
+    background: rgba(255, 253, 248, 0.98);
+    box-shadow: 0 9px 16px rgba(31, 35, 77, 0.12);
+  }
+
+  .fp-v2-detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    padding: 0 7px;
+  }
+
+  .fp-v2-detail + .fp-v2-detail {
+    border-left: 1px solid rgba(31, 47, 107, 0.14);
+  }
+
+  .fp-v2-detail b {
+    color: #202f6b;
+    font-size: clamp(8px, 0.69vw, 13px);
+    font-weight: 900;
+    line-height: 1.08;
+  }
+
+  .fp-v2-icon {
+    display: grid;
+    flex: none;
+    width: clamp(25px, 2vw, 38px);
+    height: clamp(25px, 2vw, 38px);
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: clamp(13px, 1vw, 20px);
+    font-weight: 900;
+  }
+
+  .fp-v2-icon.pink {
+    background: #f71883;
+  }
+
+  .fp-v2-icon.purple {
+    background: #6f2ab7;
+  }
+
+  .fp-v2-icon.yellow {
+    background: #ffc91a;
+  }
+
+  /* Pets: sobre as fotos, sob as caixas brancas */
+  .fp-v2-dog,
+  .fp-v2-cat {
+    position: absolute;
+    z-index: 6;
+    pointer-events: none;
+  }
+
+  .fp-v2-dog {
+    bottom: -10%;
+    left: -4.5%;
+    width: 26%;
+    animation: fp-v2-dog-float 7s ease-in-out infinite;
+  }
+
+  .fp-v2-dog img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scaleX(-1);
+    filter: drop-shadow(6px 0 0 #f71883) drop-shadow(-6px 0 0 #f71883) drop-shadow(0 6px 0 #f71883) drop-shadow(0 -6px 0 #f71883);
+  }
+
+  .fp-v2-cat {
+    right: -38%;
+    bottom: -24%;
+    width: 74%;
+    animation: fp-v2-cat-float 8s ease-in-out infinite 0.5s;
+  }
+
+  .fp-v2-cat img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(5px 0 0 #ffc91a) drop-shadow(-5px 0 0 #ffc91a) drop-shadow(0 5px 0 #ffc91a) drop-shadow(0 -5px 0 #ffc91a);
+  }
+
+  .fp-editions-v2-deco {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .fp-v2-heart,
+  .fp-v2-paw,
+  .fp-v2-squig {
+    position: absolute;
+  }
+
+  .fp-v2-heart {
+    width: 42px;
+    height: auto;
+    color: #f71883;
+  }
+
+  .heart-top {
+    top: 8%;
+    left: 22%;
+    animation: fp-v2-heart-float 6.5s ease-in-out infinite;
+  }
+
+  .heart-right {
+    right: 2%;
+    bottom: 37%;
+    animation: fp-v2-heart-right 7.2s ease-in-out infinite 0.4s;
+  }
+
+  .fp-v2-paw {
+    width: 48px;
+    height: auto;
+    color: #6f2ab7;
+  }
+
+  .paw-top {
+    top: 11%;
+    right: 22%;
+    animation: fp-v2-paw-float 6.5s ease-in-out infinite;
+  }
+
+  .paw-bottom {
+    bottom: 7%;
+    left: 49%;
+    width: 40px;
+    color: #202f6b;
+    animation: fp-v2-paw-float 7.2s ease-in-out infinite 0.4s;
+  }
+
+  .fp-v2-squig {
+    top: 18%;
+    right: 12%;
+    width: 76px;
+    height: auto;
+    color: #6f2ab7;
+    animation: fp-v2-squig-float 7s ease-in-out infinite;
+  }
+
+  .fp-v2-sun {
+    position: absolute;
+    top: 8%;
+    right: -3.5%;
+    width: clamp(72px, 9vw, 150px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #ffc91a;
+    box-shadow:
+      -26px -25px 0 -21px #ffc91a,
+      -40px 0 0 -21px #ffc91a,
+      -26px 25px 0 -21px #ffc91a,
+      0 -39px 0 -21px #ffc91a,
+      0 39px 0 -21px #ffc91a;
+    animation: fp-v2-sun-float 10s ease-in-out infinite;
+  }
+
+  @keyframes fp-v2-dog-float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-8px) rotate(1deg); }
+  }
+
+  @keyframes fp-v2-cat-float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-8px) rotate(-1deg); }
+  }
+
+  @keyframes fp-v2-heart-float {
+    0%, 100% { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(-9px) rotate(-3deg); }
+  }
+
+  @keyframes fp-v2-heart-right {
+    0%, 100% { transform: translateY(0) rotate(10deg); }
+    50% { transform: translateY(-8px) rotate(3deg); }
+  }
+
+  @keyframes fp-v2-paw-float {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-7px) rotate(5deg); }
+  }
+
+  @keyframes fp-v2-squig-float {
+    0%, 100% { transform: translateX(0) rotate(-4deg); }
+    50% { transform: translateX(9px) rotate(4deg); }
+  }
+
+  @keyframes fp-v2-sun-float {
+    0%, 100% { transform: rotate(0) scale(1); }
+    50% { transform: rotate(7deg) scale(1.04); }
+  }
+
+  @media (max-width: 760px) {
+    .fp-editions-v2-stage {
+      min-height: 0;
+      aspect-ratio: auto;
+      padding: 42px 18px 180px;
+      background-size: auto 100%;
+    }
+
+    .fp-v2-head {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: 100%;
+      margin: 0 0 38px;
+      transform: none;
+    }
+
+    .fp-v2-head h2 {
+      font-size: clamp(26px, 8vw, 40px);
+    }
+
+    .fp-v2-head p {
+      font-size: 13px;
+    }
+
+    .fp-v2-rays,
+    .paw-top,
+    .fp-v2-squig {
+      display: none;
+    }
+
+    .fp-v2-card {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      width: 100%;
+      margin: 0 0 34px;
+    }
+
+    .fp-v2-photo {
+      aspect-ratio: 1.62 / 1;
+    }
+
+    .fp-v2-label strong {
+      font-size: clamp(70px, 22vw, 110px);
+    }
+
+    .fp-v2-label span {
+      font-size: clamp(13px, 4vw, 20px);
+    }
+
+    .fp-v2-info {
+      grid-template-columns: 1fr 1fr;
+      width: 94%;
+      margin-top: -3%;
+    }
+
+    .fp-v2-detail {
+      min-height: 42px;
+      padding: 5px 7px;
+    }
+
+    .fp-v2-detail:nth-child(3) {
+      border-top: 1px solid rgba(31, 47, 107, 0.14);
+      border-left: 0;
+    }
+
+    .fp-v2-detail:nth-child(4) {
+      border-top: 1px solid rgba(31, 47, 107, 0.14);
+    }
+
+    .fp-v2-detail b {
+      font-size: 10px;
+    }
+
+    .fp-v2-dog {
+      bottom: -1%;
+      left: -9%;
+      width: 31%;
+    }
+
+    .fp-v2-cat {
+      right: -43%;
+      bottom: -8%;
+      width: 98%;
+    }
+
+    .fp-v2-sun {
+      top: 2%;
+      right: -12%;
+    }
+
+    .heart-top {
+      top: 2%;
+      left: 8%;
+    }
+
+    .heart-right {
+      right: 3%;
+      bottom: 28%;
+    }
+
+    .paw-bottom {
+      bottom: 7%;
+      left: 47%;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .fp-v2-info {
+      display: block;
+      width: 92%;
+    }
+
+    .fp-v2-detail + .fp-v2-detail {
+      border-top: 1px solid rgba(31, 47, 107, 0.14);
+      border-left: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fp-editions-v2 * {
+      animation: none !important;
+    }
+  }
+
+
+
+
+
+
+  .fp-video-section,
+
+  .fp-video-section * {
+
+    box-sizing: border-box;
+
+  }
+
+
+
+  .fp-video-section {
+
+    --fundo-video: #f8f1e5;
+
+    --pink-video: #f9418c;
+
+    --navy-video: #202f6b;
+
+
+
+    position: relative;
+
+    z-index: 2;
+
+
+
+    width: 100vw;
+
+    max-width: none;
+
+    margin: -24px 0 -24px calc(50% - 50vw);
+
+    padding: 32px 24px;
+
+
+
+    background: var(--fundo-video);
+
+    box-shadow: 0 0 0 100vmax var(--fundo-video);
+
+    clip-path: inset(0 -100vmax);
+
+  }
+
+
+
+  .fp-video-content {
+
+    width: 100%;
+
+    max-width: 1420px;
+
+    margin: 0 auto;
+
+  }
+
+
+
+  .fp-video-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #000;
+
+    aspect-ratio: 16 / 9;
+
+  }
+
+
+
+  .fp-video-cover {
+
+    position: absolute;
+
+    inset: 0;
+
+
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background: #000;
+
+    cursor: pointer;
+
+  }
+
+
+
+  .fp-video-cover img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease, filter 0.4s ease;
+
+  }
+
+
+
+  .fp-video-cover::after {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+
+      90deg,
+
+      rgba(20, 21, 55, 0.2),
+
+      rgba(20, 21, 55, 0.04) 55%,
+
+      rgba(20, 21, 55, 0.2)
+
+    );
+
+    content: "";
+
+    transition: background 0.3s ease;
+
+  }
+
+
+
+  .fp-video-play {
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: clamp(66px, 7vw, 108px);
+
+    height: clamp(66px, 7vw, 108px);
+
+    transform: translate(-50%, -50%);
+
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.28));
+
+    transition: transform 0.25s ease;
+
+  }
+
+
+
+  .fp-video-play svg {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+  }
+
+
+
+  .fp-video-text {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: clamp(18px, 3vw, 42px);
+
+    left: 50%;
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+
+
+    color: #fff;
+
+    background: var(--navy-video);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.22);
+
+
+
+    font-family: Nunito, sans-serif;
+
+    font-size: clamp(11px, 1vw, 15px);
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transform: translateX(-50%);
+
+  }
+
+
+
+  .fp-video-cover:hover img {
+
+    filter: brightness(1.05);
+
+    transform: scale(1.03);
+
+  }
+
+
+
+  .fp-video-cover:hover::after {
+
+    background: rgba(20, 21, 55, 0.06);
+
+  }
+
+
+
+  .fp-video-cover:hover .fp-video-play {
+
+    transform: translate(-50%, -50%) scale(1.12);
+
+  }
+
+
+
+  .fp-video-frame iframe {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+  }
+
+
+
+  @media (max-width: 768px) {
+
+    .fp-video-section {
+
+      margin-top: -16px;
+
+      margin-bottom: -16px;
+
+      padding: 20px 16px;
+
+    }
+
+
+
+    .fp-video-text {
+
+      bottom: 14px;
+
+      padding: 7px 13px;
+
+    }
+
+  }
+
+
+
+
+
+
+  .fp-apoiadores,
+  .fp-apoiadores * {
+    box-sizing: border-box;
+  }
+
+  .fp-apoiadores {
+    --creme: #f8f1e5;
+    --navy: #122b73;
+    --roxo: #7225bb;
+    --rosa: #f51b88;
+    --amarelo: #ffc600;
+
+    position: relative;
+    isolation: isolate;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    padding: 0;
+    overflow: hidden;
+    scroll-margin-top: 110px;
+
+    background-color: var(--creme);
+    background-image: url("/assets/festival/Colagem-Monocromatica-com-Destaques-Amarelos.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 0 0 0 100vmax var(--creme);
+    clip-path: inset(0 -100vmax);
+  }
+
+  .fp-apoiadores-inner {
+    position: relative;
+    z-index: 1;
+    width: min(1240px, 88vw);
+    min-height: 900px;
+    margin: 0 auto;
+    padding: clamp(58px, 5vw, 82px) 0 clamp(74px, 6vw, 102px);
+  }
+
+  .fp-apoiadores-head {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .fp-apoiadores-tag {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 9px 42px 11px;
+    color: #fff;
+    background: var(--roxo);
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: clamp(22px, 2.25vw, 34px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -.8px;
+    transform: rotate(-2deg);
+    clip-path: polygon(2% 9%, 11% 3%, 25% 7%, 39% 2%, 54% 7%, 68% 3%, 82% 7%, 98% 3%, 97% 92%, 83% 97%, 67% 93%, 51% 98%, 35% 93%, 18% 97%, 3% 92%);
+    box-shadow: 0 7px 0 rgba(26, 28, 92, .12);
+  }
+
+  .fp-apoiadores h2 {
+    margin: 0;
+    color: var(--navy);
+    font-family: Impact, "Arial Black", "Poppins", sans-serif;
+    font-size: clamp(35px, 4vw, 61px);
+    font-weight: 900;
+    line-height: .92;
+    letter-spacing: -.8px;
+  }
+
+  .fp-apoiadores h2 strong {
+    color: var(--roxo);
+    font-weight: 900;
+  }
+
+  .fp-amarelo {
+    display: block;
+    width: min(260px, 30vw);
+    height: 13px;
+    margin: 13px auto 10px;
+    border-top: 4px solid var(--amarelo);
+    border-radius: 50%;
+    transform: rotate(-2deg);
+  }
+
+  .fp-apoiadores-head p {
+    margin: 0;
+    color: var(--navy);
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: clamp(13px, 1.3vw, 18px);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .fp-logos-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    width: min(100%, 1170px);
+    margin: clamp(40px, 4vw, 58px) auto 0;
+  }
+
+  .fp-logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(95px, 8vw, 121px);
+    padding: 13px 18px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .95);
+    box-shadow: 0 9px 16px rgba(31, 33, 78, .16);
+  }
+
+  .fp-logo-card img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 84px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  .fp-logo-quadrado img {
+    max-width: 104px;
+    max-height: 98px;
+  }
+
+  .fp-logo-golden img {
+    max-height: 76px;
+  }
+
+  .fp-logo-progato img {
+    width: 170%;
+    height: 170%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  /* Virbac corrigido: card branco, sem moldura azul */
+  .fp-logo-virbac {
+    padding: 0;
+    background: #fff;
+  }
+
+  .fp-logo-virbac img {
+    width: 135%;
+    height: 135%;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  .fp-logo-ella img,
+  .fp-logo-renault img {
+    max-height: 88px;
+  }
+
+  .fp-logo-xpbr img {
+    max-width: 90px;
+    max-height: 87px;
+  }
+
+  .fp-logo-extra img {
+    max-height: 72px;
+  }
+
+  /* Centraliza Paramount, Nickelodeon e CBYK na última linha */
+  .fp-logo-card:nth-child(16) {
+    grid-column: 2;
+  }
+
+  .fp-deco {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .fp-heart {
+    top: 17%;
+    left: max(3.5vw, 24px);
+    width: clamp(68px, 7vw, 112px);
+    color: var(--rosa);
+    transform: rotate(-14deg);
+  }
+
+  .fp-heart svg {
+    display: block;
+    width: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 7;
+  }
+
+  .fp-paw {
+    top: 17%;
+    right: max(6vw, 35px);
+    width: clamp(62px, 6vw, 100px);
+    color: var(--roxo);
+    transform: rotate(12deg);
+  }
+
+  .fp-paw svg,
+  .fp-paw img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .fp-rays {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 50px;
+  }
+
+  .fp-rays i {
+    display: block;
+    width: 47px;
+    height: 11px;
+    border-radius: 50px;
+    background: var(--amarelo);
+  }
+
+  .fp-rays-left {
+    top: 13%;
+    left: max(18vw, 80px);
+    transform: rotate(-44deg);
+  }
+
+  .fp-rays-right {
+    top: 9%;
+    right: max(18vw, 80px);
+    transform: rotate(42deg);
+  }
+
+  .fp-squiggle {
+    bottom: 7%;
+    left: 50%;
+    width: clamp(170px, 18vw, 285px);
+    color: #8d2fd1;
+    transform: translateX(-50%);
+  }
+
+  .fp-squiggle svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-width: 7;
+  }
+
+  @media (max-width: 980px) {
+    .fp-apoiadores-inner {
+      width: min(92vw, 820px);
+      min-height: 0;
+    }
+
+    .fp-logos-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .fp-logo-card:nth-child(16) {
+      grid-column: auto;
+    }
+
+    .fp-heart {
+      left: 18px;
+    }
+
+    .fp-paw {
+      right: 18px;
+    }
+
+    .fp-rays-left {
+      left: 12%;
+    }
+
+    .fp-rays-right {
+      right: 12%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .fp-apoiadores-inner {
+      width: min(92vw, 480px);
+      padding: 46px 0 70px;
+    }
+
+    .fp-apoiadores-tag {
+      margin-bottom: 13px;
+      padding: 8px 27px 10px;
+    }
+
+    .fp-apoiadores h2 {
+      font-size: clamp(31px, 10.5vw, 47px);
+      line-height: .94;
+    }
+
+    .fp-apoiadores-head p {
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .fp-apoiadores-head p br {
+      display: none;
+    }
+
+    .fp-logos-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+      margin-top: 38px;
+    }
+
+    .fp-logo-card {
+      height: 100px;
+      padding: 12px;
+      border-radius: 13px;
+    }
+
+    .fp-logo-card img {
+      max-height: 74px;
+    }
+
+    .fp-logo-progato img {
+      width: 170%;
+      height: 170%;
+      max-width: none;
+      max-height: none;
+    }
+
+    .fp-logo-virbac img {
+      width: 135%;
+      height: 135%;
+      max-width: none;
+      max-height: none;
+    }
+
+    .fp-heart {
+      top: 15%;
+      left: -10px;
+      width: 70px;
+    }
+
+    .fp-paw {
+      top: 16%;
+      right: -8px;
+      width: 55px;
+    }
+
+    .fp-rays-left,
+    .fp-rays-right {
+      display: none;
+    }
+
+    .fp-squiggle {
+      bottom: 2.5%;
+    }
+  }
+
+
+
+
+
+
+  
+
+
+
+  #festivalpet-faq,
+
+  #festivalpet-faq * {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+  }
+
+
+
+  #festivalpet-faq {
+
+    --pink: #e6197e;
+
+    --purple: #6a2ca0;
+
+    --purple-l: #7a34c0;
+
+    --navy: #2b2b57;
+
+    --yellow: #ffc60b;
+
+    --fundo-faq: #f8f1e5;
+
+
+
+    position: relative;
+
+    isolation: isolate;
+
+    display: flex;
+
+    justify-content: center;
+
+
+
+    width: 100vw;
+
+    max-width: none;
+
+    margin: 0 0 0 calc(50% - 50vw);
+
+    padding: clamp(72px, 7vw, 120px) clamp(24px, 5vw, 80px);
+
+
+
+    background: var(--fundo-faq);
+
+    box-shadow:
+
+      0 -32px 0 var(--fundo-faq),
+
+      0 0 0 100vmax var(--fundo-faq);
+
+
+
+    /* Leva o bege até o bloco de cima */
+
+    clip-path: inset(-32px -100vmax -1px);
+
+
+
+    font-family: "Poppins", sans-serif;
+
+  }
+
+
+
+  #festivalpet-faq .fq-wrap {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 820px;
+
+  }
+
+
+
+  #festivalpet-faq .fq-stickers {
+
+    position: absolute;
+
+    z-index: 0;
+
+    inset: 0;
+
+    pointer-events: none;
+
+  }
+
+
+
+  #festivalpet-faq .fq-st {
+
+    position: absolute;
+
+    width: 88px;
+
+    height: auto;
+
+    opacity: 0.92;
+
+    filter: drop-shadow(0 8px 14px rgba(43, 43, 87, 0.18));
+
+    animation: fq-float 6s ease-in-out infinite;
+
+  }
+
+
+
+  #festivalpet-faq .st-1 {
+
+    top: -46px;
+
+    left: -70px;
+
+    width: 104px;
+
+    --r: -12deg;
+
+    animation-delay: 0s;
+
+  }
+
+
+
+  #festivalpet-faq .st-2 {
+
+    top: 18%;
+
+    right: -78px;
+
+    width: 96px;
+
+    --r: 10deg;
+
+    animation-delay: 0.8s;
+
+  }
+
+
+
+  #festivalpet-faq .st-3 {
+
+    top: 46%;
+
+    left: -84px;
+
+    width: 92px;
+
+    --r: 8deg;
+
+    animation-delay: 1.5s;
+
+  }
+
+
+
+  #festivalpet-faq .st-4 {
+
+    right: -72px;
+
+    bottom: 14%;
+
+    width: 84px;
+
+    --r: -9deg;
+
+    animation-delay: 0.4s;
+
+  }
+
+
+
+  #festivalpet-faq .st-5 {
+
+    bottom: -40px;
+
+    left: -46px;
+
+    width: 80px;
+
+    --r: 14deg;
+
+    animation-delay: 1.1s;
+
+  }
+
+
+
+  #festivalpet-faq .st-6 {
+
+    top: -52px;
+
+    right: 8%;
+
+    width: 72px;
+
+    --r: -7deg;
+
+    animation-delay: 2s;
+
+  }
+
+
+
+  @keyframes fq-float {
+
+    0%,
+
+    100% {
+
+      transform: translateY(0) rotate(var(--r, 0deg));
+
+    }
+
+
+
+    50% {
+
+      transform: translateY(-12px) rotate(var(--r, 0deg));
+
+    }
+
+  }
+
+
+
+  #festivalpet-faq .fq-head,
+
+  #festivalpet-faq .fq-list {
+
+    position: relative;
+
+    z-index: 1;
+
+  }
+
+
+
+  #festivalpet-faq .fq-head {
+
+    margin-bottom: 26px;
+
+    text-align: center;
+
+  }
+
+
+
+  #festivalpet-faq .fq-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    border-radius: 40px;
+
+
+
+    color: #fff;
+
+    background: linear-gradient(135deg, #7a34c0, #5a2490);
+
+    box-shadow: 0 10px 22px -10px rgba(90, 36, 144, 0.6);
+
+
+
+    font-size: 12.5px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+  }
+
+
+
+  #festivalpet-faq .fq-badge svg {
+
+    width: 17px;
+
+    height: 17px;
+
+  }
+
+
+
+  #festivalpet-faq .fq-title {
+
+    margin-top: 14px;
+
+    color: var(--navy);
+
+    font-family: "Anton", sans-serif;
+
+    font-size: clamp(28px, 5vw, 44px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    text-transform: uppercase;
+
+  }
+
+
+
+  #festivalpet-faq .fq-title .fq-pink {
+
+    color: var(--pink);
+
+  }
+
+
+
+  #festivalpet-faq .fq-sub {
+
+    margin-top: 8px;
+
+    color: #5b5b7a;
+
+    font-size: 15px;
+
+  }
+
+
+
+  #festivalpet-faq .fq-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+  }
+
+
+
+  #festivalpet-faq .fq-item {
+
+    overflow: hidden;
+
+    border: 1.5px solid rgba(106, 44, 160, 0.12);
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(4px);
+
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  }
+
+
+
+  #festivalpet-faq .fq-item:hover {
+
+    border-color: rgba(230, 25, 126, 0.35);
+
+    box-shadow: 0 14px 30px -18px rgba(43, 43, 87, 0.45);
+
+  }
+
+
+
+  #festivalpet-faq .fq-item.open {
+
+    border-color: var(--pink);
+
+    box-shadow: 0 18px 40px -20px rgba(230, 25, 126, 0.5);
+
+  }
+
+
+
+  #festivalpet-faq .fq-q {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: 14px;
+
+    padding: 18px 20px;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family: "Poppins", sans-serif;
+
+  }
+
+
+
+  #festivalpet-faq .fq-paw {
+
+    display: grid;
+
+    flex: none;
+
+    width: 38px;
+
+    height: 38px;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    background: linear-gradient(140deg, #f63c93, #e6197e);
+
+    box-shadow: 0 8px 16px -8px rgba(230, 25, 126, 0.6);
+
+    transition: transform 0.35s ease, background 0.35s ease;
+
+  }
+
+
+
+  #festivalpet-faq .fq-paw svg {
+
+    width: 21px;
+
+    height: 21px;
+
+  }
+
+
+
+  #festivalpet-faq .fq-item.open .fq-paw {
+
+    background: linear-gradient(140deg, #8b45c9, #6a2ca0);
+
+    transform: rotate(-12deg) scale(1.05);
+
+  }
+
+
+
+  #festivalpet-faq .fq-q-txt {
+
+    flex: 1;
+
+    color: var(--navy);
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    transition: color 0.25s ease;
+
+  }
+
+
+
+  #festivalpet-faq .fq-item.open .fq-q-txt {
+
+    color: var(--pink);
+
+  }
+
+
+
+  #festivalpet-faq .fq-plus {
+
+    position: relative;
+
+    flex: none;
+
+    width: 26px;
+
+    height: 26px;
+
+    border: 2px solid rgba(106, 44, 160, 0.3);
+
+    border-radius: 50%;
+
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.35s ease;
+
+  }
+
+
+
+  #festivalpet-faq .fq-plus::before,
+
+  #festivalpet-faq .fq-plus::after {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 11px;
+
+    height: 2.4px;
+
+    border-radius: 3px;
+
+    background: var(--purple);
+
+    content: "";
+
+    transform: translate(-50%, -50%);
+
+    transition: transform 0.35s ease, background 0.3s ease;
+
+  }
+
+
+
+  #festivalpet-faq .fq-plus::after {
+
+    transform: translate(-50%, -50%) rotate(90deg);
+
+  }
+
+
+
+  #festivalpet-faq .fq-item.open .fq-plus {
+
+    border-color: var(--pink);
+
+    background: var(--pink);
+
+    transform: rotate(135deg);
+
+  }
+
+
+
+  #festivalpet-faq .fq-item.open .fq-plus::before,
+
+  #festivalpet-faq .fq-item.open .fq-plus::after {
+
+    background: #fff;
+
+  }
+
+
+
+  #festivalpet-faq .fq-a {
+
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  }
+
+
+
+  #festivalpet-faq .fq-item.open .fq-a {
+
+    grid-template-rows: 1fr;
+
+  }
+
+
+
+  #festivalpet-faq .fq-a-in {
+
+    overflow: hidden;
+
+  }
+
+
+
+  #festivalpet-faq .fq-a p {
+
+    padding: 0 22px 20px 72px;
+
+    color: #4a4a6b;
+
+    font-size: 14.5px;
+
+    line-height: 1.65;
+
+    opacity: 0;
+
+    transform: translateY(-6px);
+
+    transition: opacity 0.35s ease 0.08s, transform 0.35s ease 0.08s;
+
+  }
+
+
+
+  #festivalpet-faq .fq-item.open .fq-a p {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+
+
+  #festivalpet-faq .fq-a a {
+
+    border-bottom: 1.5px solid rgba(230, 25, 126, 0.35);
+
+    color: var(--pink);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+  }
+
+
+
+  #festivalpet-faq .fq-a a:hover {
+
+    border-color: var(--purple);
+
+    color: var(--purple);
+
+  }
+
+
+
+  @media (max-width: 960px) {
+
+    #festivalpet-faq .st-1 {
+
+      top: -38px;
+
+      left: -24px;
+
+    }
+
+
+
+    #festivalpet-faq .st-2 {
+
+      right: -30px;
+
+    }
+
+
+
+    #festivalpet-faq .st-3 {
+
+      left: -34px;
+
+    }
+
+
+
+    #festivalpet-faq .st-4 {
+
+      right: -26px;
+
+    }
+
+
+
+    #festivalpet-faq .st-5 {
+
+      left: -14px;
+
+    }
+
+  }
+
+
+
+  @media (max-width: 640px) {
+
+    #festivalpet-faq {
+
+      padding: 62px 20px 74px;
+
+      box-shadow:
+
+        0 -20px 0 var(--fundo-faq),
+
+        0 0 0 100vmax var(--fundo-faq);
+
+      clip-path: inset(-20px -100vmax -1px);
+
+    }
+
+
+
+    #festivalpet-faq .st-2,
+
+    #festivalpet-faq .st-3,
+
+    #festivalpet-faq .st-4 {
+
+      display: none;
+
+    }
+
+
+
+    #festivalpet-faq .st-1 {
+
+      top: -30px;
+
+      left: -8px;
+
+      width: 64px;
+
+      opacity: 0.85;
+
+    }
+
+
+
+    #festivalpet-faq .st-5 {
+
+      bottom: -22px;
+
+      left: -6px;
+
+      width: 56px;
+
+      opacity: 0.85;
+
+    }
+
+
+
+    #festivalpet-faq .st-6 {
+
+      top: -32px;
+
+      right: 2%;
+
+      width: 52px;
+
+      opacity: 0.85;
+
+    }
+
+
+
+    #festivalpet-faq .fq-q {
+
+      gap: 11px;
+
+      padding: 15px;
+
+    }
+
+
+
+    #festivalpet-faq .fq-q-txt {
+
+      font-size: 14.5px;
+
+    }
+
+
+
+    #festivalpet-faq .fq-paw {
+
+      width: 34px;
+
+      height: 34px;
+
+    }
+
+
+
+    #festivalpet-faq .fq-a p {
+
+      padding: 0 16px 18px;
+
+    }
+
+  }
+
+
+
+  @media (prefers-reduced-motion: reduce) {
+
+    #festivalpet-faq * {
+
+      transition: none !important;
+
+      animation: none !important;
+
+    }
+
+  }
+
+
+
+
+
+
+
+  #fp-footer,
+
+  #fp-footer * {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+  }
+
+
+
+  #fp-footer {
+
+    --pink: #e6197e;
+
+    --navy: #20204a;
+
+    --cream: #f8f1e5;
+
+    --line: rgba(230, 25, 126, 0.45);
+
+
+
+    position: relative;
+
+    isolation: isolate;
+
+
+
+    width: 100vw;
+
+    max-width: none;
+
+    margin: 0 0 0 calc(50% - 50vw);
+
+
+
+    background: var(--cream);
+
+    box-shadow:
+
+      0 -32px 0 var(--cream),
+
+      0 0 0 100vmax var(--cream);
+
+
+
+    /* Preenche a faixa entre FAQ e rodapé */
+
+    clip-path: inset(-32px -100vmax 0);
+
+
+
+    border-top: 1px solid var(--pink);
+
+    font-family: "Poppins", -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  }
+
+
+
+  #fp-footer .fpf-inner {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto 2fr auto 1fr;
+
+    align-items: center;
+
+    gap: clamp(20px, 4vw, 50px);
+
+
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    min-height: 300px;
+
+    margin: 0 auto;
+
+    padding: 40px clamp(24px, 5vw, 70px);
+
+  }
+
+
+
+  #fp-footer .fpf-divider {
+
+    align-self: stretch;
+
+    width: 1px;
+
+    min-height: 120px;
+
+    max-height: 150px;
+
+    margin: auto 0;
+
+    background: var(--line);
+
+  }
+
+
+
+  #fp-footer .fpf-logo {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+  }
+
+
+
+  #fp-footer .fpf-logo img {
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 200px;
+
+    max-height: 110px;
+
+    object-fit: contain;
+
+  }
+
+
+
+  #fp-footer .fpf-copy {
+
+    text-align: center;
+
+  }
+
+
+
+  #fp-footer .fpf-copy p {
+
+    color: var(--navy);
+
+    font-size: clamp(14px, 1.3vw, 18px);
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+  }
+
+
+
+  #fp-footer .fpf-social {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+  }
+
+
+
+  #fp-footer .fpf-social a {
+
+    display: grid;
+
+    width: 56px;
+
+    height: 56px;
+
+    place-items: center;
+
+    border: 1.6px solid var(--pink);
+
+    border-radius: 50%;
+
+
+
+    color: var(--pink);
+
+    text-decoration: none;
+
+
+
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+
+  }
+
+
+
+  #fp-footer .fpf-social a svg {
+
+    width: 26px;
+
+    height: 26px;
+
+  }
+
+
+
+  #fp-footer .fpf-social a:hover {
+
+    color: #fff;
+
+    background: var(--pink);
+
+    box-shadow: 0 10px 20px -8px rgba(230, 25, 126, 0.6);
+
+    transform: translateY(-2px) scale(1.05);
+
+  }
+
+
+
+  @media (max-width: 760px) {
+
+    #fp-footer {
+
+      box-shadow:
+
+        0 -20px 0 var(--cream),
+
+        0 0 0 100vmax var(--cream);
+
+
+
+      clip-path: inset(-20px -100vmax 0);
+
+    }
+
+
+
+    #fp-footer .fpf-inner {
+
+      grid-template-columns: 1fr;
+
+      justify-items: center;
+
+      gap: 22px;
+
+      min-height: 0;
+
+      padding: 34px 22px;
+
+      text-align: center;
+
+    }
+
+
+
+    #fp-footer .fpf-divider {
+
+      display: none;
+
+    }
+
+
+
+    #fp-footer .fpf-logo,
+
+    #fp-footer .fpf-social {
+
+      justify-content: center;
+
+    }
+
+  }
