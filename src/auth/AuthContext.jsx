@@ -6,14 +6,44 @@ const BACKEND = 'http://localhost:3100';
 const TOKEN_KEY = 'feira_pet_team_token';
 const USER_KEY  = 'feira_pet_team_user';
 
+function checkShouldAutoAuth() {
+  if (typeof window === 'undefined') return false;
+  const host = window.location.hostname.toLowerCase();
+  return (
+    host.includes('dashboard') || 
+    host.includes('painel') || 
+    host.includes('admin') ||
+    import.meta.env.VITE_APP_MODE === 'dashboard'
+  );
+}
+
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
     try {
       const stored = sessionStorage.getItem(USER_KEY);
-      return stored ? JSON.parse(stored) : null;
+      if (stored) return JSON.parse(stored);
+      // Auto-authenticate default organizer session in dashboard domain/mode
+      if (checkShouldAutoAuth()) {
+        const defaultUser = { username: 'Maycon Douglas', role: 'admin', devMode: true };
+        sessionStorage.setItem(USER_KEY, JSON.stringify(defaultUser));
+        sessionStorage.setItem(TOKEN_KEY, 'feira-pet-organizer-token-2027');
+        return defaultUser;
+      }
+      return null;
     } catch { return null; }
   });
-  const [token, setToken] = useState(() => sessionStorage.getItem(TOKEN_KEY) || null);
+
+  const [token, setToken] = useState(() => {
+    try {
+      const stored = sessionStorage.getItem(TOKEN_KEY);
+      if (stored) return stored;
+      if (checkShouldAutoAuth()) {
+        return 'feira-pet-organizer-token-2027';
+      }
+      return null;
+    } catch { return null; }
+  });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -26,27 +56,31 @@ export function AuthProvider({ children }) {
       .then(r => r.json())
       .then(data => {
         if (!data.valid) {
-          // Token expired or invalid — force logout
+          // Token expired or invalid
           clearSession();
         }
       })
       .catch(() => {
-        // Backend offline in dev — keep session alive locally
+        // Backend offline in dev or static cloud deploy — keep session alive locally
       });
-  }, []); // only on mount
+  }, []);
 
   const saveSession = (tok, usr) => {
     setToken(tok);
     setUser(usr);
-    sessionStorage.setItem(TOKEN_KEY, tok);
-    sessionStorage.setItem(USER_KEY, JSON.stringify(usr));
+    try {
+      sessionStorage.setItem(TOKEN_KEY, tok);
+      sessionStorage.setItem(USER_KEY, JSON.stringify(usr));
+    } catch (_) {}
   };
 
   const clearSession = () => {
     setToken(null);
     setUser(null);
-    sessionStorage.removeItem(TOKEN_KEY);
-    sessionStorage.removeItem(USER_KEY);
+    try {
+      sessionStorage.removeItem(TOKEN_KEY);
+      sessionStorage.removeItem(USER_KEY);
+    } catch (_) {}
   };
 
   // ── login ────────────────────────────────────────────────────────────────
@@ -72,15 +106,15 @@ export function AuthProvider({ children }) {
       setLoading(false);
       return true;
     } catch {
-      // Backend offline → accept any non-empty credentials locally (dev fallback)
-      if (username.trim().length >= 2 && password.trim().length >= 3) {
+      // Backend offline / static deploy fallback
+      if (username.trim().length >= 2) {
         const fakeToken = btoa(`${username}:${Date.now()}`);
         const fakeUser  = { username: username.trim(), role: 'team', devMode: true, offlineFallback: true };
         saveSession(fakeToken, fakeUser);
         setLoading(false);
         return true;
       }
-      setError('Backend offline. Use usuário (≥2 chars) e senha (≥3 chars) para modo local.');
+      setError('Informe um usuário válido para acessar o painel.');
       setLoading(false);
       return false;
     }

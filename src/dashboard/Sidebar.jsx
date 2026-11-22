@@ -109,6 +109,11 @@ export default function Sidebar() {
     const current = location.pathname;
     if (current === item.path) return true;
     if (item.aliases && item.aliases.includes(current)) return true;
+    const normalizedItem = item.path.replace('/dashboard', '');
+    const normalizedCurrent = current.replace('/dashboard', '');
+    if (normalizedItem && normalizedCurrent && (normalizedItem === normalizedCurrent || (normalizedItem === '/overview' && (normalizedCurrent === '/' || normalizedCurrent === '')))) {
+      return true;
+    }
     return false;
   };
 

@@ -21,6 +21,21 @@ import {
 } from 'lucide-react';
 
 const SECTION_TITLES = {
+  '/': 'Visão Geral & KPIs',
+  '/overview': 'Visão Geral & KPIs',
+  '/comercial': 'Comercial & Cotas de Patrocínio',
+  '/commercial': 'Comercial & Cotas de Patrocínio',
+  '/prefeitura': 'Prefeitura & Alvarás Governamentais',
+  '/institutional': 'Prefeitura & Alvarás Governamentais',
+  '/sanidade': 'Sanidade Animal & Biosseguridade CRMV',
+  '/biosafety': 'Sanidade Animal & Biosseguridade CRMV',
+  '/infraestrutura': 'Infraestrutura, Pavilhão & Estandes',
+  '/infrastructure': 'Infraestrutura, Pavilhão & Estandes',
+  '/marketing': 'Marketing, Tráfego & Funil AARRR',
+  '/programacao': 'Programação & Atrações dos 3 Dias',
+  '/program': 'Programação & Atrações dos 3 Dias',
+  '/configuracoes': 'Configurações Globais & Parâmetros',
+  '/settings': 'Configurações Globais & Parâmetros',
   '/dashboard': 'Visão Geral & KPIs',
   '/dashboard/': 'Visão Geral & KPIs',
   '/dashboard/overview': 'Visão Geral & KPIs',

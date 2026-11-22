@@ -11,7 +11,6 @@ import ProtectedRoute from './auth/ProtectedRoute';
 
 // Landing page (public)
 import LandingPage from './landing/LandingPage';
-import Navbar from './components/Layout/Navbar';
 import Footer from './components/Layout/Footer';
 
 // Dashboard & Views (team-only)
@@ -43,27 +42,106 @@ function LandingLayout() {
 
 // Determines dynamically whether this domain runs as the Dashboard or the Landing Page:
 function checkIsDashboardProject() {
+  // 1. Explicit environment variable check (set in Vercel project dashboard-feira-eu-amo-pet)
+  if (import.meta.env.VITE_APP_MODE === 'dashboard') {
+    return true;
+  }
   if (typeof window === 'undefined') return false;
   const host = window.location.hostname.toLowerCase();
 
-  // 1. Domain-based separation:
+  // 2. Domain-based separation:
   // If domain is dashboard-* / painel-* / admin-*, ALWAYS run as Dashboard
   if (host.includes('dashboard') || host.includes('painel') || host.includes('admin')) {
     return true;
   }
 
-  // If domain is feira-eu-amo-pet / landing-*, ALWAYS run as Landing Page
-  if (host.includes('feira-eu-amo-pet') || host.includes('landing')) {
-    return false;
-  }
-
-  // 2. Explicit environment variable check (for custom deployments / localhost):
-  return import.meta.env.VITE_APP_MODE === 'dashboard';
+  return false;
 }
 
 export default function App() {
   const isDashboardProject = checkIsDashboardProject();
 
+  // ── SE O PROJETO FOR O DASHBOARD (dashboard-feira-eu-amo-pet) ──────────────
+  if (isDashboardProject) {
+    return (
+      <BrowserRouter>
+        <AuthProvider>
+          <AppProvider>
+            {/* Shared UI overlays */}
+            <Toast />
+            <LightboxModal />
+
+            <Routes>
+              {/* Login Gate */}
+              <Route path="/login" element={<LoginPage />} />
+
+              {/* Rota Raiz ('/') é o Dashboard diretamente */}
+              <Route
+                path="/"
+                element={
+                  <ProtectedRoute>
+                    <DashboardLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route index element={<OverviewView />} />
+                <Route path="overview" element={<OverviewView />} />
+                <Route path="comercial" element={<CommercialView />} />
+                <Route path="prefeitura" element={<InstitutionalView />} />
+                <Route path="sanidade" element={<BiosafetyView />} />
+                <Route path="infraestrutura" element={<InfrastructureView />} />
+                <Route path="marketing" element={<MarketingView />} />
+                <Route path="programacao" element={<ProgramView />} />
+                <Route path="configuracoes" element={<SettingsView />} />
+
+                {/* Aliases em inglês */}
+                <Route path="commercial" element={<Navigate to="/comercial" replace />} />
+                <Route path="institutional" element={<Navigate to="/prefeitura" replace />} />
+                <Route path="biosafety" element={<Navigate to="/sanidade" replace />} />
+                <Route path="infrastructure" element={<Navigate to="/infraestrutura" replace />} />
+                <Route path="program" element={<Navigate to="/programacao" replace />} />
+                <Route path="settings" element={<Navigate to="/configuracoes" replace />} />
+              </Route>
+
+              {/* Rota '/dashboard' também aponta diretamente para o painel */}
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <DashboardLayout />
+                  </ProtectedRoute>
+                }
+              >
+                <Route index element={<OverviewView />} />
+                <Route path="overview" element={<OverviewView />} />
+                <Route path="comercial" element={<CommercialView />} />
+                <Route path="prefeitura" element={<InstitutionalView />} />
+                <Route path="sanidade" element={<BiosafetyView />} />
+                <Route path="infraestrutura" element={<InfrastructureView />} />
+                <Route path="marketing" element={<MarketingView />} />
+                <Route path="programacao" element={<ProgramView />} />
+                <Route path="configuracoes" element={<SettingsView />} />
+
+                <Route path="commercial" element={<Navigate to="/dashboard/comercial" replace />} />
+                <Route path="institutional" element={<Navigate to="/dashboard/prefeitura" replace />} />
+                <Route path="biosafety" element={<Navigate to="/dashboard/sanidade" replace />} />
+                <Route path="infrastructure" element={<Navigate to="/dashboard/infraestrutura" replace />} />
+                <Route path="program" element={<Navigate to="/dashboard/programacao" replace />} />
+                <Route path="settings" element={<Navigate to="/dashboard/configuracoes" replace />} />
+
+                <Route path="*" element={<Navigate to="/dashboard/overview" replace />} />
+              </Route>
+
+              {/* Qualquer rota desconhecida no projeto do dashboard redireciona para a raiz do painel */}
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </AppProvider>
+        </AuthProvider>
+      </BrowserRouter>
+    );
+  }
+
+  // ── SE O PROJETO FOR A LANDING PAGE (feira-eu-amo-pet) ─────────────────────
   return (
     <BrowserRouter>
       <AuthProvider>
@@ -73,24 +151,13 @@ export default function App() {
           <LightboxModal />
 
           <Routes>
-            {/*
-             * PUBLIC — Landing Page
-             * URL: /
-             * Zero link or leak to dashboard.
-             */}
+            {/* PUBLIC — Landing Page */}
             <Route path="/" element={<LandingLayout />} />
 
-            {/*
-             * PUBLIC — Login Gate
-             * URL: /login
-             * Restricted entry for organizers.
-             */}
+            {/* Login Gate */}
             <Route path="/login" element={<LoginPage />} />
 
-            {/*
-             * PROTECTED — Team Operations Dashboard
-             * URL: /dashboard with full sub-route nesting and deep linking
-             */}
+            {/* Dashboard routes */}
             <Route
               path="/dashboard"
               element={
@@ -101,8 +168,6 @@ export default function App() {
             >
               <Route index element={<OverviewView />} />
               <Route path="overview" element={<OverviewView />} />
-
-              {/* Sub-rotas operacionais canônicas */}
               <Route path="comercial" element={<CommercialView />} />
               <Route path="prefeitura" element={<InstitutionalView />} />
               <Route path="sanidade" element={<BiosafetyView />} />
@@ -111,7 +176,6 @@ export default function App() {
               <Route path="programacao" element={<ProgramView />} />
               <Route path="configuracoes" element={<SettingsView />} />
 
-              {/* Redirecionamentos transparentes para aliases em inglês */}
               <Route path="commercial" element={<Navigate to="/dashboard/comercial" replace />} />
               <Route path="institutional" element={<Navigate to="/dashboard/prefeitura" replace />} />
               <Route path="biosafety" element={<Navigate to="/dashboard/sanidade" replace />} />
@@ -119,7 +183,6 @@ export default function App() {
               <Route path="program" element={<Navigate to="/dashboard/programacao" replace />} />
               <Route path="settings" element={<Navigate to="/dashboard/configuracoes" replace />} />
 
-              {/* Sub-rota desconhecida dentro do dashboard redireciona para overview */}
               <Route path="*" element={<Navigate to="/dashboard/overview" replace />} />
             </Route>
 
