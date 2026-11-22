@@ -2,31 +2,31 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 // Context providers
-import { AppProvider }  from './context/AppContext';
+import { AppProvider } from './context/AppContext';
 import { AuthProvider } from './auth/AuthContext';
 
 // Auth
-import LoginPage     from './auth/LoginPage';
+import LoginPage from './auth/LoginPage';
 import ProtectedRoute from './auth/ProtectedRoute';
 
 // Landing page (public)
-import LandingPage   from './landing/LandingPage';
-import Navbar        from './components/Layout/Navbar';
-import Footer        from './components/Layout/Footer';
+import LandingPage from './landing/LandingPage';
+import Navbar from './components/Layout/Navbar';
+import Footer from './components/Layout/Footer';
 
 // Dashboard & Views (team-only)
-import DashboardLayout    from './dashboard/DashboardLayout';
-import OverviewView       from './dashboard/views/OverviewView';
-import CommercialView     from './dashboard/views/CommercialView';
-import InstitutionalView  from './dashboard/views/InstitutionalView';
-import BiosafetyView      from './dashboard/views/BiosafetyView';
+import DashboardLayout from './dashboard/DashboardLayout';
+import OverviewView from './dashboard/views/OverviewView';
+import CommercialView from './dashboard/views/CommercialView';
+import InstitutionalView from './dashboard/views/InstitutionalView';
+import BiosafetyView from './dashboard/views/BiosafetyView';
 import InfrastructureView from './dashboard/views/InfrastructureView';
-import MarketingView      from './dashboard/views/MarketingView';
-import ProgramView        from './dashboard/views/ProgramView';
-import SettingsView       from './dashboard/views/SettingsView';
+import MarketingView from './dashboard/views/MarketingView';
+import ProgramView from './dashboard/views/ProgramView';
+import SettingsView from './dashboard/views/SettingsView';
 
 // Shared overlays
-import Toast         from './components/ui/Toast';
+import Toast from './components/ui/Toast';
 import LightboxModal from './components/ui/LightboxModal';
 
 // Landing layout: sections + Footer (completely isolated from dashboard, 1:1 Festival Pet)
@@ -74,18 +74,11 @@ export default function App() {
 
           <Routes>
             {/*
-             * PUBLIC — Root Route
-             * If in Dashboard Project: redirects directly to /dashboard or /login
-             * If in Landing Project: renders the full Festival Landing Page
+             * PUBLIC — Landing Page
+             * URL: /
+             * Zero link or leak to dashboard.
              */}
-            <Route 
-              path="/" 
-              element={
-                isDashboardProject 
-                  ? <Navigate to="/dashboard" replace /> 
-                  : <LandingLayout />
-              } 
-            />
+            <Route path="/" element={<LandingLayout />} />
 
             {/*
              * PUBLIC — Login Gate
@@ -130,13 +123,8 @@ export default function App() {
               <Route path="*" element={<Navigate to="/dashboard/overview" replace />} />
             </Route>
 
-            {/* Unknown top-level routes redirect to root (landing or dashboard depending on project) */}
-            <Route 
-              path="*" 
-              element={
-                <Navigate to={isDashboardProject ? "/dashboard" : "/"} replace />
-              } 
-            />
+            {/* Any unknown top-level route redirects to public landing */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </AppProvider>
       </AuthProvider>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import { useAuth } from '../auth/AuthContext';
+import BrandHeartPaw from '../components/BrandHeartPaw';
 import {
   LayoutDashboard,
   Landmark,
@@ -13,7 +14,8 @@ import {
   Settings,
   Globe,
   LogOut,
-  ExternalLink
+  ExternalLink,
+  Sparkles
 } from 'lucide-react';
 
 export default function Sidebar() {
@@ -34,15 +36,17 @@ export default function Sidebar() {
       aliases: ['/dashboard', '/dashboard/'],
       label: 'Visão Geral & KPIs', 
       icon: LayoutDashboard, 
-      badge: 'Central' 
+      badge: 'Central',
+      color: '#f9418c'
     },
     { 
       id: 'commercial', 
       path: '/dashboard/comercial', 
       aliases: ['/dashboard/commercial'],
-      label: 'Comercial & Patrocínios', 
+      label: 'Comercial & Cotas', 
       icon: DollarSign, 
-      badge: 'Cotas' 
+      badge: 'Cotas',
+      color: '#ffc600'
     },
     { 
       id: 'institutional', 
@@ -51,15 +55,17 @@ export default function Sidebar() {
       label: 'Prefeitura & Alvarás', 
       icon: Landmark, 
       badge: pendingAlvaras > 0 ? `${pendingAlvaras} pend.` : 'Ok', 
-      badgeColor: pendingAlvaras > 0 ? 'bg-amber-950 text-amber-300 border border-amber-800' : 'bg-emerald-950 text-emerald-300 border border-emerald-800' 
+      badgeColor: pendingAlvaras > 0 ? 'bg-amber-400/20 text-amber-300 border border-amber-400/30' : 'bg-emerald-400/20 text-emerald-300 border border-emerald-400/30',
+      color: '#38bdf8'
     },
     { 
       id: 'biosafety', 
       path: '/dashboard/sanidade', 
       aliases: ['/dashboard/biosafety'],
-      label: 'Sanidade & Biosseguridade', 
+      label: 'Sanidade & GTA', 
       icon: ShieldCheck, 
-      badge: 'CRMV/GTA' 
+      badge: 'CRMV',
+      color: '#cbe33d'
     },
     { 
       id: 'infrastructure', 
@@ -67,7 +73,8 @@ export default function Sidebar() {
       aliases: ['/dashboard/infrastructure'],
       label: 'Infraestrutura & Estandes', 
       icon: Building2, 
-      badge: `${occupiedBooths}/${totalBooths}` 
+      badge: `${occupiedBooths}/${totalBooths}`,
+      color: '#a78bfa'
     },
     { 
       id: 'marketing', 
@@ -75,15 +82,17 @@ export default function Sidebar() {
       aliases: [],
       label: 'Marketing & Funil AARRR', 
       icon: TrendingUp, 
-      badge: '6 Semanas' 
+      badge: '6 Semanas',
+      color: '#f43f5e'
     },
     { 
       id: 'program', 
       path: '/dashboard/programacao', 
       aliases: ['/dashboard/program'],
-      label: 'Programação & Atrações', 
+      label: 'Programação Oficial', 
       icon: CalendarDays, 
-      badge: '3 Dias' 
+      badge: '3 Dias',
+      color: '#fb923c'
     },
     { 
       id: 'settings', 
@@ -91,7 +100,8 @@ export default function Sidebar() {
       aliases: ['/dashboard/settings'],
       label: 'Configurações Globais', 
       icon: Settings, 
-      badge: 'Editar' 
+      badge: 'Ajustes',
+      color: '#94a3b8'
     }
   ];
 
@@ -103,30 +113,35 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-[260px] min-w-[260px] bg-stone-950 text-stone-300 flex flex-col shrink-0 h-screen border-r border-stone-800/80 select-none">
+    <aside className="w-[264px] min-w-[264px] bg-[#161e47] text-white flex flex-col shrink-0 h-screen border-r border-[#243068] select-none shadow-xl z-30">
       
-      {/* Top Sidebar Header */}
-      <div className="p-5 border-b border-stone-800/80 flex items-center justify-between shrink-0">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-stone-900 border border-stone-800 text-stone-100 flex items-center justify-center font-black text-sm shadow-sm">
-            <span className="text-emerald-500 font-mono text-base font-bold">FP</span>
+      {/* Top Sidebar Header with Official Brand Logo */}
+      <div className="p-4 border-b border-[#243068] flex items-center justify-between shrink-0 bg-[#12193b]">
+        <Link to="/dashboard/overview" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-xl bg-white/10 p-1 flex items-center justify-center border border-white/15 shadow-sm group-hover:scale-105 transition-transform">
+            <img
+              src="/assets/branding/logo-eu-amo-pet-transparente-oficial.png"
+              alt="Logo Feira Eu Amo Pet"
+              className="w-full h-full object-contain"
+            />
           </div>
           <div>
-            <div className="font-sans font-bold text-stone-100 text-sm tracking-tight leading-tight">
-              Feira Eu Amo Pet
+            <div className="font-extrabold text-white text-sm tracking-tight leading-tight flex items-center gap-1.5">
+              <span>Feira Eu Amo Pet</span>
             </div>
-            <div className="text-[11px] text-stone-500 font-medium flex items-center gap-1.5 mt-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              Painel Operacional
+            <div className="text-[10px] text-[#ffc600] font-black uppercase tracking-wider flex items-center gap-1 mt-0.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#f9418c] animate-pulse"></span>
+              Painel Operacional 2027
             </div>
           </div>
-        </div>
+        </Link>
       </div>
 
-      {/* Navigation Links with Independent Smooth Scrollbar */}
-      <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1 scrollbar-thin">
-        <div className="px-3 pb-2 text-[10px] font-bold uppercase tracking-wider text-stone-500">
-          Processos Críticos
+      {/* Navigation Links with Brand Accents */}
+      <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1.5 scrollbar-thin">
+        <div className="px-3 pb-2 text-[10px] font-black uppercase tracking-wider text-indigo-300/60 flex items-center justify-between">
+          <span>Processos Críticos</span>
+          <span className="text-[9px] text-[#ffc600] bg-[#ffc600]/10 px-1.5 py-0.5 rounded font-mono font-bold">Macaé 2027</span>
         </div>
 
         {menuItems.map((item) => {
@@ -142,22 +157,28 @@ export default function Sidebar() {
                   setActiveDashboardTab(item.id);
                 }
               }}
-              className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-all group ${
+              className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold transition-all group relative ${
                 active
-                  ? 'bg-stone-800 text-white font-semibold border-l-2 border-emerald-500 pl-2.5 shadow-xs'
-                  : 'text-stone-400 hover:text-stone-200 hover:bg-stone-900'
+                  ? 'bg-[#202f6b] text-white shadow-md border-l-4 border-[#f9418c] pl-2.5'
+                  : 'text-indigo-200/80 hover:text-white hover:bg-white/5'
               }`}
             >
-              <div className="flex items-center gap-2.5 truncate">
-                <Icon className={`w-4 h-4 shrink-0 transition-colors ${active ? 'text-emerald-400' : 'text-stone-400 group-hover:text-stone-200'}`} />
+              <div className="flex items-center gap-3 truncate">
+                <div 
+                  className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                    active ? 'bg-[#f9418c] text-white shadow-sm' : 'bg-white/5 text-indigo-300 group-hover:bg-white/10 group-hover:text-white'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                </div>
                 <span className="truncate">{item.label}</span>
               </div>
 
               {item.badge && (
-                <span className={`text-[10px] font-mono tabular-nums px-2 py-0.5 rounded-md ${
+                <span className={`text-[10px] font-mono tabular-nums px-2 py-0.5 rounded-md font-bold shrink-0 ${
                   active 
-                    ? 'bg-emerald-950 text-emerald-300 border border-emerald-800/80' 
-                    : item.badgeColor || 'bg-stone-900 text-stone-400 group-hover:bg-stone-800'
+                    ? 'bg-[#ffc600] text-[#161e47] shadow-xs' 
+                    : item.badgeColor || 'bg-white/10 text-indigo-200 group-hover:bg-white/15'
                 }`}>
                   {item.badge}
                 </span>
@@ -167,57 +188,62 @@ export default function Sidebar() {
         })}
       </div>
 
-      {/* Sidebar Footer with Quick Stats & Session */}
-      <div className="p-3.5 border-t border-stone-800/80 bg-stone-950 space-y-2.5 shrink-0">
+      {/* Sidebar Footer with Brand Occupancy Bar & Session Card */}
+      <div className="p-3.5 border-t border-[#243068] bg-[#12193b] space-y-2.5 shrink-0">
         
-        {/* Booth Occupancy Mini Bar */}
-        <div className="p-2.5 rounded-xl bg-stone-900/90 border border-stone-800/80">
+        {/* Booth Occupancy Mini Bar with Brand Gradient */}
+        <div className="p-2.5 rounded-xl bg-white/5 border border-white/10">
           <div className="flex items-center justify-between text-xs">
-            <span className="text-stone-400 text-[11px] font-medium">Ocupação Pavilhão:</span>
-            <span className="font-bold text-amber-400 font-mono tabular-nums text-xs">
-              {Math.round((occupiedBooths / totalBooths) * 100)}%
+            <span className="text-indigo-200 text-[11px] font-bold">Ocupação do Pavilhão:</span>
+            <span className="font-black text-[#ffc600] font-mono tabular-nums text-xs">
+              {Math.round((occupiedBooths / totalBooths) * 100)}% ({occupiedBooths}/{totalBooths})
             </span>
           </div>
-          <div className="w-full bg-stone-800 h-1 rounded-full overflow-hidden mt-1.5">
+          <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden mt-2 p-0.5">
             <div
-              className="bg-amber-400 h-full rounded-full transition-all duration-500"
+              className="bg-gradient-to-r from-[#ffc600] via-[#f9418c] to-[#8c43dc] h-full rounded-full transition-all duration-500 shadow-sm"
               style={{ width: `${(occupiedBooths / totalBooths) * 100}%` }}
             ></div>
           </div>
         </div>
 
-        {/* User Session Info */}
+        {/* User Session Info Card */}
         {user && (
-          <div className="flex items-center justify-between p-2 rounded-xl bg-stone-900 border border-stone-800/80">
-            <div className="min-w-0 pr-1">
-              <div className="text-xs font-semibold text-stone-200 truncate">{user.username}</div>
-              <div className="text-[10px] text-stone-500 font-medium truncate">
-                {user.devMode ? 'Modo desenvolvimento' : 'Equipe autorizada'}
+          <div className="flex items-center justify-between p-2 rounded-xl bg-white/5 border border-white/10">
+            <div className="flex items-center gap-2.5 min-w-0 pr-1">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#f9418c] to-[#8c43dc] text-white font-black text-xs flex items-center justify-center shrink-0 shadow-sm">
+                MD
+              </div>
+              <div className="min-w-0">
+                <div className="text-xs font-bold text-white truncate">{user.username || 'Maycon Douglas'}</div>
+                <div className="text-[10px] text-indigo-300 font-medium truncate">
+                  {user.devMode ? 'Comissão Organizadora' : 'Equipe Autorizada'}
+                </div>
               </div>
             </div>
             <button
               onClick={() => { logout(); navigate('/login'); }}
-              className="p-1.5 rounded-lg text-stone-400 hover:text-red-400 hover:bg-stone-800 transition-colors shrink-0"
+              className="p-1.5 rounded-lg text-indigo-300 hover:text-[#f9418c] hover:bg-white/10 transition-colors shrink-0"
               title="Encerrar sessão"
             >
-              <LogOut className="w-3.5 h-3.5" />
+              <LogOut className="w-4 h-4" />
             </button>
           </div>
         )}
 
-        {/* View Public Site in New Tab */}
+        {/* View Public Landing Page */}
         <a
-          href="/"
+          href="https://feira-eu-amo-pet.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-300 text-xs font-medium transition-all border border-stone-800 group"
-          title="Abrir o site público oficial em nova aba"
+          className="w-full flex items-center justify-between py-2 px-3 rounded-xl bg-gradient-to-r from-[#f9418c]/15 via-[#ffc600]/10 to-[#8c43dc]/15 hover:from-[#f9418c]/25 hover:to-[#8c43dc]/25 text-white text-xs font-bold transition-all border border-[#f9418c]/30 group shadow-sm"
+          title="Abrir a Landing Page oficial em nova aba"
         >
           <div className="flex items-center gap-2">
-            <Globe className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Ver Site Público</span>
+            <Globe className="w-3.5 h-3.5 text-[#ffc600]" />
+            <span>Ver Landing Page</span>
           </div>
-          <ExternalLink className="w-3 h-3 text-stone-500 group-hover:text-stone-300" />
+          <ExternalLink className="w-3.5 h-3.5 text-indigo-300 group-hover:text-white" />
         </a>
       </div>
 

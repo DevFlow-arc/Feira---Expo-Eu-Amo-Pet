@@ -19,7 +19,7 @@ export default function FestivalEbook() {
 
   const docConfig = isB2B ? {
     tipo: 'comercial',
-    titulo: 'Livro de Apresentação Comercial 2027',
+    titulo: 'Livro de Apresentação & Mídia Kit Comercial 2027',
     badge: 'DOSSIÊ COMERCIAL 2027 • 46 PÁGINAS',
     nomeArquivo: 'Livro-de-Apresentacao-Para-Patrocinadores-Feira-Pet-2027.pdf',
     pdfUrl: '/docs/Livro-de-Apresentacao-Para-Patrocinadores-Feira-Pet-2027.pdf',
@@ -84,7 +84,7 @@ export default function FestivalEbook() {
 
   return (
     <section id="ebook" className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#f8f1e5] overflow-hidden border-t-2 border-b-2 border-stone-200/60" style={{ scrollMarginTop: '90px' }}>
-      
+
       {/* Faixa Superior com Gradiente da Identidade Visual */}
       <div className="absolute top-0 left-0 w-full h-3.5 bg-gradient-to-r from-[#f9418c] via-[#ffc600] to-[#8c43dc]" />
 
@@ -101,23 +101,24 @@ export default function FestivalEbook() {
 
         {/* Cabeçalho da Seção com as Fontes Oficiais do Site */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <span 
+          <span
             className="inline-block px-5 py-1.5 rounded-full bg-[#8c43dc] text-white text-xs sm:text-sm font-black uppercase tracking-wider shadow-md -rotate-1 mb-4"
             style={{ fontFamily: '"Nunito", sans-serif' }}
           >
             MATERIAL EXCLUSIVO 2027 • DOWNLOAD GRATUITO
           </span>
 
-          <h2 
+          <h2
             className="text-3xl sm:text-4xl md:text-5xl text-[#202f6b] uppercase tracking-tight leading-tight"
             style={{ fontFamily: '"Protest Strike", sans-serif' }}
           >
-            LIVRO DE APRESENTAÇÃO
+            LIVRO DE APRESENTAÇÃO <br className="hidden sm:inline" />
+            <span className="text-[#f9418c]">&amp; MÍDIA KIT OFICIAL</span>
           </h2>
 
           <div className="w-48 h-2.5 bg-[#ffc600] rounded-full mx-auto my-4 -rotate-1" />
 
-          <p 
+          <p
             className="text-stone-700 text-sm sm:text-base font-medium leading-relaxed"
             style={{ fontFamily: '"Nunito", sans-serif' }}
           >
@@ -130,12 +131,12 @@ export default function FestivalEbook() {
 
           {/* Coluna da Esquerda: Capa Oficial do Ebook Completa, sem bordas recortando (5 cols) */}
           <div className="lg:col-span-5 flex flex-col items-center">
-            
+
             <div className="relative group flex flex-col items-center w-full max-w-sm">
-              
+
               {/* Badge Flutuante no Topo */}
               <div className="mb-3 flex items-center justify-center gap-2">
-                <span 
+                <span
                   className="px-4 py-1 rounded-full bg-[#202f6b] text-[#ffc600] text-xs font-black uppercase tracking-wider shadow-md border border-white/20 flex items-center gap-1.5"
                   style={{ fontFamily: '"Nunito", sans-serif' }}
                 >
@@ -161,7 +162,7 @@ export default function FestivalEbook() {
               </div>
 
               {/* Destaques do Conteúdo Logo Abaixo da Capa */}
-              <div 
+              <div
                 className="w-full mt-5 p-4 rounded-2xl bg-white shadow-md border border-stone-200 space-y-2 text-xs text-stone-700"
                 style={{ fontFamily: '"Nunito", sans-serif' }}
               >
@@ -185,22 +186,22 @@ export default function FestivalEbook() {
           <div className="lg:col-span-7">
 
             <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-xl border border-stone-200">
-              
+
               {/* Header do Form com Fonte Protest Strike */}
               <div className="mb-6">
-                <span 
+                <span
                   className="text-xs font-black uppercase tracking-wider text-[#f9418c] block mb-1"
                   style={{ fontFamily: '"Nunito", sans-serif' }}
                 >
                   PASSO 1: SELECIONE SEU PERFIL
                 </span>
-                <h3 
+                <h3
                   className="text-2xl sm:text-3xl text-[#202f6b] uppercase tracking-tight"
                   style={{ fontFamily: '"Protest Strike", sans-serif' }}
                 >
                   {isB2B ? 'Baixe o Dossiê Comercial 2027' : 'Baixe a Apresentação Oficial 2027'}
                 </h3>
-                <p 
+                <p
                   className="text-xs sm:text-sm text-stone-600 mt-1.5 font-medium"
                   style={{ fontFamily: '"Nunito", sans-serif' }}
                 >
@@ -226,25 +227,23 @@ export default function FestivalEbook() {
                         setPerfil(tab.id);
                         setDownloaded(false);
                       }}
-                      className={`p-3 rounded-2xl text-left border-2 transition-all flex flex-col justify-between ${
-                        active
-                          ? 'border-[#f9418c] bg-[#f9418c]/10 text-[#202f6b] shadow-md ring-2 ring-[#f9418c]/30'
-                          : 'border-stone-200 hover:border-stone-300 bg-stone-50 text-stone-600'
-                      }`}
+                      className={`p-3 rounded-2xl text-left border-2 transition-all flex flex-col justify-between ${active
+                        ? 'border-[#f9418c] bg-[#f9418c]/10 text-[#202f6b] shadow-md ring-2 ring-[#f9418c]/30'
+                        : 'border-stone-200 hover:border-stone-300 bg-stone-50 text-stone-600'
+                        }`}
                     >
-                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center mb-2 ${
-                        active ? 'bg-[#f9418c] text-white' : 'bg-stone-200 text-stone-600'
-                      }`}>
+                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center mb-2 ${active ? 'bg-[#f9418c] text-white' : 'bg-stone-200 text-stone-600'
+                        }`}>
                         <Icon className="w-4 h-4" />
                       </div>
                       <div>
-                        <span 
+                        <span
                           className="text-xs font-black block leading-tight uppercase"
                           style={{ fontFamily: '"Nunito", sans-serif' }}
                         >
                           {tab.label}
                         </span>
-                        <span 
+                        <span
                           className="text-[10px] text-stone-500 block leading-tight mt-0.5"
                           style={{ fontFamily: '"Nunito", sans-serif' }}
                         >
@@ -257,7 +256,7 @@ export default function FestivalEbook() {
               </div>
 
               {/* Mensagem Explicativa Dinâmica para o Perfil Selecionado */}
-              <div 
+              <div
                 className="mb-6 p-4 rounded-2xl bg-[#202f6b]/5 border-l-4 border-[#202f6b] text-xs text-[#202f6b]"
                 style={{ fontFamily: '"Nunito", sans-serif' }}
               >
@@ -276,7 +275,7 @@ export default function FestivalEbook() {
                 <form onSubmit={handleDownload} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label 
+                      <label
                         className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       >
@@ -294,7 +293,7 @@ export default function FestivalEbook() {
                     </div>
 
                     <div>
-                      <label 
+                      <label
                         className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       >
@@ -314,7 +313,7 @@ export default function FestivalEbook() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label 
+                      <label
                         className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       >
@@ -332,7 +331,7 @@ export default function FestivalEbook() {
                     </div>
 
                     <div>
-                      <label 
+                      <label
                         className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       >
@@ -365,7 +364,7 @@ export default function FestivalEbook() {
                     )}
                   </button>
 
-                  <p 
+                  <p
                     className="text-[11px] text-center text-stone-500 mt-2 font-medium"
                     style={{ fontFamily: '"Nunito", sans-serif' }}
                   >
@@ -378,13 +377,13 @@ export default function FestivalEbook() {
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <div>
-                    <h4 
+                    <h4
                       className="text-2xl text-[#202f6b] uppercase tracking-tight"
                       style={{ fontFamily: '"Protest Strike", sans-serif' }}
                     >
                       Download Concluído com Sucesso!
                     </h4>
-                    <p 
+                    <p
                       className="text-xs sm:text-sm text-stone-600 mt-1 max-w-md mx-auto"
                       style={{ fontFamily: '"Nunito", sans-serif' }}
                     >

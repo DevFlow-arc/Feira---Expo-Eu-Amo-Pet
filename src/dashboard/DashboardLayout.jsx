@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
 import Sidebar from './Sidebar';
+import BrandHeartPaw from '../components/BrandHeartPaw';
 import {
   Calendar,
   MapPin,
@@ -14,26 +15,28 @@ import {
   Users,
   Store,
   DollarSign,
-  X
+  X,
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 
 const SECTION_TITLES = {
   '/dashboard': 'Visão Geral & KPIs',
   '/dashboard/': 'Visão Geral & KPIs',
   '/dashboard/overview': 'Visão Geral & KPIs',
-  '/dashboard/comercial': 'Comercial & Patrocínios',
-  '/dashboard/commercial': 'Comercial & Patrocínios',
-  '/dashboard/prefeitura': 'Prefeitura & Alvarás',
-  '/dashboard/institutional': 'Prefeitura & Alvarás',
-  '/dashboard/sanidade': 'Sanidade & Biosseguridade',
-  '/dashboard/biosafety': 'Sanidade & Biosseguridade',
-  '/dashboard/infraestrutura': 'Infraestrutura & Estandes',
-  '/dashboard/infrastructure': 'Infraestrutura & Estandes',
-  '/dashboard/marketing': 'Marketing & Funil AARRR',
-  '/dashboard/programacao': 'Programação & Atrações',
-  '/dashboard/program': 'Programação & Atrações',
-  '/dashboard/configuracoes': 'Configurações Globais',
-  '/dashboard/settings': 'Configurações Globais'
+  '/dashboard/comercial': 'Comercial & Cotas de Patrocínio',
+  '/dashboard/commercial': 'Comercial & Cotas de Patrocínio',
+  '/dashboard/prefeitura': 'Prefeitura & Alvarás Governamentais',
+  '/dashboard/institutional': 'Prefeitura & Alvarás Governamentais',
+  '/dashboard/sanidade': 'Sanidade Animal & Biosseguridade CRMV',
+  '/dashboard/biosafety': 'Sanidade Animal & Biosseguridade CRMV',
+  '/dashboard/infraestrutura': 'Infraestrutura, Pavilhão & Estandes',
+  '/dashboard/infrastructure': 'Infraestrutura, Pavilhão & Estandes',
+  '/dashboard/marketing': 'Marketing, Tráfego & Funil AARRR',
+  '/dashboard/programacao': 'Programação & Atrações dos 3 Dias',
+  '/dashboard/program': 'Programação & Atrações dos 3 Dias',
+  '/dashboard/configuracoes': 'Configurações Globais & Parâmetros',
+  '/dashboard/settings': 'Configurações Globais & Parâmetros'
 };
 
 const SEARCH_ITEMS = [
@@ -94,7 +97,7 @@ export default function DashboardLayout() {
   );
 
   return (
-    <div className="flex h-screen overflow-hidden bg-stone-100 text-stone-900 font-sans antialiased">
+    <div className="flex h-screen overflow-hidden bg-[#f8f5ee] text-[#202f6b] font-sans antialiased">
       
       {/* 1. Independent Scroll Sidebar */}
       <Sidebar />
@@ -102,15 +105,15 @@ export default function DashboardLayout() {
       {/* 2. Main Content Column */}
       <div className="flex-1 flex flex-col h-screen overflow-hidden min-w-0">
         
-        {/* Topbar Chrome */}
-        <header className="h-16 bg-white border-b border-stone-200/90 px-5 lg:px-7 flex items-center justify-between shrink-0 select-none z-20">
+        {/* Topbar Chrome with Festival Brand Accents */}
+        <header className="h-16 bg-white/95 backdrop-blur-md border-b border-[#e5dfd3] px-5 lg:px-7 flex items-center justify-between shrink-0 select-none z-20 shadow-xs">
           
           {/* Left: Breadcrumbs + Context */}
           <div className="flex items-center gap-3">
-            <nav className="flex items-center gap-2 text-xs font-medium text-stone-500">
-              <span className="hidden sm:inline text-stone-400">Painel</span>
+            <nav className="flex items-center gap-2 text-xs font-bold text-stone-500">
+              <span className="hidden sm:inline text-stone-400 hover:text-[#202f6b] transition-colors">Painel</span>
               <ChevronRight className="w-3.5 h-3.5 text-stone-300 hidden sm:inline" />
-              <span className="text-stone-900 font-semibold truncate max-w-[200px] sm:max-w-none">
+              <span className="text-[#202f6b] font-black text-sm tracking-tight truncate max-w-[200px] sm:max-w-none">
                 {currentTitle}
               </span>
             </nav>
@@ -119,13 +122,13 @@ export default function DashboardLayout() {
 
             {/* Event Date & Location Calm Badges */}
             <div className="hidden xl:flex items-center gap-2">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 text-[11px] font-medium text-stone-600">
-                <Calendar className="w-3.5 h-3.5 text-stone-400" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ffc600]/15 border border-[#ffc600]/30 text-[11px] font-black text-[#946a00]">
+                <Calendar className="w-3.5 h-3.5 text-[#b8860b]" />
                 <span>{generalInfo.targetDate}</span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 text-[11px] font-medium text-stone-600 truncate max-w-[240px]">
-                <MapPin className="w-3.5 h-3.5 text-stone-400" />
-                <span className="truncate">{generalInfo.venueName}</span>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#202f6b]/5 border border-[#202f6b]/15 text-[11px] font-bold text-[#202f6b] truncate max-w-[260px]">
+                <MapPin className="w-3.5 h-3.5 text-[#f9418c]" />
+                <span className="truncate">{generalInfo.venueName} • {generalInfo.city}</span>
               </div>
             </div>
           </div>
@@ -139,12 +142,12 @@ export default function DashboardLayout() {
                 setSearchOpen(true);
                 setTimeout(() => searchInputRef.current?.focus(), 50);
               }}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-stone-200 bg-stone-50/80 hover:bg-stone-100 text-stone-500 text-xs transition-colors group"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-xl border border-stone-200 bg-white hover:bg-stone-50 text-stone-600 text-xs font-bold transition-all shadow-2xs hover:border-[#f9418c]/40 group"
               title="Busca Rápida (Ctrl+K)"
             >
-              <Search className="w-3.5 h-3.5 text-stone-400 group-hover:text-stone-600" />
-              <span className="hidden md:inline text-stone-400">Buscar...</span>
-              <kbd className="hidden md:inline-flex text-[10px] font-mono bg-white border border-stone-200 px-1.5 py-0.5 rounded text-stone-400 shadow-2xs">
+              <Search className="w-3.5 h-3.5 text-stone-400 group-hover:text-[#f9418c] transition-colors" />
+              <span className="hidden md:inline text-stone-500">Buscar...</span>
+              <kbd className="hidden md:inline-flex text-[10px] font-mono font-bold bg-[#f8f5ee] border border-stone-300 px-1.5 py-0.5 rounded text-stone-500 shadow-2xs">
                 Ctrl+K
               </kbd>
             </button>
@@ -153,49 +156,57 @@ export default function DashboardLayout() {
             <div className="relative" ref={notifRef}>
               <button
                 onClick={() => setNotificationsOpen((prev) => !prev)}
-                className={`relative p-2 rounded-xl border transition-colors ${
+                className={`relative p-2 rounded-xl border transition-all ${
                   notificationsOpen
-                    ? 'bg-stone-100 border-stone-300 text-stone-800'
-                    : 'border-stone-200 bg-white hover:bg-stone-50 text-stone-600'
+                    ? 'bg-[#202f6b] border-[#202f6b] text-white'
+                    : 'border-stone-200 bg-white hover:bg-stone-50 text-stone-600 hover:border-[#f9418c]/40'
                 }`}
                 title="Notificações Operacionais"
               >
                 <Bell className="w-4 h-4" />
-                <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-white"></span>
+                <span className="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-[#f9418c] ring-2 ring-white animate-pulse"></span>
               </button>
 
               {notificationsOpen && (
-                <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-white border border-stone-200 rounded-2xl shadow-xl py-3 z-50 animate-fade-in text-xs">
+                <div className="absolute right-0 mt-2 w-80 sm:w-96 bg-white border border-[#e5dfd3] rounded-2xl shadow-2xl py-3 z-50 animate-in fade-in slide-in-from-top-2 text-xs">
                   <div className="px-4 pb-2.5 border-b border-stone-100 flex items-center justify-between">
-                    <span className="font-bold text-stone-900 text-xs">Notificações Operacionais</span>
-                    <span className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <span className="font-extrabold text-[#202f6b] text-xs uppercase tracking-wider">
+                      Notificações Operacionais
+                    </span>
+                    <span className="text-[10px] font-mono font-black px-2 py-0.5 rounded-full bg-[#f9418c]/15 text-[#f9418c] border border-[#f9418c]/30">
                       3 novas
                     </span>
                   </div>
 
                   <div className="divide-y divide-stone-100 max-h-72 overflow-y-auto">
-                    <div className="p-3 hover:bg-stone-50 transition-colors flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    <div className="p-3.5 hover:bg-stone-50/80 transition-colors flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-200">
+                        <CheckCircle2 className="w-4 h-4" />
+                      </div>
                       <div>
-                        <div className="font-semibold text-stone-900">Alvará CCZ & Posturas em análise</div>
+                        <div className="font-bold text-stone-900">Alvará CCZ & Posturas em análise</div>
                         <div className="text-stone-500 text-[11px] mt-0.5">Nova gestão municipal agendou vistoria técnica no Parque da Fundação Rural.</div>
                         <div className="text-[10px] text-stone-400 font-mono mt-1">Hoje, 09:42</div>
                       </div>
                     </div>
 
-                    <div className="p-3 hover:bg-stone-50 transition-colors flex items-start gap-2.5">
-                      <Store className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                    <div className="p-3.5 hover:bg-stone-50/80 transition-colors flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 mt-0.5 border border-amber-200">
+                        <Store className="w-4 h-4" />
+                      </div>
                       <div>
-                        <div className="font-semibold text-stone-900">Novo lead "Quero Expor"</div>
+                        <div className="font-bold text-stone-900">Novo lead "Quero Expor"</div>
                         <div className="text-stone-500 text-[11px] mt-0.5">Distribuidora Pet Norte Fluminense solicitou proposta para Cota Sênior (30m²).</div>
                         <div className="text-[10px] text-stone-400 font-mono mt-1">Hoje, 08:15</div>
                       </div>
                     </div>
 
-                    <div className="p-3 hover:bg-stone-50 transition-colors flex items-start gap-2.5">
-                      <Users className="w-4 h-4 text-sky-500 shrink-0 mt-0.5" />
+                    <div className="p-3.5 hover:bg-stone-50/80 transition-colors flex items-start gap-3">
+                      <div className="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 mt-0.5 border border-indigo-200">
+                        <Users className="w-4 h-4" />
+                      </div>
                       <div>
-                        <div className="font-semibold text-stone-900">Grade temática Congresso VET 360</div>
+                        <div className="font-bold text-stone-900">Grade temática Congresso VET 360</div>
                         <div className="text-stone-500 text-[11px] mt-0.5">As 4 trilhas científicas com 20h de certificado foram cadastradas no cronograma.</div>
                         <div className="text-[10px] text-stone-400 font-mono mt-1">Ontem, 17:30</div>
                       </div>
@@ -205,90 +216,70 @@ export default function DashboardLayout() {
               )}
             </div>
 
-            {/* Restore Original Demo Data */}
-            <button
-              onClick={resetToDefaults}
-              className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-stone-200 bg-white hover:bg-stone-50 text-xs font-medium text-stone-600 transition-colors"
-              title="Restaurar dados originais de demonstração"
-            >
-              <RefreshCw className="w-3.5 h-3.5 text-stone-400" />
-              <span>Restaurar</span>
-            </button>
-
-            <div className="h-4 w-px bg-stone-200 hidden sm:block"></div>
-
-            {/* Profile Avatar & Info */}
-            <div className="flex items-center gap-2 pl-1">
-              <div className="w-8 h-8 rounded-xl bg-stone-900 text-stone-100 flex items-center justify-center font-bold text-xs shadow-xs border border-stone-800">
+            {/* Profile Pill Badge */}
+            <div className="hidden sm:flex items-center gap-2 pl-2 border-l border-stone-200">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#202f6b] to-[#f9418c] text-white font-black text-xs flex items-center justify-center shadow-xs">
                 MD
               </div>
-              <div className="hidden sm:block text-left">
-                <div className="text-xs font-bold text-stone-800 leading-tight flex items-center gap-1.5">
-                  <span>Maycon Douglas</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                </div>
-                <div className="text-[10px] text-stone-500 font-medium">
-                  MD Mercado Digital
-                </div>
+              <div className="text-left hidden md:block leading-tight">
+                <div className="text-xs font-black text-[#202f6b]">Maycon Douglas</div>
+                <div className="text-[10px] font-bold text-[#f9418c]">Direção Geral</div>
               </div>
             </div>
 
           </div>
         </header>
 
-        {/* Scrollable View Content routed via Outlet */}
-        <main className="flex-1 overflow-y-auto p-5 sm:p-6 lg:p-8 bg-stone-100/80 scrollbar-thin">
-          <div className="max-w-7xl mx-auto">
-            <Outlet />
-          </div>
+        {/* Dynamic Nested View Viewport with Smooth Scrolling */}
+        <main className="flex-1 overflow-y-auto p-5 sm:p-7 lg:p-8 space-y-7 scrollbar-thin">
+          <Outlet />
         </main>
-
       </div>
 
-      {/* Quick Search Modal */}
+      {/* Global Quick Search Modal (Ctrl+K) */}
       {searchOpen && (
-        <div className="fixed inset-0 bg-stone-950/60 backdrop-blur-xs flex items-start justify-center pt-20 px-4 z-50 animate-fade-in">
-          <div className="bg-white border border-stone-200 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden">
-            <div className="p-3 border-b border-stone-100 flex items-center gap-2">
-              <Search className="w-4 h-4 text-stone-400 ml-2" />
+        <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
+          <div className="bg-white rounded-2xl shadow-2xl border border-stone-200 max-w-lg w-full overflow-hidden text-stone-900">
+            <div className="p-3.5 border-b border-stone-100 flex items-center gap-3">
+              <Search className="w-5 h-5 text-[#f9418c] shrink-0" />
               <input
                 ref={searchInputRef}
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Buscar seções, cotas, alvarás, normas..."
-                className="flex-1 text-sm text-stone-900 placeholder:text-stone-400 outline-none px-2 py-1"
+                placeholder="Navegar no painel (ex: cotas, alvará, GTA, estandes...)"
+                className="w-full bg-transparent text-sm font-bold text-stone-900 focus:outline-none placeholder:text-stone-400"
               />
               <button
                 onClick={() => setSearchOpen(false)}
-                className="p-1 rounded-lg text-stone-400 hover:text-stone-600 hover:bg-stone-100"
+                className="p-1 rounded-lg text-stone-400 hover:text-stone-700 hover:bg-stone-100"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <div className="p-2 max-h-72 overflow-y-auto">
-              {filteredSearch.length === 0 ? (
-                <div className="p-4 text-center text-xs text-stone-400">
-                  Nenhum resultado encontrado para "{searchQuery}".
-                </div>
-              ) : (
+            <div className="max-h-80 overflow-y-auto p-2 divide-y divide-stone-50">
+              {filteredSearch.length > 0 ? (
                 filteredSearch.map((item, idx) => (
-                  <button
+                  <div
                     key={idx}
                     onClick={() => {
                       navigate(item.path);
                       setSearchOpen(false);
                       setSearchQuery('');
                     }}
-                    className="w-full text-left p-2.5 rounded-xl hover:bg-stone-50 flex items-center justify-between text-xs transition-colors"
+                    className="p-3 rounded-xl hover:bg-[#f8f5ee] cursor-pointer flex items-center justify-between text-xs font-bold transition-colors group"
                   >
-                    <span className="font-medium text-stone-800">{item.label}</span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-stone-100 text-stone-500">
+                    <span className="text-stone-800 group-hover:text-[#202f6b]">{item.label}</span>
+                    <span className="text-[10px] uppercase font-mono font-black px-2 py-0.5 rounded-full bg-[#202f6b]/10 text-[#202f6b]">
                       {item.category}
                     </span>
-                  </button>
+                  </div>
                 ))
+              ) : (
+                <div className="p-6 text-center text-xs text-stone-400">
+                  Nenhum processo ou seção encontrado com "{searchQuery}"
+                </div>
               )}
             </div>
           </div>
