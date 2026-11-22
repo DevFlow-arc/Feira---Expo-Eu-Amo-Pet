@@ -41,18 +41,29 @@ function LandingLayout() {
   );
 }
 
-// Determines if this build/deployment runs exclusively as the Dashboard project:
-// 1. Explicitly via environment variable: VITE_APP_MODE === 'dashboard'
-// 2. Or accessed via dashboard/admin/painel domains (e.g. dashboard-*.vercel.app)
-const isDashboardProject =
-  import.meta.env.VITE_APP_MODE === 'dashboard' ||
-  (typeof window !== 'undefined' && (
-    window.location.hostname.includes('dashboard') ||
-    window.location.hostname.includes('painel') ||
-    window.location.hostname.includes('admin')
-  ));
+// Determines dynamically whether this domain runs as the Dashboard or the Landing Page:
+function checkIsDashboardProject() {
+  if (typeof window === 'undefined') return false;
+  const host = window.location.hostname.toLowerCase();
+
+  // 1. Domain-based separation:
+  // If domain is dashboard-* / painel-* / admin-*, ALWAYS run as Dashboard
+  if (host.includes('dashboard') || host.includes('painel') || host.includes('admin')) {
+    return true;
+  }
+
+  // If domain is feira-eu-amo-pet / landing-*, ALWAYS run as Landing Page
+  if (host.includes('feira-eu-amo-pet') || host.includes('landing')) {
+    return false;
+  }
+
+  // 2. Explicit environment variable check (for custom deployments / localhost):
+  return import.meta.env.VITE_APP_MODE === 'dashboard';
+}
 
 export default function App() {
+  const isDashboardProject = checkIsDashboardProject();
+
   return (
     <BrowserRouter>
       <AuthProvider>
