@@ -65,6 +65,9 @@ export default function Navbar() {
               <a href="#fp-edicoes" className="text-sm font-semibold text-[#202f6b] hover:text-[#f45225] transition-colors">
                 Edições
               </a>
+              <a href="#fp-planta" className="text-sm font-semibold text-[#202f6b] hover:text-[#f45225] transition-colors">
+                Planta Baixa
+              </a>
               <a href="#fp-apoiadores" className="text-sm font-semibold text-[#202f6b] hover:text-[#f45225] transition-colors">
                 Marcas Parceiras
               </a>
@@ -128,6 +131,13 @@ export default function Navbar() {
             className="block text-sm font-semibold text-[#202f6b] hover:text-[#f45225] py-1"
           >
             Edições
+          </a>
+          <a 
+            href="#fp-planta" 
+            onClick={() => setMobileMenuOpen(false)}
+            className="block text-sm font-semibold text-[#202f6b] hover:text-[#f45225] py-1"
+          >
+            Planta Baixa
           </a>
           <a 
             href="#fp-apoiadores" 

@@ -1,9 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { initialData } from '../data/initialData';
+import { INITIAL_BOOTHS } from '../data/floorPlanData';
 
 const AppContext = createContext();
 
 const STORAGE_KEY = 'feira_pet_platform_data_v4';
+const BOOTHS_STORAGE_KEY = 'feira_pet_floor_plan_booths_v1';
 
 const DEFAULT_LEADS = [
   {
@@ -74,6 +76,27 @@ export function AppProvider({ children }) {
   const [activeDashboardTab, setActiveDashboardTab] = useState('overview');
   const [lightboxImage, setLightboxImage] = useState(null);
   const [toast, setToast] = useState(null);
+
+  // ─── Floor Plan Booths State (Synced with localStorage) ─────────────────────
+  const [boothsList, setBoothsList] = useState(() => {
+    try {
+      const stored = localStorage.getItem(BOOTHS_STORAGE_KEY);
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('localStorage read booths error:', e);
+    }
+    return INITIAL_BOOTHS;
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(BOOTHS_STORAGE_KEY, JSON.stringify(boothsList));
+    } catch (e) {
+      console.warn('localStorage write booths error:', e);
+    }
+  }, [boothsList]);
 
   useEffect(() => {
     try {
@@ -241,6 +264,17 @@ export function AppProvider({ children }) {
   // ─── Infrastructure / Booths ──────────────────────────────────────────────
   const booths = data.booths || [];
 
+  const updateBooth = (id, updates) => {
+    setBoothsList(prev => prev.map(b => b.id === id ? { ...b, ...updates } : b));
+    showToast(`Estande ${id} atualizado.`);
+  };
+
+  const resetBooths = () => {
+    setBoothsList(INITIAL_BOOTHS);
+    localStorage.removeItem(BOOTHS_STORAGE_KEY);
+    showToast('Planta baixa restaurada para o padrão.');
+  };
+
   const updateBoothsBreakdown = (index, updates) => {
     setData(prev => {
       const nextBreakdown = [...(prev.infrastructureSpecs?.boothsBreakdown || [])];
@@ -353,6 +387,9 @@ export function AppProvider({ children }) {
         addScheduleItem,
         deleteScheduleItem,
         booths,
+        boothsList,
+        updateBooth,
+        resetBooths,
         updateMunicipalChecklist,
         addMunicipalItem,
         updateBiosafetyChecklist,

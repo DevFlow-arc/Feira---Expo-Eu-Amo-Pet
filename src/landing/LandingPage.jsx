@@ -5,6 +5,7 @@ import FestivalPurpose from './FestivalPurpose';
 import FestivalTemTudo from './FestivalTemTudo';
 import FestivalEdicoes from './FestivalEdicoes';
 import FestivalVideo from './FestivalVideo';
+import FestivalFloorPlanSection from './FestivalFloorPlanSection';
 import FestivalEbook from './FestivalEbook';
 import FestivalApoiadores from './FestivalApoiadores';
 import FestivalFaq from './FestivalFaq';
@@ -32,13 +33,16 @@ export default function LandingPage() {
       {/* 6. Tour Virtual / Vídeo Showcase */}
       <FestivalVideo />
 
-      {/* 7. Dossiê Oficial & E-book para Patrocinadores e Expositores 2027 */}
+      {/* 7. Planta Baixa Interativa do Pavilhão & Manuais Técnicos Oficiais */}
+      <FestivalFloorPlanSection />
+
+      {/* 8. Dossiê Oficial & E-book para Patrocinadores e Expositores 2027 */}
       <FestivalEbook />
 
-      {/* 8. Marcas & Apoiadores */}
+      {/* 9. Marcas & Apoiadores */}
       <FestivalApoiadores />
 
-      {/* 9. FAQ: Ficou com Alguma Dúvida? */}
+      {/* 10. FAQ: Ficou com Alguma Dúvida? */}
       <FestivalFaq />
     </div>
   );
