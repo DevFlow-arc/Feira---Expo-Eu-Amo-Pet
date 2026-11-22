@@ -3,8 +3,8 @@ import { useApp } from '../../context/AppContext';
 import { Landmark, Check, Clock, AlertCircle, Plus, X, Filter } from 'lucide-react';
 
 export default function InstitutionalView() {
-  const { data, updateMunicipalChecklist, addMunicipalItem } = useApp();
-  const { municipalChecklist } = data;
+  const { data, updateMunicipalChecklist, addMunicipalItem, municipalChecklist } = useApp();
+  const safeMunicipal = municipalChecklist || data?.municipalChecklist || [];
 
   const [statusFilter, setStatusFilter] = useState('all');
   const [showAddModal, setShowAddModal] = useState(false);
@@ -18,11 +18,11 @@ export default function InstitutionalView() {
     status: 'pendente'
   });
 
-  const completed = municipalChecklist.filter(i => i.status === 'concluido').length;
-  const inProgress = municipalChecklist.filter(i => i.status === 'em_andamento').length;
-  const pending = municipalChecklist.filter(i => i.status === 'pendente').length;
+  const completed = safeMunicipal.filter(i => i.status === 'concluido').length;
+  const inProgress = safeMunicipal.filter(i => i.status === 'em_andamento').length;
+  const pending = safeMunicipal.filter(i => i.status === 'pendente').length;
 
-  const filteredItems = municipalChecklist.filter(i => {
+  const filteredItems = safeMunicipal.filter(i => {
     if (statusFilter === 'all') return true;
     return i.status === statusFilter;
   });

@@ -21,11 +21,11 @@ import {
 export default function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { setActiveDashboardTab, data } = useApp();
+  const { setActiveDashboardTab, data, municipalChecklist } = useApp();
   const { logout, user } = useAuth();
-  const { municipalChecklist } = data;
+  const safeMunicipal = municipalChecklist || data?.municipalChecklist || [];
 
-  const pendingAlvaras = municipalChecklist.filter(i => i.status !== 'concluido').length;
+  const pendingAlvaras = safeMunicipal.filter(i => i.status !== 'concluido').length;
   const occupiedBooths = data.generalInfo.occupiedBoothsCount;
   const totalBooths = data.generalInfo.totalBoothsCount;
 

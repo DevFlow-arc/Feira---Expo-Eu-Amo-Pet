@@ -65,7 +65,15 @@ export function AppProvider({ children }) {
       if (stored) {
         const parsed = JSON.parse(stored);
         if (!parsed.leads) parsed.leads = DEFAULT_LEADS;
-        return parsed;
+        return {
+          ...initialData,
+          ...parsed,
+          generalInfo: { ...initialData.generalInfo, ...(parsed.generalInfo || {}) },
+          infrastructureSpecs: { ...initialData.infrastructureSpecs, ...(parsed.infrastructureSpecs || {}) },
+          municipalChecklist: parsed.municipalChecklist || initialData.municipalChecklist,
+          biosafetyChecklist: parsed.biosafetyChecklist || initialData.biosafetyChecklist,
+          sponsorshipTiers: parsed.sponsorshipTiers || initialData.sponsorshipTiers,
+        };
       }
     } catch (e) {
       console.warn('localStorage read error:', e);
@@ -227,6 +235,10 @@ export function AppProvider({ children }) {
   };
 
   // ─── Municipal Checklist ──────────────────────────────────────────────────
+  const municipalChecklist = data.municipalChecklist || initialData.municipalChecklist || [];
+  const biosafetyChecklist = data.biosafetyChecklist || initialData.biosafetyChecklist || [];
+  const infrastructureSpecs = data.infrastructureSpecs || initialData.infrastructureSpecs || {};
+
   const updateMunicipalChecklist = (id, updates) => {
     setData(prev => ({
       ...prev,
@@ -390,6 +402,9 @@ export function AppProvider({ children }) {
         boothsList,
         updateBooth,
         resetBooths,
+        municipalChecklist,
+        biosafetyChecklist,
+        infrastructureSpecs,
         updateMunicipalChecklist,
         addMunicipalItem,
         updateBiosafetyChecklist,

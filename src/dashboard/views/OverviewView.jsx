@@ -23,21 +23,24 @@ import {
 
 export default function OverviewView() {
   const { data, leads, updateLead, sponsorshipTiers, municipalChecklist, biosafetyChecklist } = useApp();
-  const { generalInfo } = data;
+  const generalInfo = data?.generalInfo || {};
 
-  const totalPotential = sponsorshipTiers.reduce((acc, t) => acc + (t.price * (t.availableSlots || t.spots || 0)), 0);
-  const totalClosed = sponsorshipTiers.reduce((acc, t) => acc + (t.price * (t.filledSlots || 0)), 0);
+  const safeSponsorship = sponsorshipTiers || data?.sponsorshipTiers || [];
+  const totalPotential = safeSponsorship.reduce((acc, t) => acc + (t.price * (t.availableSlots || t.spots || 0)), 0);
+  const totalClosed = safeSponsorship.reduce((acc, t) => acc + (t.price * (t.filledSlots || 0)), 0);
   const percentClosed = totalPotential > 0 ? Math.round((totalClosed / totalPotential) * 100) : 0;
 
   const occupiedBooths = generalInfo.occupiedBoothsCount || 18;
   const totalBooths = generalInfo.totalBoothsCount || 60;
   const boothPercent = Math.round((occupiedBooths / totalBooths) * 100);
 
-  const completedMun = municipalChecklist.filter(i => i.status === 'concluido').length;
-  const totalMun = municipalChecklist.length;
+  const safeMunicipal = municipalChecklist || data?.municipalChecklist || [];
+  const completedMun = safeMunicipal.filter(i => i.status === 'concluido').length;
+  const totalMun = safeMunicipal.length;
 
-  const completedBio = biosafetyChecklist.filter(i => i.status === 'concluido').length;
-  const totalBio = biosafetyChecklist.length;
+  const safeBiosafety = biosafetyChecklist || data?.biosafetyChecklist || [];
+  const completedBio = safeBiosafety.filter(i => i.status === 'concluido').length;
+  const totalBio = safeBiosafety.length;
 
   const handleWhatsappLead = (lead) => {
     const cleanPhone = lead.telefone.replace(/\D/g, '');

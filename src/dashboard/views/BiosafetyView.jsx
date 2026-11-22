@@ -3,10 +3,10 @@ import { useApp } from '../../context/AppContext';
 import { ShieldCheck, Stethoscope, Clock, Check, AlertCircle, Dog, Bird, ShieldAlert } from 'lucide-react';
 
 export default function BiosafetyView() {
-  const { data, updateBiosafetyChecklist } = useApp();
-  const { biosafetyChecklist } = data;
+  const { data, updateBiosafetyChecklist, biosafetyChecklist } = useApp();
+  const safeBiosafety = biosafetyChecklist || data?.biosafetyChecklist || [];
 
-  const completed = biosafetyChecklist.filter(i => i.status === 'concluido').length;
+  const completed = safeBiosafety.filter(i => i.status === 'concluido').length;
 
   return (
     <div className="space-y-6">
