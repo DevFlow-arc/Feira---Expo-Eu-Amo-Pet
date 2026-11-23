@@ -19,7 +19,7 @@ export default function FestivalEbook() {
 
   const docConfig = isB2B ? {
     tipo: 'comercial',
-    titulo: 'Livro de Apresentação & Mídia Kit Comercial 2027',
+    titulo: 'Livro de Apresentação & Dossiê Comercial 2027',
     badge: 'DOSSIÊ COMERCIAL 2027 • 46 PÁGINAS',
     nomeArquivo: 'Livro-de-Apresentacao-Para-Patrocinadores-Feira-Pet-2027.pdf',
     pdfUrl: '/docs/Livro-de-Apresentacao-Para-Patrocinadores-Feira-Pet-2027.pdf',
@@ -83,13 +83,17 @@ export default function FestivalEbook() {
   };
 
   return (
-    <section id="ebook" className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#f8f1e5] overflow-hidden border-t-2 border-b-2 border-stone-200/60" style={{ scrollMarginTop: '90px' }}>
+    <section id="ebook" className="fp-ebook-section relative overflow-hidden" style={{ scrollMarginTop: '90px' }}>
 
-      {/* Faixa Superior com Gradiente da Identidade Visual */}
-      <div className="absolute top-0 left-0 w-full h-3.5 bg-gradient-to-r from-[#f9418c] via-[#ffc600] to-[#8c43dc]" />
+      {/* Borda Rasgada Decorativa Superior (eliminando a barra de gradiente artificial) */}
+      <div 
+        className="fp-torn-divider-top" 
+        style={{ backgroundImage: 'url("/assets/festival/Colagem-Dossie_top_crop.png")' }}
+        aria-hidden="true" 
+      />
 
       {/* Ícone Decorativo Oficial da Marca (Coração com Patinha) 100% Transparente em Marca d'Água */}
-      <div className="absolute -top-6 -right-6 w-36 h-36 opacity-10 pointer-events-none select-none rotate-12">
+      <div className="absolute top-10 right-6 w-36 h-36 opacity-10 pointer-events-none select-none rotate-12 z-0">
         <img
           src="/assets/branding/coracao-patinha-puro.png"
           alt="Patinha Feira Eu Amo Pet"
@@ -97,7 +101,7 @@ export default function FestivalEbook() {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Cabeçalho da Seção com as Fontes Oficiais do Site */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -113,7 +117,7 @@ export default function FestivalEbook() {
             style={{ fontFamily: '"Protest Strike", sans-serif' }}
           >
             LIVRO DE APRESENTAÇÃO <br className="hidden sm:inline" />
-            <span className="text-[#f9418c]">&amp; MÍDIA KIT OFICIAL</span>
+            <span className="text-[#f9418c]">&amp; DOSSIÊ OFICIAL 2027</span>
           </h2>
 
           <div className="w-48 h-2.5 bg-[#ffc600] rounded-full mx-auto my-4 -rotate-1" />
@@ -422,6 +426,13 @@ export default function FestivalEbook() {
         </div>
 
       </div>
+
+      {/* Borda Rasgada Decorativa Inferior - Conectando com a seção de Apoiadores */}
+      <div 
+        className="fp-torn-divider-bottom" 
+        style={{ backgroundImage: 'url("/assets/festival/Colagem-Dossie_bottom_crop.png")' }}
+        aria-hidden="true" 
+      />
 
     </section>
   );

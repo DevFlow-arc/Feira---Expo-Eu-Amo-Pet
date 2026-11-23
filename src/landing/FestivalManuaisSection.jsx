@@ -18,8 +18,15 @@ export default function FestivalManuaisSection() {
   };
 
   return (
-    <section id="fp-manuais" className="py-20 bg-[#f8f1e2] relative overflow-hidden border-t border-[#ebdcca]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="fp-manuais" className="fp-manuais-section relative overflow-hidden">
+      {/* Borda Rasgada Superior - Transição Suave do Bloco de Vídeo */}
+      <div 
+        className="fp-torn-divider-top"
+        style={{ backgroundImage: 'url("/assets/festival/Colagem-Manuais_top_crop.png")' }}
+        aria-hidden="true"
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -27,7 +34,7 @@ export default function FestivalManuaisSection() {
             Documentação Oficial • Edição 2027
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-black text-[#202f6b] tracking-tight">
-            Manuais Técnicos & Regulamentos
+            Manuais Técnicos &amp; Regulamentos
           </h2>
           <p className="text-sm sm:text-base text-[#62628d] font-medium leading-relaxed">
             Acesse e baixe os manuais operacionais em PDF para montadoras, expositores e tutores em conformidade com as normas do Corpo de Bombeiros, NR-10 e sanidade animal do CRMV-RJ.
@@ -35,7 +42,7 @@ export default function FestivalManuaisSection() {
         </div>
 
         {/* ─── Termo de Responsabilidade Animal (Destaque Especial) ────────── */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-dashed border-[#f45225]/40 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-white/95 backdrop-blur-xs rounded-3xl p-6 sm:p-8 border-2 border-dashed border-[#f45225]/40 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 rounded-2xl bg-[#f45225]/10 text-[#f45225] flex items-center justify-center shrink-0">
               <Dog className="w-8 h-8" />
@@ -68,7 +75,7 @@ export default function FestivalManuaisSection() {
 
         {/* ─── Grid de Manuais Técnicos Oficiais ───────────────────────────── */}
         <div className="space-y-4">
-          <div className="flex items-center justify-between pb-2 border-b border-[#ebdcca]">
+          <div className="flex items-center justify-between pb-2 border-b border-[#ebdcca]/80">
             <h3 className="text-lg font-serif font-bold text-[#202f6b]">
               Manuais de Montagem, Instalações Elétricas e Sanidade
             </h3>
@@ -81,7 +88,7 @@ export default function FestivalManuaisSection() {
             {OFFICIAL_MANUALS.map(manual => (
               <div 
                 key={manual.id}
-                className="bg-white rounded-3xl p-6 border border-[#ebdcca] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+                className="bg-white/95 backdrop-blur-xs rounded-3xl p-6 border border-[#ebdcca] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -124,6 +131,13 @@ export default function FestivalManuaisSection() {
         </div>
 
       </div>
+
+      {/* Borda Rasgada Inferior - Transição para o Dossiê/Ebook */}
+      <div 
+        className="fp-torn-divider-bottom"
+        style={{ backgroundImage: 'url("/assets/festival/Colagem-Manuais_bottom_crop.png")' }}
+        aria-hidden="true"
+      />
     </section>
   );
 }
