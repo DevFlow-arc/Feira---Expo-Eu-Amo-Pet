@@ -61,7 +61,8 @@ export default function FestivalHero() {
             <span>ONDE <b className="orange">PETS,</b></span>
             <span><b className="purple">PESSOAS</b> E MARCAS</span>
             <span>SE ENCONTRAM</span>
-            <span>PARA VIVER ALGO <b className="pink">ESPECIAL.</b></span>
+            <span>PARA VIVER ALGO</span>
+            <span><b className="pink">ESPECIAL.</b></span>
           </h1>
 
           <p className="fp-home-lead">
@@ -77,18 +78,18 @@ export default function FestivalHero() {
             src="/assets/festival/ChatGPT-Image-21_09_2026-15_14_31.png"
             alt="Pessoas e pets na Feira Eu Amo Pet"
           />
-        </div>
 
-        {/* Rotating Star Badge */}
-        <div className="fp-home-star" aria-hidden="true">
-          <svg viewBox="0 0 280 280">
-            <polygon fill="#f9418c" points="258,130 215,153 241,194 192,192 194,241 153,215 130,258 107,215 66,241 68,192 19,194 45,153 2,130 45,107 19,66 68,68 66,19 107,45 130,2 153,45 194,19 192,68 241,66 215,107"/>
-            <g fill="#202f6b" textAnchor="middle" fontFamily="Protest Strike, sans-serif" fontSize="24" transform="rotate(-8 130 130)">
-              <text x="130" y="112">EXPERIÊNCIA</text>
-              <text x="130" y="142">CONHECIMENTO</text>
-              <text x="130" y="172">IMPACTO SOCIAL</text>
-            </g>
-          </svg>
+          {/* Rotating Star Badge directly pinned to the photo cutout */}
+          <div className="fp-home-star" aria-hidden="true">
+            <svg viewBox="0 0 280 280">
+              <polygon fill="#f9418c" points="258,130 215,153 241,194 192,192 194,241 153,215 130,258 107,215 66,241 68,192 19,194 45,153 2,130 45,107 19,66 68,68 66,19 107,45 130,2 153,45 194,19 192,68 241,66 215,107"/>
+              <g fill="#202f6b" textAnchor="middle" fontFamily="Protest Strike, sans-serif" fontSize="24" transform="rotate(-8 130 130)">
+                <text x="130" y="112">EXPERIÊNCIA</text>
+                <text x="130" y="142">CONHECIMENTO</text>
+                <text x="130" y="172">IMPACTO SOCIAL</text>
+              </g>
+            </svg>
+          </div>
         </div>
 
         {/* Mascot Cat with Sunglasses & Hat */}
