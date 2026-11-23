@@ -35,11 +35,11 @@ export default function FestivalPurpose() {
         <span className="purpose-line" aria-hidden="true"></span>
 
         <p className="purpose-text">
-          Nossa missão é <strong>criar valor na interação com os apaixonados por animais de estimação, potencializando o bem da relação entre o pet e sua família</strong>. A Feira &amp; Expo Eu Amo Pet nasce para unir tutores, marcas inovadoras e especialistas veterinários em uma celebração que transforma carinho em cuidado, saúde e desenvolvimento socioeconômico.
+          Nossa missão é <strong>criar valor na interação com os apaixonados por animais de estimação, potencializando o bem da relação entre o pet e sua família</strong>. A Feira &amp; Expo Eu Amo Pet nasce para reunir tutores, empresas do setor e especialistas veterinários em uma celebração que transforma carinho em cuidado, saúde e desenvolvimento no mercado pet em Macaé e Região dos Lagos.
         </p>
 
         <p className="purpose-text purpose-text-second">
-          Esse propósito se traduz em ações concretas em <strong>Macaé e Região dos Lagos</strong>: apoio integrado ao <strong>Centro de Controle de Zoonoses (CCZ)</strong>, suporte a ONGs e protetores locais independentes e conscientização contínua sobre saúde pública e bem-estar animal. <strong>Conheça os pilares e valores que movem o nosso festival:</strong>
+          Essa missão se traduz em ações concretas a cada edição: apoio integrado ao <strong>Centro de Controle de Zoonoses (CCZ)</strong>, suporte ativo a ONGs e protetores locais credenciados, campanhas de vacinação e um legado que permanece na região. <strong>Conheça os resultados e causas que movem o nosso festival:</strong>
         </p>
 
         <ul className="impact-list">
@@ -51,7 +51,7 @@ export default function FestivalPurpose() {
               <ellipse cx="84" cy="40" rx="11" ry="15" />
               <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
             </svg>
-            <span><strong>Espaço Adote um Pet:</strong> Área dedicada à adoção responsável em parceria com ONGs, canis municipais e protetores locais credenciados de Macaé e Região dos Lagos;</span>
+            <span><strong>63 toneladas de ração</strong> arrecadadas para ONGs e protetores parceiros;</span>
           </li>
 
           <li>
@@ -62,7 +62,7 @@ export default function FestivalPurpose() {
               <ellipse cx="84" cy="40" rx="11" ry="15" />
               <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
             </svg>
-            <span><strong>Castramóvel &amp; Parceria CCZ:</strong> Conscientização e suporte ao serviço móvel de castração e controle populacional ético em parceria com a saúde pública municipal;</span>
+            <span><strong>Mais de 100 pets castrados</strong> em parceria com o Castramóvel CCZ;</span>
           </li>
 
           <li>
@@ -73,7 +73,7 @@ export default function FestivalPurpose() {
               <ellipse cx="84" cy="40" rx="11" ry="15" />
               <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
             </svg>
-            <span><strong>Triagem &amp; Sanidade Animal:</strong> Ações preventivas de orientação veterinária, checagem vacinal obrigatória e protocolos de biossegurança com Responsável Técnico (CRMV-RJ);</span>
+            <span><strong>Milhares de vacinas e antiparasitários</strong> aplicados gratuitamente;</span>
           </li>
 
           <li>
@@ -84,7 +84,7 @@ export default function FestivalPurpose() {
               <ellipse cx="84" cy="40" rx="11" ry="15" />
               <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
             </svg>
-            <span><strong>Ponto de Arrecadação Solidária:</strong> Ponto permanente de arrecadação de ração e insumos para destinação transparente a abrigos e animais resgatados da região;</span>
+            <span><strong>Espaço Adote um Pet:</strong> Área dedicada a ONGs para apresentarem seus projetos e realizarem adoções responsáveis;</span>
           </li>
 
           <li>
@@ -95,7 +95,7 @@ export default function FestivalPurpose() {
               <ellipse cx="84" cy="40" rx="11" ry="15" />
               <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
             </svg>
-            <span><strong>Workshops &amp; Posse Responsável:</strong> Sessões educativas gratuitas para tutores sobre nutrição, comportamento pet e prevenção de abandono.</span>
+            <span><strong>Workshops &amp; Conscientização:</strong> Sessões gratuitas sobre posse responsável, nutrição preventiva e legado pet friendly na região.</span>
           </li>
         </ul>
 

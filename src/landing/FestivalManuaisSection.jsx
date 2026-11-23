@@ -35,13 +35,13 @@ export default function FestivalManuaisSection() {
         </div>
 
         {/* ─── Termo de Responsabilidade Animal (Destaque Especial) ────────── */}
-        <div className="bg-white/95 backdrop-blur-xs rounded-3xl p-6 sm:p-8 border-2 border-dashed border-[#f45225]/40 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-[#f45225]/10 text-[#f45225] flex items-center justify-center shrink-0">
-              <Dog className="w-8 h-8" />
+        <div className="bg-white/95 backdrop-blur-xs rounded-3xl p-5 sm:p-8 border-2 border-dashed border-[#f45225]/40 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-5 sm:gap-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#f45225]/10 text-[#f45225] flex items-center justify-center shrink-0">
+              <Dog className="w-7 h-7 sm:w-8 sm:h-8" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#f45225] bg-[#f45225]/10 px-2 py-0.5 rounded-md">
                   Acesso de Animais • Portão 2 CAEX
                 </span>
@@ -59,7 +59,7 @@ export default function FestivalManuaisSection() {
           <a
             href="/docs/manuais/Termo-De-Responsabilidade-Animal-Feira-Pet.pdf"
             download
-            className="shrink-0 px-6 py-3.5 rounded-2xl bg-[#f45225] hover:bg-[#d94218] text-white font-bold text-sm flex items-center gap-2 shadow-sm hover:shadow transition-all hover:scale-105"
+            className="w-full md:w-auto shrink-0 px-6 py-3.5 rounded-2xl bg-[#f45225] hover:bg-[#d94218] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow transition-all min-h-[44px]"
           >
             <Download className="w-4 h-4" />
             <span>Baixar Termo em PDF</span>
@@ -81,11 +81,11 @@ export default function FestivalManuaisSection() {
             {OFFICIAL_MANUALS.map(manual => (
               <div 
                 key={manual.id}
-                className="bg-white/95 backdrop-blur-xs rounded-3xl p-6 border border-[#ebdcca] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+                className="bg-white/95 backdrop-blur-xs rounded-3xl p-5 sm:p-6 border border-[#ebdcca] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="p-3 rounded-2xl bg-[#f8f1e2] text-[#202f6b] group-hover:bg-[#202f6b] group-hover:text-white transition-colors">
+                    <span className="p-2.5 sm:p-3 rounded-2xl bg-[#f8f1e2] text-[#202f6b] group-hover:bg-[#202f6b] group-hover:text-white transition-colors">
                       {getManualIcon(manual.icon)}
                     </span>
                     <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-stone-100 text-stone-700">
@@ -104,15 +104,15 @@ export default function FestivalManuaisSection() {
                   </p>
                 </div>
 
-                <div className="pt-4 mt-5 border-t border-[#f0e3d2] flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-[#8d8da0]">
+                <div className="pt-4 mt-5 border-t border-[#f0e3d2] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                  <span className="text-[11px] font-mono text-[#8d8da0] text-center sm:text-left">
                     {manual.pages} • {manual.size}
                   </span>
 
                   <a
                     href={manual.pdfUrl}
                     download
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#202f6b] hover:bg-[#152048] text-white text-xs font-bold shadow-2xs transition-all hover:scale-105"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#202f6b] hover:bg-[#152048] text-white text-xs font-bold shadow-2xs transition-all min-h-[40px]"
                   >
                     <ArrowDownToLine className="w-3.5 h-3.5" />
                     <span>Baixar PDF</span>

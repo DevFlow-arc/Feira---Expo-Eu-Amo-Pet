@@ -284,7 +284,7 @@ export default function FestivalEbook() {
                         placeholder="Ex: Carlos Eduardo"
                         value={formData.nome}
                         onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
+                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-base sm:text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       />
                     </div>
@@ -302,7 +302,7 @@ export default function FestivalEbook() {
                         placeholder="(22) 99999-9999"
                         value={formData.whatsapp}
                         onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
+                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-base sm:text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       />
                     </div>
@@ -322,7 +322,7 @@ export default function FestivalEbook() {
                         placeholder="contato@empresa.com.br"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
+                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-base sm:text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       />
                     </div>
@@ -339,7 +339,7 @@ export default function FestivalEbook() {
                         placeholder={isB2B ? 'Ex: PetShop & Clínica Veterinária' : 'Ex: Macaé / Região dos Lagos'}
                         value={formData.empresa}
                         onChange={(e) => setFormData({ ...formData, empresa: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
+                        className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-300 text-base sm:text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#f9418c] focus:bg-white"
                         style={{ fontFamily: '"Nunito", sans-serif' }}
                       />
                     </div>
