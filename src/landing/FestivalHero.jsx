@@ -40,7 +40,7 @@ export default function FestivalHero() {
         </nav>
       </header>
 
-      {/* Coqueiro Tropical Contínuo (Folhas no topo e tronco descendo continuamente até a divisão/gato na proporção original) */}
+      {/* Coqueiro Tropical Contínuo (Folhas no topo e tronco sutil no canto da tela) */}
       <img
         decoding="async"
         className="fp-home-coqueiro-vertical"
@@ -53,12 +53,6 @@ export default function FestivalHero() {
       <main className="fp-home-main">
         <div className="fp-home-copy">
           <div className="fp-home-badge">FEIRA EU AMO PET {eventInfo?.year || '2027'}</div>
-
-          {/* Animated SVG Heart */}
-          <svg className="fp-home-heart" viewBox="0 0 66 58" fill="none" aria-hidden="true">
-            <path d="M33 52C7 34 5 16 16 9c9-6 17 2 17 10 0-8 8-16 17-10 11 7 9 25-17 43Z" stroke="#f9418c" strokeWidth="4" strokeLinejoin="round" />
-            <path d="m48 7 5-5m1 13 8-2" stroke="#f9418c" strokeWidth="4" strokeLinecap="round" />
-          </svg>
 
           {/* Triple Line Accents */}
           <div className="fp-home-lines" aria-hidden="true">

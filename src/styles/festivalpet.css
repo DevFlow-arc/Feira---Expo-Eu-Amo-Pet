@@ -203,17 +203,7 @@
 }
 
 .fp-home-heart {
-
-  position: absolute;
-
-  top: 66px;
-
-  left: 315px;
-
-  width: 55px;
-
-  animation: fp-heart 6s ease-in-out infinite;
-
+  display: none !important;
 }
 
 
@@ -810,15 +800,15 @@
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -36px;
     bottom: 0;
     height: 100%;
-    width: clamp(150px, 40vw, 215px);
+    width: clamp(135px, 35vw, 185px);
     object-fit: fill;
     pointer-events: none;
     z-index: 2;
-    opacity: 0.96;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
+    opacity: 0.82;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.04));
   }
 
   .fp-home-top {
