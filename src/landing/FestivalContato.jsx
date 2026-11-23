@@ -125,13 +125,13 @@ export default function FestivalContato() {
                 Acompanhe as divulgações, marcas confirmadas, atrações e os bastidores do festival.
               </p>
               <div className="text-sm font-black text-stone-900 font-mono">
-                @feira.euamopet
+                @euamopetfeiraexpo
               </div>
             </div>
 
             <div className="mt-6 pt-4 border-t border-stone-100">
               <a
-                href="https://www.instagram.com/feira.euamopet/"
+                href="https://www.instagram.com/euamopetfeiraexpo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-xl bg-[#8c43dc] hover:bg-[#7733c2] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all"
