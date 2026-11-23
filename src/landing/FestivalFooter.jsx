@@ -61,12 +61,10 @@ export default function FestivalFooter() {
           </a>
 
           <a
-            href="https://www.instagram.com/feira.euamopet/"
             href="https://www.instagram.com/euamopetfeiraexpo/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram Oficial Feira Eu Amo Pet"
-            title="Instagram Oficial @feira.euamopet"
             title="Instagram Oficial @euamopetfeiraexpo"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ width: 24, height: 24 }}>
