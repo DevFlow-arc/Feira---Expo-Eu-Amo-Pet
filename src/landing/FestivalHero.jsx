@@ -99,7 +99,7 @@ export default function FestivalHero() {
         <img
           decoding="async"
           className="fp-home-dog"
-          src="/assets/festival/Banner-Vivo-Valoriza-1.png"
+          src="/assets/festival/gato-mascote-oficial.png"
           alt="Gato Mascote Feira Eu Amo Pet"
         />
 
