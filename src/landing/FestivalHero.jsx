@@ -30,11 +30,12 @@ export default function FestivalHero() {
 
         <nav className="fp-home-nav" aria-label="Menu principal">
           <a href="#o-festival">O Festival</a>
-          <a href="#social">Propósito</a>
-          <a href="#o-que-tem">O QUE TEM</a>
-          <a href="#edicoes">NOSSAS EDIÇÕES</a>
-          <a href="#ebook">E-BOOK 2027</a>
-          <a href="#apoiadores">Apoiadores</a>
+          <a href="#mercado">Mercado</a>
+          <a href="#atracoes">Atrações</a>
+          <a href="#edicoes">Edições</a>
+          <a href="#patrocinio">Patrocínio</a>
+          <a href="#ebook">Dossiê 2027</a>
+          <a href="#contato">Contato</a>
           <a href="#faq">FAQ</a>
         </nav>
       </header>
@@ -114,21 +115,21 @@ export default function FestivalHero() {
               <circle cx="24" cy="8" r="5.5" />
               <path d="M14 30c0-6 4.5-10.8 10-10.8s10 4.8 10 10.8H14z" />
             </svg>
-            <p><b>MILHARES</b><small>DE PESSOAS E PETS</small></p>
+            <p><b>+15.000</b><small>VISITANTES &amp; PETS</small></p>
           </div>
 
           <div>
             <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" strokeWidth="4">
               <path d="m25 4 6 14 15 1-11 10 4 15-14-8-14 8 4-15L4 19l15-1 6-14Z"/>
             </svg>
-            <p><b>MUITAS</b><small>ATRAÇÕES</small></p>
+            <p><b>8 GRANDES</b><small>ATRAÇÕES CONFIRMADAS</small></p>
           </div>
 
           <div>
             <svg viewBox="0 0 50 46" fill="none" stroke="currentColor" strokeWidth="4">
               <path d="M25 40C7 29 2 20 5 12c4-10 15-8 20 1C30 4 41 2 45 12c3 8-2 17-20 28Z"/>
             </svg>
-            <p><b>3 DIAS</b><small>DE ENCONTRO</small></p>
+            <p><b>3 DIAS</b><small>DE FEIRA &amp; EXPO 2027</small></p>
           </div>
         </div>
       </main>

@@ -9,10 +9,10 @@ export default function HeroSection() {
     <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 bg-[#faf8f5] border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Headline, Institutional Status & Value Prop */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
+
             {/* Top pill badge (Modeled after petfaires.com.br hero) */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-100 border border-stone-300 text-stone-800 text-xs font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
@@ -72,7 +72,7 @@ export default function HeroSection() {
           {/* Right Column: Hero Visual Showcase (Real 3D Fair Pavilion Render) */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              
+
               {/* Main Architectural Card Frame */}
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-stone-300 bg-stone-900 group">
                 <img
@@ -80,7 +80,7 @@ export default function HeroSection() {
                   alt="Pavilhão Oficial da Feira Eu Amo Pet"
                   className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-700"
                 />
-                
+
                 {/* Subtle Overlay Badge */}
                 <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-stone-950 via-stone-950/80 to-transparent text-white">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300">

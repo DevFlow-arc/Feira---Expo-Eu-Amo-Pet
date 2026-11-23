@@ -5661,6 +5661,8 @@ background-repeat: no-repeat, no-repeat;
     clip-path: inset(0 -100vmax);
   }
 
+
+
   .fp-torn-divider-bottom {
     position: absolute;
     bottom: 0;
@@ -5697,6 +5699,86 @@ background-repeat: no-repeat, no-repeat;
     background-repeat: no-repeat;
 
     box-shadow: 0 0 0 100vmax #f8f1e5;
+    clip-path: inset(0 -100vmax);
+  }
+
+  /* ==========================================================================
+     SEÇÕES AIDA EXPANDIDAS (MERCADO, ATRAÇÕES, INFRA, PATROCÍNIO, CONTATO)
+     ========================================================================== */
+  .fp-mercado-section {
+    position: relative;
+    isolation: isolate;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    background-color: #f5f0e6;
+    color: #202f6b;
+    font-family: "Nunito", Arial, sans-serif;
+    box-shadow: 0 0 0 100vmax #f5f0e6;
+    clip-path: inset(0 -100vmax);
+  }
+
+  .fp-atracoes-section {
+    position: relative;
+    isolation: isolate;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    background-color: #f8f1e5;
+    background-image:
+      linear-gradient(rgba(248, 241, 229, 0.88), rgba(248, 241, 229, 0.88)),
+      url("/assets/festival/Colagem-Tropical-em-Papel-Rasgado.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #202f6b;
+    font-family: "Nunito", Arial, sans-serif;
+    box-shadow: 0 0 0 100vmax #f8f1e5;
+    clip-path: inset(0 -100vmax);
+  }
+
+  .fp-infra-section {
+    position: relative;
+    isolation: isolate;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    background-color: #f8f1e5;
+    color: #202f6b;
+    font-family: "Nunito", Arial, sans-serif;
+    box-shadow: 0 0 0 100vmax #f8f1e5;
+    clip-path: inset(0 -100vmax);
+  }
+
+  .fp-patrocinio-section {
+    position: relative;
+    isolation: isolate;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    background-color: #f8f1e5;
+    background-image:
+      linear-gradient(rgba(248, 241, 229, 0.84), rgba(248, 241, 229, 0.84)),
+      url("/assets/festival/Colagem-Vintage-de-Festival-em-Papel-Rasgado.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #202f6b;
+    font-family: "Nunito", Arial, sans-serif;
+    box-shadow: 0 0 0 100vmax #f8f1e5;
+    clip-path: inset(0 -100vmax);
+  }
+
+  .fp-contato-section {
+    position: relative;
+    isolation: isolate;
+    width: 100vw;
+    max-width: none;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    background-color: #f5eee2;
+    color: #202f6b;
+    font-family: "Nunito", Arial, sans-serif;
+    box-shadow: 0 0 0 100vmax #f5eee2;
     clip-path: inset(0 -100vmax);
   }
 
