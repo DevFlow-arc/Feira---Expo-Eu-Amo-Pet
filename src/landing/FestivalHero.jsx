@@ -40,11 +40,20 @@ export default function FestivalHero() {
         </nav>
       </header>
 
-      {/* Tropical Palm Fronds (Coqueiro) framing the top-right corner on mobile */}
+      {/* Tropical Palm Crown (Topo do Coqueiro) framing the top-right corner on mobile */}
       <img
         decoding="async"
-        className="fp-home-coqueiro-mobile"
+        className="fp-home-coqueiro-top"
         src="/assets/festival/coqueiro-topo-mobile.png"
+        alt=""
+        aria-hidden="true"
+      />
+
+      {/* Tropical Foliage & Palm Base (Raiz e Base do Coqueiro ao lado do gato) on mobile */}
+      <img
+        decoding="async"
+        className="fp-home-coqueiro-base"
+        src="/assets/festival/coqueiro-base-mobile.png"
         alt=""
         aria-hidden="true"
       />
