@@ -20,7 +20,7 @@ export default function FestivalAbout() {
           </div>
 
           <p className="about-text">
-            A <strong>Feira Eu Amo Pet 2027</strong> é um encontro inovador que celebra a relação entre pessoas e seus pets por meio de experiências, aprendizado, cultura, negócios e diversão. Um polo de conexões onde famílias, especialistas, marcas líderes do mercado e o poder público se unem em <strong>Macaé e na Região dos Lagos</strong> para inspirar, conectar e fomentar um mercado que cresce exponencialmente.
+            A <strong>Feira &amp; Expo Eu Amo Pet 2027</strong> é um evento inovador e abrangente que celebra o universo pet, reunindo apaixonados por animais, empresas do setor e especialistas em um só lugar. Nosso objetivo é criar uma experiência única que promova a interação, a troca de conhecimento e o desenvolvimento de negócios no mercado pet em <strong>Macaé e Região dos Lagos</strong>.
           </p>
 
           <div className="features">
@@ -34,7 +34,7 @@ export default function FestivalAbout() {
                   <path d="M32,31 C44,31 53,40 50,51 C47,60 38,61 32,56 C26,61 17,60 14,51 C11,40 20,31 32,31 Z"/>
                 </svg>
               </div>
-              <span className="feat-lbl">Ambiente<br />para todas<br />as famílias</span>
+              <span className="feat-lbl">Concursos &amp;<br />Desfiles Pets</span>
             </div>
 
             <div className="feature">
@@ -46,7 +46,7 @@ export default function FestivalAbout() {
                   <path d="M28,32 L32,40 L36,32"/>
                 </svg>
               </div>
-              <span className="feat-lbl">Conteúdo e<br />experiências</span>
+              <span className="feat-lbl">Workshops &amp;<br />Palestras VET</span>
             </div>
 
             <div className="feature">
@@ -56,7 +56,7 @@ export default function FestivalAbout() {
                   <path d="M23,25 L23,17 C23,11 27,8 32,8 C37,8 41,11 41,17 L41,25" fill="none"/>
                 </svg>
               </div>
-              <span className="feat-lbl">Marcas e<br />produtos</span>
+              <span className="feat-lbl">Marcas &amp;<br />Insumos Pet</span>
             </div>
 
             <div className="feature">
@@ -68,7 +68,7 @@ export default function FestivalAbout() {
                   <path d="M27,30 L26,52 M37,30 L38,52" fill="none" stroke="#fff" strokeWidth="2.4" opacity=".7"/>
                 </svg>
               </div>
-              <span className="feat-lbl">Gastronomia<br />e lazer</span>
+              <span className="feat-lbl">Playground &amp;<br />Gastronomia</span>
             </div>
           </div>
         </div>

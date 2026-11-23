@@ -25,8 +25,8 @@ export default function FestivalApoiadores() {
     { id: 15, cota: 'PARCEIRO COMERCIAL', desc: 'Expositor Oficial' },
     // Linha 4 (3 cards centralizados na 2ª coluna - 16, 17 e 18 via CSS .fp-logo-card:nth-child(16) { grid-column: 2; })
     { id: 16, cota: 'PARCEIRO DE MÍDIA', desc: 'Rádio, TV & Web' },
-    { id: 17, cota: 'APOIO INSTITUCIONAL', desc: 'CCZ & Fundação Rural' },
-    { id: 18, cota: 'APOIO INSTITUCIONAL', desc: 'Prefeitura de Campos' },
+    { id: 17, cota: 'APOIO INSTITUCIONAL', desc: 'CCZ & Proteção Animal' },
+    { id: 18, cota: 'APOIO REGIONAL', desc: 'Macaé & Região dos Lagos' },
   ];
 
   const handleDownloadEbook = () => {
@@ -63,18 +63,18 @@ export default function FestivalApoiadores() {
         </div>
 
         <header className="fp-apoiadores-head">
-          <span className="fp-apoiadores-tag">MARCAS</span>
+          <span className="fp-apoiadores-tag">PATROCÍNIOS &amp; APOIOS</span>
 
           <h2>
-            QUE JÁ FIZERAM PARTE<br />
-            <strong>DESSA HISTÓRIA</strong>
+            MARCAS &amp; PARCEIROS<br />
+            <strong>QUE TRANSFORMAM O MERCADO PET</strong>
           </h2>
 
           <span className="fp-amarelo" aria-hidden="true"></span>
 
           <p>
-            A <strong>Feira Eu Amo Pet 2027</strong> acontece junto de marcas, parceiros e apoiadores que acreditam<br />
-            no poder das conexões entre pets, pessoas e marcas em Macaé, Região dos Lagos e todo o estado.
+            A <strong>Feira &amp; Expo Eu Amo Pet 2027</strong> oferece visibilidade máxima com cotas <strong>Máster, Sênior e Júnior</strong>,<br />
+            conectando sua marca diretamente a mais de 15.000 tutores e profissionais em Macaé e Região dos Lagos.
           </p>
 
           {/* Link direcionando para preenchimento de dados na Seção de E-book */}

@@ -5,7 +5,7 @@ export default function FestivalEdicoes() {
   const { eventInfo } = useApp();
 
   return (
-    <section id="edicao-sp" className="fp-editions-v2">
+    <section id="edicoes" className="fp-editions-v2">
       <div className="fp-editions-v2-stage">
 
         <div className="fp-editions-v2-deco" aria-hidden="true">

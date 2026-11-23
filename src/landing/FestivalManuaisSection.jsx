@@ -124,6 +124,13 @@ export default function FestivalManuaisSection() {
         </div>
 
       </div>
+
+      {/* Transição Rasgada em Papel Kraft/Festival - Ligação fluida para o Dossiê/Ebook */}
+      <div 
+        className="fp-torn-divider-bottom"
+        style={{ backgroundImage: 'url("/assets/festival/Colagem-Dossie_top_crop.png")' }}
+        aria-hidden="true"
+      />
     </section>
   );
 }

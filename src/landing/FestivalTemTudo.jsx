@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function FestivalTemTudo() {
   return (
-    <section id="ingresso" className="fp-tem-tudo">
+    <section id="o-que-tem" className="fp-tem-tudo">
       <div className="fp-tem-tudo-card">
 
         <h2>
@@ -10,8 +10,8 @@ export default function FestivalTemTudo() {
         </h2>
 
         <p className="fp-tem-tudo-intro">
-          Experiências, conhecimento e impacto social para todos os apaixonados pelo universo pet.
-          Cada edição é uma oportunidade de viver, aprender e deixar um legado ainda maior!
+          Experiências interativas, conhecimento especializado e impacto social para apaixonados pelo universo pet.
+          Três pilares estratégicos desenhados para conectar famílias, tutores, veterinários e marcas inovadoras!
         </p>
 
         <div className="fp-tem-tudo-itens">
@@ -26,8 +26,8 @@ export default function FestivalTemTudo() {
             </div>
 
             <span className="fp-tem-tudo-num pink">01</span>
-            <h3>EXPERIÊNCIAS</h3>
-            <p>Ativações de marcas líderes, arena agility com obstáculos, concurso pet fantasia e praça gastronômica.</p>
+            <h3>CONCURSOS &amp; LAZER</h3>
+            <p>Concursos e desfiles premiando habilidades e beleza pet, playground recreativo seguro e praça de alimentação com conforto para toda a família.</p>
           </article>
 
           <article className="fp-tem-tudo-item">
@@ -40,8 +40,8 @@ export default function FestivalTemTudo() {
             </div>
 
             <span className="fp-tem-tudo-num yellow">02</span>
-            <h3>CONHECIMENTO</h3>
-            <p>Workshops de adestramento positivo, primeiros socorros pet e Congresso VET 360 com certificação.</p>
+            <h3>WORKSHOPS &amp; NEGÓCIOS</h3>
+            <p>Sessões educativas e palestras com especialistas do mercado pet, abordando saúde animal, nutrição, comportamento e novas oportunidades comerciais.</p>
           </article>
 
           <article className="fp-tem-tudo-item">
@@ -53,8 +53,8 @@ export default function FestivalTemTudo() {
             </div>
 
             <span className="fp-tem-tudo-num pink">03</span>
-            <h3>IMPACTO SOCIAL</h3>
-            <p>Circuito de Adoção Responsável CCZ, Castramóvel, vacinação gratuita e arrecadação de ração solidária.</p>
+            <h3>ESPAÇO ADOTE UM PET</h3>
+            <p>Área dedicada para adoção responsável em parceria com ONGs e canis locais, suporte ao Castramóvel, vacinação e conscientização sobre posse responsável.</p>
           </article>
 
         </div>

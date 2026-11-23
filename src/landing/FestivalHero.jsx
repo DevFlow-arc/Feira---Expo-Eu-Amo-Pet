@@ -30,9 +30,9 @@ export default function FestivalHero() {
 
         <nav className="fp-home-nav" aria-label="Menu principal">
           <a href="#o-festival">O Festival</a>
-          <a href="#social">Social</a>
-          <a href="#ingresso">O QUE TEM</a>
-          <a href="#edicao-sp">NOSSAS EDIÇÕES</a>
+          <a href="#social">Propósito</a>
+          <a href="#o-que-tem">O QUE TEM</a>
+          <a href="#edicoes">NOSSAS EDIÇÕES</a>
           <a href="#ebook">E-BOOK 2027</a>
           <a href="#apoiadores">Apoiadores</a>
           <a href="#faq">FAQ</a>
@@ -64,9 +64,9 @@ export default function FestivalHero() {
           </h1>
 
           <p>
-            Um festival para viver experiências,<br />
-            descobrir novidades e celebrar a conexão<br />
-            entre pessoas e pets em Macaé e Região dos Lagos.
+            Um festival transformador que une o amor pelos animais,<br />
+            inovação e oportunidades de negócios no mercado pet<br />
+            em Macaé e Região dos Lagos.
           </p>
         </div>
 

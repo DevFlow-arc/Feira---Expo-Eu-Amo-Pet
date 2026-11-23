@@ -34,74 +34,73 @@ export default function FestivalPurpose() {
 
         <span className="purpose-line" aria-hidden="true"></span>
 
-        <p className="purpose-text">
-          Nossa missão é <strong>criar valor na interação com os apaixonados por animais de estimação, potencializando o bem da relação entre o pet e sua família</strong>. A Feira &amp; Expo Eu Amo Pet nasce para reunir tutores, empresas do setor e especialistas veterinários em uma celebração que transforma carinho em cuidado, saúde e desenvolvimento no mercado pet em Macaé e Região dos Lagos.
-        </p>
+        {/* Manifesto Oficial da Feira & Expo Eu Amo Pet */}
+        <div className="space-y-4 max-w-3xl mx-auto">
+          <p className="purpose-text">
+            A <strong>Feira &amp; Expo Eu Amo Pet</strong> é um evento inovador e abrangente que celebra o universo pet, reunindo apaixonados por animais, empresas do setor e especialistas em um só lugar.
+          </p>
 
-        <p className="purpose-text purpose-text-second">
-          Essa missão se traduz em ações concretas a cada edição: apoio integrado ao <strong>Centro de Controle de Zoonoses (CCZ)</strong>, suporte ativo a ONGs e protetores locais credenciados, campanhas de vacinação e um legado que permanece na região. <strong>Conheça os resultados e causas que movem o nosso festival:</strong>
-        </p>
+          <p className="purpose-text">
+            Nosso objetivo é criar uma experiência única que promova a interação, a troca de conhecimento e o desenvolvimento de negócios no mercado pet, que está em constante crescimento no Brasil e no mundo.
+          </p>
 
-        <ul className="impact-list">
-          <li>
-            <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-              <ellipse cx="24" cy="35" rx="11" ry="15" />
-              <ellipse cx="45" cy="20" rx="11" ry="15" />
-              <ellipse cx="68" cy="22" rx="11" ry="15" />
-              <ellipse cx="84" cy="40" rx="11" ry="15" />
-              <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
-            </svg>
-            <span><strong>63 toneladas de ração</strong> arrecadadas para ONGs e protetores parceiros;</span>
-          </li>
+          <p className="purpose-text text-[#f9418c] font-black uppercase tracking-wide pt-1">
+            Venha fazer parte deste evento transformador, que une amor pelos animais, inovação e desenvolvimento de mercado.
+          </p>
+        </div>
 
-          <li>
-            <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-              <ellipse cx="24" cy="35" rx="11" ry="15" />
-              <ellipse cx="45" cy="20" rx="11" ry="15" />
-              <ellipse cx="68" cy="22" rx="11" ry="15" />
-              <ellipse cx="84" cy="40" rx="11" ry="15" />
-              <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
-            </svg>
-            <span><strong>Mais de 100 pets castrados</strong> em parceria com o Castramóvel CCZ;</span>
-          </li>
+        {/* Blocos Estratégicos: MISSÃO, VISÃO E VALORES */}
+        <div className="purpose-pillars-grid">
+          {/* Card Missão */}
+          <div className="purpose-pillar-card purpose-pillar-mission">
+            <span className="pillar-badge mission">MISSÃO</span>
+            <p className="pillar-text">
+              CRIAR VALOR NA INTERAÇÃO COM OS APAIXONADOS POR ANIMAIS DE ESTIMAÇÃO, POTENCIALIZANDO O BEM DA RELAÇÃO ENTRE O PET E SUA FAMÍLIA.
+            </p>
+          </div>
 
-          <li>
-            <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-              <ellipse cx="24" cy="35" rx="11" ry="15" />
-              <ellipse cx="45" cy="20" rx="11" ry="15" />
-              <ellipse cx="68" cy="22" rx="11" ry="15" />
-              <ellipse cx="84" cy="40" rx="11" ry="15" />
-              <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
-            </svg>
-            <span><strong>Milhares de vacinas e antiparasitários</strong> aplicados gratuitamente;</span>
-          </li>
+          {/* Card Visão */}
+          <div className="purpose-pillar-card purpose-pillar-vision">
+            <span className="pillar-badge vision">VISÃO</span>
+            <p className="pillar-text">
+              SER NACIONALMENTE CONHECIDA, COMO A MAIOR FEIRA NO RAMO PET, ATÉ 2026.
+            </p>
+          </div>
+        </div>
 
-          <li>
-            <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-              <ellipse cx="24" cy="35" rx="11" ry="15" />
-              <ellipse cx="45" cy="20" rx="11" ry="15" />
-              <ellipse cx="68" cy="22" rx="11" ry="15" />
-              <ellipse cx="84" cy="40" rx="11" ry="15" />
-              <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
-            </svg>
-            <span><strong>Espaço Adote um Pet:</strong> Área dedicada a ONGs para apresentarem seus projetos e realizarem adoções responsáveis;</span>
-          </li>
+        {/* Card Valores */}
+        <div className="purpose-values-card">
+          <div className="mb-4">
+            <span className="pillar-badge values">VALORES</span>
+          </div>
 
-          <li>
-            <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-              <ellipse cx="24" cy="35" rx="11" ry="15" />
-              <ellipse cx="45" cy="20" rx="11" ry="15" />
-              <ellipse cx="68" cy="22" rx="11" ry="15" />
-              <ellipse cx="84" cy="40" rx="11" ry="15" />
-              <path d="M50 45c-19 0-32 15-32 29 0 14 13 19 25 13 5-3 9-3 14 0 12 6 25 1 25-13 0-14-13-29-32-29Z" />
-            </svg>
-            <span><strong>Workshops &amp; Conscientização:</strong> Sessões gratuitas sobre posse responsável, nutrição preventiva e legado pet friendly na região.</span>
-          </li>
-        </ul>
-
-        <p className="purpose-closing">
-          Porque para nós, potencializar o bem da relação entre o pet e sua família também significa cuidar com responsabilidade de quem mais precisa.
-        </p>
+          <ul className="values-list">
+            <li>
+              <span className="val-paw" aria-hidden="true">🐾</span>
+              <span>PAIXÃO PELO MUNDO PET</span>
+            </li>
+            <li>
+              <span className="val-paw" aria-hidden="true">🐾</span>
+              <span>INOVAÇÃO E CRIATIVIDADE</span>
+            </li>
+            <li>
+              <span className="val-paw" aria-hidden="true">🐾</span>
+              <span>ENCANTAR NOSSOS CLIENTES</span>
+            </li>
+            <li>
+              <span className="val-paw" aria-hidden="true">🐾</span>
+              <span>ÉTICA, PROFISSIONALISMO E RESPONSABILIDADE SOCIOAMBIENTAL</span>
+            </li>
+            <li>
+              <span className="val-paw" aria-hidden="true">🐾</span>
+              <span>COMPROMETIMENTO E CREDIBILIDADE COM O MERCADO</span>
+            </li>
+            <li>
+              <span className="val-paw" aria-hidden="true">🐾</span>
+              <span>QUALIDADE DOS PRODUTOS E SERVIÇOS OFERECIDOS</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
