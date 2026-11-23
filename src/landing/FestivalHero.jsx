@@ -40,6 +40,15 @@ export default function FestivalHero() {
         </nav>
       </header>
 
+      {/* Tropical Palm Fronds (Coqueiro) framing the top-right corner on mobile */}
+      <img
+        decoding="async"
+        className="fp-home-coqueiro-mobile"
+        src="/assets/festival/coqueiro-topo-mobile.png"
+        alt=""
+        aria-hidden="true"
+      />
+
       {/* Main Hero Container */}
       <main className="fp-home-main">
         <div className="fp-home-copy">
