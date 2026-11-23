@@ -122,7 +122,7 @@
 
   gap: clamp(14px, 1.8vw, 32px);
 
-  margin: 0 auto;
+  margin: 16px auto 0;
 
   white-space: nowrap;
 
@@ -162,7 +162,7 @@
 
   max-width: 1850px;
 
-  height: calc(100% - 120px);
+  height: calc(100% - 84px);
 
   min-height: 570px;
 
@@ -491,11 +491,11 @@
 
   z-index: 15;
 
-  right: clamp(16px, 3.5vw, 65px);
+  right: clamp(28px, 7.5vw, 95px);
 
   bottom: 0;
 
-  width: clamp(280px, 23vw, 360px);
+  width: clamp(150px, 15vw, 215px);
 
   height: auto;
 
@@ -537,7 +537,7 @@
 
   left: 0;
 
-  right: clamp(310px, 27vw, 440px);
+  right: clamp(200px, 22.5vw, 330px);
 
   display: flex;
 
@@ -747,9 +747,9 @@
 
     right: 2%;
 
-    width: 49%;
+    width: 48%;
 
-    height: 440px;
+    height: 560px;
 
   }
 
@@ -757,7 +757,7 @@
 
   .fp-home-star {
 
-    width: 150px;
+    width: 160px;
 
   }
 
@@ -765,7 +765,7 @@
 
   .fp-home-copy>p {
 
-    margin-left: 30px;
+    margin-left: 50px;
 
   }
 
@@ -773,9 +773,9 @@
 
   .fp-home-dog {
 
-    width: clamp(230px, 26vw, 280px);
+    width: clamp(135px, 14vw, 165px);
 
-    right: 12px;
+    right: clamp(16px, 4vw, 35px);
 
     bottom: 0;
 
@@ -783,11 +783,9 @@
 
   }
 
-
-
   .fp-home-stats {
 
-    right: clamp(250px, 29vw, 300px);
+    right: clamp(165px, 19vw, 215px);
 
     gap: 10px;
 
@@ -979,7 +977,7 @@
     z-index: 25 !important;
     right: -4px;
     bottom: -8px;
-    width: clamp(165px, 46vw, 215px);
+    width: clamp(135px, 38vw, 175px);
     height: auto;
     pointer-events: none;
     filter: drop-shadow(0 14px 24px rgba(20, 25, 60, 0.4));
