@@ -64,10 +64,8 @@ export default function FestivalHero() {
             <span>PARA VIVER ALGO <b className="pink">ESPECIAL.</b></span>
           </h1>
 
-          <p>
-            Um festival transformador que une o amor pelos animais,<br />
-            inovação e oportunidades de negócios no mercado pet<br />
-            em Macaé e Região dos Lagos.
+          <p className="fp-home-lead">
+            Um festival transformador que une o amor pelos animais, inovação e oportunidades de negócios no mercado pet em Macaé e Região dos Lagos.
           </p>
         </div>
 

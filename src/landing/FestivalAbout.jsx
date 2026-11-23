@@ -13,7 +13,8 @@ export default function FestivalAbout() {
             <h2 className="about-title">
               <span>O MAIOR</span>
               <span>ENCONTRO PET</span>
-              <span>MACAÉ &amp; REGIÃO DOS LAGOS</span>
+              <span>MACAÉ &amp;</span>
+              <span>REGIÃO DOS LAGOS</span>
             </h2>
 
             <span className="about-title-line" aria-hidden="true"></span>
