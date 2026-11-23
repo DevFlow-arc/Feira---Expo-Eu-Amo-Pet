@@ -5530,7 +5530,7 @@ background-repeat: no-repeat, no-repeat;
   }
 
   /* ==========================================================================
-     DOCUMENTAÇÃO & MANUAIS TÉCNICOS (COLAGEM & PAPEL RASGADO VINTAGE)
+     DOCUMENTAÇÃO & MANUAIS TÉCNICOS (COLAGEM KRAFT FESTIVAL)
      ========================================================================== */
   .fp-manuais-section {
     position: relative;
@@ -5538,17 +5538,16 @@ background-repeat: no-repeat, no-repeat;
     width: 100vw;
     max-width: none;
     margin: 0 0 0 calc(50% - 50vw) !important;
-    padding: clamp(64px, 6vw, 100px) 0 clamp(74px, 6vw, 110px);
-    overflow: hidden;
+    padding: clamp(70px, 7vw, 110px) 0 clamp(80px, 7vw, 120px);
     scroll-margin-top: 110px;
 
     color: #202f6b;
     font-family: "Nunito", Arial, sans-serif;
     background-color: #f8f1e5;
     background-image:
-      linear-gradient(rgba(248, 241, 229, 0.72), rgba(248, 241, 229, 0.72)),
+      linear-gradient(rgba(248, 241, 229, 0.78), rgba(248, 241, 229, 0.78)),
       url("/assets/festival/Colagem-Manuais-e-Regulamentos-Papel-Rasgado.jpg");
-    background-position: center top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -5556,36 +5555,8 @@ background-repeat: no-repeat, no-repeat;
     clip-path: inset(0 -100vmax);
   }
 
-  .fp-torn-divider-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: clamp(38px, 4.5vw, 64px);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 5;
-    opacity: 0.95;
-  }
-
-  .fp-torn-divider-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: clamp(38px, 4.5vw, 64px);
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 5;
-    opacity: 0.95;
-  }
-
   /* ==========================================================================
-     LIVRO DE APRESENTAÇÃO & DOSSIÊ COMERCIAL 2027 (COLAGEM FESTIVAL)
+     LIVRO DE APRESENTAÇÃO & DOSSIÊ COMERCIAL 2027 (COLAGEM KRAFT FESTIVAL)
      ========================================================================== */
   .fp-ebook-section {
     position: relative;
@@ -5593,17 +5564,16 @@ background-repeat: no-repeat, no-repeat;
     width: 100vw;
     max-width: none;
     margin: 0 0 0 calc(50% - 50vw) !important;
-    padding: clamp(64px, 6vw, 100px) 0 clamp(74px, 6vw, 110px);
-    overflow: hidden;
+    padding: clamp(70px, 7vw, 110px) 0 clamp(80px, 7vw, 120px);
     scroll-margin-top: 110px;
 
     color: #202f6b;
     font-family: "Nunito", Arial, sans-serif;
     background-color: #f8f1e5;
     background-image:
-      linear-gradient(rgba(248, 241, 229, 0.75), rgba(248, 241, 229, 0.75)),
+      linear-gradient(rgba(248, 241, 229, 0.82), rgba(248, 241, 229, 0.82)),
       url("/assets/festival/Colagem-Dossie-e-Midia-Kit-Papel-Rasgado.jpg");
-    background-position: center top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 

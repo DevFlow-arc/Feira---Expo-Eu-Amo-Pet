@@ -2,7 +2,7 @@ import React from 'react';
 import { OFFICIAL_MANUALS } from '../data/floorPlanData';
 import { 
   FileText, Zap, ShieldCheck, Dog, Calendar, 
-  ArrowDownToLine, CheckCircle2, Download 
+  ArrowDownToLine, Download 
 } from 'lucide-react';
 
 export default function FestivalManuaisSection() {
@@ -19,13 +19,6 @@ export default function FestivalManuaisSection() {
 
   return (
     <section id="fp-manuais" className="fp-manuais-section relative overflow-hidden">
-      {/* Borda Rasgada Superior - Transição Suave do Bloco de Vídeo */}
-      <div 
-        className="fp-torn-divider-top"
-        style={{ backgroundImage: 'url("/assets/festival/Colagem-Manuais_top_crop.png")' }}
-        aria-hidden="true"
-      />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         
         {/* Section Header */}
@@ -37,7 +30,7 @@ export default function FestivalManuaisSection() {
             Manuais Técnicos &amp; Regulamentos
           </h2>
           <p className="text-sm sm:text-base text-[#62628d] font-medium leading-relaxed">
-            Acesse e baixe os manuais operacionais em PDF para montadoras, expositores e tutores em conformidade com as normas do Corpo de Bombeiros, NR-10 e sanidade animal do CRMV-RJ.
+            Acesse e baixe os manuais operacionais em PDF para montadoras, expositores e tutores em conformidade com as normas do Corpo de Bombeiros (CBMERJ), NR-10 e sanidade animal do CRMV-RJ.
           </p>
         </div>
 
@@ -131,13 +124,6 @@ export default function FestivalManuaisSection() {
         </div>
 
       </div>
-
-      {/* Borda Rasgada Inferior - Transição para o Dossiê/Ebook */}
-      <div 
-        className="fp-torn-divider-bottom"
-        style={{ backgroundImage: 'url("/assets/festival/Colagem-Manuais_bottom_crop.png")' }}
-        aria-hidden="true"
-      />
     </section>
   );
 }

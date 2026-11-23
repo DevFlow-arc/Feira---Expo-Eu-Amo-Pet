@@ -85,13 +85,6 @@ export default function FestivalEbook() {
   return (
     <section id="ebook" className="fp-ebook-section relative overflow-hidden" style={{ scrollMarginTop: '90px' }}>
 
-      {/* Borda Rasgada Decorativa Superior (eliminando a barra de gradiente artificial) */}
-      <div 
-        className="fp-torn-divider-top" 
-        style={{ backgroundImage: 'url("/assets/festival/Colagem-Dossie_top_crop.png")' }}
-        aria-hidden="true" 
-      />
-
       {/* Ícone Decorativo Oficial da Marca (Coração com Patinha) 100% Transparente em Marca d'Água */}
       <div className="absolute top-10 right-6 w-36 h-36 opacity-10 pointer-events-none select-none rotate-12 z-0">
         <img
@@ -426,13 +419,6 @@ export default function FestivalEbook() {
         </div>
 
       </div>
-
-      {/* Borda Rasgada Decorativa Inferior - Conectando com a seção de Apoiadores */}
-      <div 
-        className="fp-torn-divider-bottom" 
-        style={{ backgroundImage: 'url("/assets/festival/Colagem-Dossie_bottom_crop.png")' }}
-        aria-hidden="true" 
-      />
 
     </section>
   );
