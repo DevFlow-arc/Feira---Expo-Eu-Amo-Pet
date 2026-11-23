@@ -40,20 +40,11 @@ export default function FestivalHero() {
         </nav>
       </header>
 
-      {/* Tropical Palm Crown (Topo do Coqueiro) framing the top-right corner on mobile */}
+      {/* Coqueiro Tropical Contínuo (Folhas no topo e tronco descendo continuamente até a divisão/gato na proporção original) */}
       <img
         decoding="async"
-        className="fp-home-coqueiro-top"
-        src="/assets/festival/coqueiro-topo-mobile.png"
-        alt=""
-        aria-hidden="true"
-      />
-
-      {/* Tropical Foliage & Palm Base (Raiz e Base do Coqueiro ao lado do gato) on mobile */}
-      <img
-        decoding="async"
-        className="fp-home-coqueiro-base"
-        src="/assets/festival/coqueiro-base-mobile.png"
+        className="fp-home-coqueiro-vertical"
+        src="/assets/festival/coqueiro-continuo-mobile.png"
         alt=""
         aria-hidden="true"
       />
@@ -65,8 +56,8 @@ export default function FestivalHero() {
 
           {/* Animated SVG Heart */}
           <svg className="fp-home-heart" viewBox="0 0 66 58" fill="none" aria-hidden="true">
-            <path d="M33 52C7 34 5 16 16 9c9-6 17 2 17 10 0-8 8-16 17-10 11 7 9 25-17 43Z" stroke="#f9418c" strokeWidth="4" strokeLinejoin="round"/>
-            <path d="m48 7 5-5m1 13 8-2" stroke="#f9418c" strokeWidth="4" strokeLinecap="round"/>
+            <path d="M33 52C7 34 5 16 16 9c9-6 17 2 17 10 0-8 8-16 17-10 11 7 9 25-17 43Z" stroke="#f9418c" strokeWidth="4" strokeLinejoin="round" />
+            <path d="m48 7 5-5m1 13 8-2" stroke="#f9418c" strokeWidth="4" strokeLinecap="round" />
           </svg>
 
           {/* Triple Line Accents */}
@@ -100,7 +91,7 @@ export default function FestivalHero() {
           {/* Rotating Star Badge directly pinned to the photo cutout */}
           <div className="fp-home-star" aria-hidden="true">
             <svg viewBox="0 0 280 280">
-              <polygon fill="#f9418c" points="258,130 215,153 241,194 192,192 194,241 153,215 130,258 107,215 66,241 68,192 19,194 45,153 2,130 45,107 19,66 68,68 66,19 107,45 130,2 153,45 194,19 192,68 241,66 215,107"/>
+              <polygon fill="#f9418c" points="258,130 215,153 241,194 192,192 194,241 153,215 130,258 107,215 66,241 68,192 19,194 45,153 2,130 45,107 19,66 68,68 66,19 107,45 130,2 153,45 194,19 192,68 241,66 215,107" />
               <g fill="#202f6b" textAnchor="middle" fontFamily="Protest Strike, sans-serif" fontSize="24" transform="rotate(-8 130 130)">
                 <text x="130" y="112">EXPERIÊNCIA</text>
                 <text x="130" y="142">CONHECIMENTO</text>
@@ -137,14 +128,14 @@ export default function FestivalHero() {
 
           <div>
             <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" strokeWidth="4">
-              <path d="m25 4 6 14 15 1-11 10 4 15-14-8-14 8 4-15L4 19l15-1 6-14Z"/>
+              <path d="m25 4 6 14 15 1-11 10 4 15-14-8-14 8 4-15L4 19l15-1 6-14Z" />
             </svg>
             <p><b>8 GRANDES</b><small>ATRAÇÕES CONFIRMADAS</small></p>
           </div>
 
           <div>
             <svg viewBox="0 0 50 46" fill="none" stroke="currentColor" strokeWidth="4">
-              <path d="M25 40C7 29 2 20 5 12c4-10 15-8 20 1C30 4 41 2 45 12c3 8-2 17-20 28Z"/>
+              <path d="M25 40C7 29 2 20 5 12c4-10 15-8 20 1C30 4 41 2 45 12c3 8-2 17-20 28Z" />
             </svg>
             <p><b>3 DIAS</b><small>DE FEIRA &amp; EXPO 2027</small></p>
           </div>
@@ -170,7 +161,7 @@ export default function FestivalHero() {
                 {leadType === 'visitante' ? 'Garanta sua Entrada' : 'Reserve seu Estande'}
               </h3>
               <p className="text-xs text-stone-600 mt-1">
-                {leadType === 'visitante' 
+                {leadType === 'visitante'
                   ? 'Receba o voucher digital com acesso direto aos 3 dias de evento no Parque da Fundação Rural.'
                   : 'Fale com Maycon Douglas e receba a planta atualizada e tabela comercial de cotas.'}
               </p>

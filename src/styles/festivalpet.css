@@ -198,8 +198,7 @@
 
 
 
-.fp-home-coqueiro-top,
-.fp-home-coqueiro-base {
+.fp-home-coqueiro-vertical {
   display: none;
 }
 
@@ -805,29 +804,18 @@
     background: var(--cream) url("/assets/festival/hero-bottom-tear.png") center bottom / 100% 55px no-repeat;
   }
 
-  .fp-home-coqueiro-top {
+  .fp-home-coqueiro-vertical {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    width: clamp(160px, 44vw, 240px);
-    height: auto;
+    bottom: 0;
+    height: 100%;
+    width: clamp(150px, 40vw, 215px);
+    object-fit: fill;
     pointer-events: none;
     z-index: 2;
     opacity: 0.96;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
-  }
-
-  .fp-home-coqueiro-base {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: clamp(170px, 46vw, 250px);
-    height: auto;
-    pointer-events: none;
-    z-index: 3;
-    opacity: 0.95;
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
   }
 
@@ -962,9 +950,9 @@
   .fp-home-dog {
     position: absolute;
     z-index: 25 !important;
-    right: -28px;
-    bottom: -36px;
-    width: clamp(340px, 90vw, 440px);
+    right: -25px;
+    bottom: -32px;
+    width: clamp(350px, 92vw, 450px);
     height: auto;
     pointer-events: none;
     filter: drop-shadow(0 16px 30px rgba(20, 25, 60, 0.44));
@@ -986,6 +974,7 @@
 
   .fp-home-stats {
     position: relative;
+    z-index: 26;
     bottom: auto;
     flex-direction: column;
     align-items: flex-start;
