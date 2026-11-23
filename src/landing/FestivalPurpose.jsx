@@ -63,7 +63,7 @@ export default function FestivalPurpose() {
           <div className="purpose-pillar-card purpose-pillar-vision">
             <span className="pillar-badge vision">VISÃO</span>
             <p className="pillar-text">
-              SER NACIONALMENTE CONHECIDA, COMO A MAIOR FEIRA NO RAMO PET, ATÉ 2026.
+              SER NACIONALMENTE CONHECIDA, COMO A MAIOR FEIRA NO RAMO PET, ATÉ 2027.
             </p>
           </div>
         </div>

@@ -33,7 +33,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
               <div className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white border border-stone-200/90 shadow-xs text-xs sm:text-sm font-semibold text-stone-800">
                 <Calendar className="w-4 h-4 text-emerald-700" />
-                <span>{eventInfo.date || '14 a 16 de Novembro de 2025'}</span>
+                <span>{eventInfo.date || '14 a 16 de Novembro de 2027'}</span>
               </div>
               <div className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white border border-stone-200/90 shadow-xs text-xs sm:text-sm font-semibold text-stone-800">
                 <MapPin className="w-4 h-4 text-stone-600" />

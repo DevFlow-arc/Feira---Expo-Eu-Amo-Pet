@@ -71,7 +71,7 @@ export default function CongressoVetSection() {
     triggerCelebration();
     const phone = "5522997885784";
     const text = encodeURIComponent(
-      `Olá! Sou profissional/acadêmico da área veterinária e gostaria de me inscrever no *Congresso VET em Foco 2025* na Feira Eu Amo Pet com emissão de certificado oficial.`
+      `Olá! Sou profissional/acadêmico da área veterinária e gostaria de me inscrever no *Congresso VET em Foco 2027* na Feira Eu Amo Pet com emissão de certificado oficial.`
     );
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   };
@@ -87,7 +87,7 @@ export default function CongressoVetSection() {
             Atualização Técnico-Científica • VET 360
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-950 mt-4 tracking-tight">
-            Congresso VET em Foco 2025
+            Congresso VET em Foco 2027
           </h2>
           <p className="text-sm sm:text-base text-stone-600 mt-4 leading-relaxed">
             Venha acompanhar a transformação da medicina veterinária com palestrantes de referência regional e nacional. Conteúdo prático, baseado em evidências, pronto para você aplicar no consultório no dia seguinte.
