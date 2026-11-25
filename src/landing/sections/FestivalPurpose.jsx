@@ -1,5 +1,5 @@
 import React from 'react';
-import BrandHeartPaw from '../components/BrandHeartPaw';
+import BrandHeartPaw from '../../components/BrandHeartPaw';
 
 export default function FestivalPurpose() {
   return (

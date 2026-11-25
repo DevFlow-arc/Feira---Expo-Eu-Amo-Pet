@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useApp } from '../context/AppContext';
+import { useApp } from '../../context/AppContext';
 import { Award, Store, Stethoscope, HeartHandshake, Download, CheckCircle2, FileText, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function FestivalEbook() {

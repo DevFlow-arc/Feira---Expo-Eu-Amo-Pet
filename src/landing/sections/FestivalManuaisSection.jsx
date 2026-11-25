@@ -1,5 +1,5 @@
 import React from 'react';
-import { OFFICIAL_MANUALS } from '../data/floorPlanData';
+import { OFFICIAL_MANUALS } from '../../data/floorPlanData';
 import { 
   FileText, Zap, ShieldCheck, Dog, Calendar, 
   ArrowDownToLine, Download 

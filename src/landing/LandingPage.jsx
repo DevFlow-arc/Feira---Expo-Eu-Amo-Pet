@@ -1,19 +1,19 @@
 import React from 'react';
-import FestivalHero from './FestivalHero';
-import FestivalAbout from './FestivalAbout';
-import FestivalPurpose from './FestivalPurpose';
-import FestivalMercadoPet from './FestivalMercadoPet';
-import FestivalTemTudo from './FestivalTemTudo';
-import FestivalAtracoes from './FestivalAtracoes';
-import FestivalEdicoes from './FestivalEdicoes';
-import FestivalInfraestrutura from './FestivalInfraestrutura';
-import FestivalVideo from './FestivalVideo';
-import FestivalPatrocinio from './FestivalPatrocinio';
-import FestivalApoiadores from './FestivalApoiadores';
-import FestivalManuaisSection from './FestivalManuaisSection';
-import FestivalEbook from './FestivalEbook';
-import FestivalFaq from './FestivalFaq';
-import FestivalContato from './FestivalContato';
+import FestivalHero from './sections/FestivalHero';
+import FestivalAbout from './sections/FestivalAbout';
+import FestivalPurpose from './sections/FestivalPurpose';
+import FestivalMercadoPet from './sections/FestivalMercadoPet';
+import FestivalTemTudo from './sections/FestivalTemTudo';
+import FestivalAtracoes from './sections/FestivalAtracoes';
+import FestivalEdicoes from './sections/FestivalEdicoes';
+import FestivalInfraestrutura from './sections/FestivalInfraestrutura';
+import FestivalVideo from './sections/FestivalVideo';
+import FestivalPatrocinio from './sections/FestivalPatrocinio';
+import FestivalApoiadores from './sections/FestivalApoiadores';
+import FestivalManuaisSection from './sections/FestivalManuaisSection';
+import FestivalEbook from './sections/FestivalEbook';
+import FestivalFaq from './sections/FestivalFaq';
+import FestivalContato from './sections/FestivalContato';
 
 // LandingPage: Estrutura completa orientada ao método AIDA (Atenção, Interesse, Desejo, Ação)
 // 100% alinhada com o Livro de Apresentação Oficial 2027 da Feira & Expo Eu Amo Pet

@@ -1,5 +1,5 @@
 import React from 'react';
-import BrandHeartPaw from '../components/BrandHeartPaw';
+import BrandHeartPaw from '../../components/BrandHeartPaw';
 
 export default function FestivalApoiadores() {
   // 18 slots exatos organizados de acordo com os pacotes oficiais do Livro de Apresentação:
